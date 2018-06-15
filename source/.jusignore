@@ -1,0 +1,6 @@
+scripts/*
+dist/*
+images/*.png
+build/*
+node_modules/*
+package*.json

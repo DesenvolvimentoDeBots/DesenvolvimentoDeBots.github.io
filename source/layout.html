@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<title>{{page.title}}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="{{page.description}}" />
+	<meta name="keywords" content="{{page.title}}{{#if keywords}},{{page.keywords}}{{/if}}" />
+
+	<meta property="og:title" content="{{page.title}}" />
+	<meta property="og:url" content="{{page.data.meta.baseURL}}{{page.href}}" />
+	<meta property="og:site_name" content="{{page.title}}" />
+	<meta property="og:description" content="{{page.description}}" />
+	<meta name="twitter:title" content="{{page.title}}" />
+	<meta name="twitter:url" content="{{page.data.meta.baseURL}}{{page.href}}" />
+
+	<!--<link rel="shortcut icon" href="{{page.data.meta.baseURL}}/images/favicon.ico">-->
+	<link rel="stylesheet" href="{{page.data.meta.baseURL}}/uikit-3.0.0-beta.40/css/uikit.min.css">
+	<link rel="stylesheet" href="{{page.data.meta.baseURL}}/css/theme.css">
+	<link rel="stylesheet" href="{{page.data.meta.baseURL}}/css/reset.css">
+	<script src="{{page.data.meta.baseURL}}/uikit-3.0.0-beta.40/js/uikit.min.js"></script>
+	<script src="{{page.data.meta.baseURL}}/uikit-3.0.0-beta.40/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+	{{{body}}}
+	<script src="{{page.data.meta.baseURL}}/js/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>
