@@ -1,0 +1,25 @@
+{
+  "name": "desenvolvimentodebots-site",
+  "version": "1.0.0",
+  "description": "DesenvolvimentoDeBots.github.io",
+  "main": "README.md",
+  "scripts": {
+    "start": "bash scripts/test.sh",
+    "build": "bash scripts/build.sh"
+  },
+  "keywords": [
+    "website",
+    "jus"
+  ],
+  "author": "TiagoDanin",
+  "license": "MIT",
+  "dependencies": {
+    "ignored": "2.0.4",
+    "jus": "0.26.0",
+    "node-sass": "4.5.0",
+    "require-dir": "0.3.2"
+  },
+  "devDependencies": {
+    "npx": "10.2.0"
+  }
+}
