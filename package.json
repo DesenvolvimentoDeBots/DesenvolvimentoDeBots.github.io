@@ -5,7 +5,8 @@
   "main": "README.md",
   "scripts": {
     "start": "bash scripts/test.sh",
-    "build": "bash scripts/build.sh"
+    "build": "bash scripts/build.sh",
+    "fix": "bash scripts/fixJus.sh"
   },
   "keywords": [
     "website",
@@ -14,6 +15,7 @@
   "author": "TiagoDanin",
   "license": "MIT",
   "dependencies": {
+    "chokidar": "1.4.2",
     "ignored": "2.0.4",
     "jus": "0.26.0",
     "node-sass": "4.5.0",
