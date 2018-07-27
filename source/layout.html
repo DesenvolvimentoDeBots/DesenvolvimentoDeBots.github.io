@@ -37,6 +37,7 @@
 		</div>
 		<div class="uk-navbar-right">
 			<ul class="uk-navbar-nav">
+				<li><a href="/bots">Bots&Projetos</a></li>
 				<li>
 					<a href="#">Parent</a>
 					<div class="uk-navbar-dropdown">
@@ -47,10 +48,15 @@
 						</ul>
 					</div>
 				</li>
-				<li><a href="#">Item</a></li>
 			</ul>
 		</div>
 	</nav>
+	{{#if page.description}}
+		<div class="uk-hidden-small uk-card uk-card-body uk-card-primary uk-panel">
+			<h3 class="uk-card-title">{{page.title}}</h3>
+			<p>{{page.description}}</p>
+		</div>
+	{{/if}}
 	</br>
 	{{{body}}}
 	<footer>

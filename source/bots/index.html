@@ -1,0 +1,56 @@
+<!--
+title: Projetos criado pela comunidade!
+description: Bots desenvolvido pelos membros do grupo.
+regexParaUsarEmREADME: \- \[(.*)\]\((.*)\) por \[(.*)\]\((.*)\) \- (.*)$
+trocaPara: {"name": "$1", "username": "$2", "urls": [{"title": "GitHub", "url": "$2"}], "authors": [{"name":"$3", "url": "$4"}], "description": "$5"},
+-->
+
+<ul uk-accordion>
+	<li class="uk-open">
+		<a class="uk-accordion-title" id="telegram">Telegram</a>
+		<div class="uk-accordion-content">
+			<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
+				{{#each page.data.telegram}}
+					<div>
+						<div class="uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-card-title">
+								{{name}}
+								{{#if username}}
+									(<a href="https://telegram.me/{{username}}">@{{username}}</a>)
+								{{/if}}
+							</h3>
+							{{#if urls}}
+								{{#each urls}}
+									<a href="{{url}}">{{title}}</a>
+								{{/each}}
+							{{/if}}
+							<p>{{description}}</p>
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	</li>
+	<li>
+		<a class="uk-accordion-title" id="outros">Outros</a>
+		<div class="uk-accordion-content">
+			<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
+				{{#each page.data.etc}}
+					<div>
+						<div class="uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-card-title">
+								{{name}}
+							</h3>
+							{{#if urls}}
+								{{#each urls}}
+									<a href="{{url}}">{{title}}</a>
+								{{/each}}
+							{{/if}}
+							<p>{{description}}</p>
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+	</li>
+</ul>
