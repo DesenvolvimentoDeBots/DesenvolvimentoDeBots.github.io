@@ -56,12 +56,13 @@
 	</nav>
 	{{#if page.description}}
 		<div class="uk-hidden-small uk-card uk-card-body uk-card-primary uk-panel">
-			<h3 class="uk-card-title">{{page.title}}</h3>
+			<h3 class="uk-card-title"><span uk-icon="info"></span> {{page.title}}</h3>
 			<p>{{page.description}}</p>
 		</div>
 	{{/if}}
-	</br>
+	<!--FIXME: Bug in jus-->
 	{{#if page.article}}
+		</br>
 		<div class="uk-container">
 			<article class="uk-margin-auto">
 				{{{body}}}

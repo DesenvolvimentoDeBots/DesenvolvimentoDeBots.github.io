@@ -5,9 +5,12 @@ regexParaUsarEmREADME: \- \[(.*)\]\((.*)\) por \[(.*)\]\((.*)\) \- (.*)$
 trocaPara: {"name": "$1", "username": "$2", "urls": [{"title": "GitHub", "url": "$2"}], "authors": [{"name":"$3", "url": "$4"}], "description": "$5"},
 -->
 
-<ul uk-accordion>
+<ul uk-accordion class="uk-margin-remove">
 	<li class="uk-open">
-		<a class="uk-accordion-title" id="telegram">Telegram</a>
+		<a class="uk-accordion-title uk-card uk-card-default uk-card-body uk-card-primary card-green" id="telegram">
+			<span uk-icon="triangle-up"></span>
+			Telegram
+		</a>
 		<div class="uk-accordion-content">
 			<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
 				{{#each page.data.telegram}}
@@ -37,8 +40,11 @@ trocaPara: {"name": "$1", "username": "$2", "urls": [{"title": "GitHub", "url": 
 			</div>
 		</div>
 	</li>
-	<li>
-		<a class="uk-accordion-title" id="outros">Outros</a>
+	<li class="uk-margin-remove">
+		<a class="uk-accordion-title uk-card uk-card-default uk-card-body uk-card-primary card-red" id="outros">
+			<span uk-icon="more"></span>
+			Outros
+		</a>
 		<div class="uk-accordion-content">
 			<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
 				{{#each page.data.etc}}
