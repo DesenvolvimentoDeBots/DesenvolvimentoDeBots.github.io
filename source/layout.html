@@ -37,7 +37,9 @@
 		</div>
 		<div class="uk-navbar-right">
 			<ul class="uk-navbar-nav">
-				<li><a href="/bots">Bots&Projetos</a></li>
+				<li><a href="/projetos">Projetos da Comunidade</a></li>
+				<li><a href="/material">Material de Apoio</a></li>
+				<!--
 				<li>
 					<a href="#">Parent</a>
 					<div class="uk-navbar-dropdown">
@@ -48,6 +50,7 @@
 						</ul>
 					</div>
 				</li>
+				-->
 			</ul>
 		</div>
 	</nav>
@@ -58,7 +61,15 @@
 		</div>
 	{{/if}}
 	</br>
-	{{{body}}}
+	{{#if page.article}}
+		<div class="uk-container">
+			<article class="uk-margin-auto">
+				{{{body}}}
+			</article>
+		</div>
+	{{else}}
+		{{{body}}}
+	{{/if}}
 	<footer>
 		<div class="uk-card uk-card-secondary uk-card-body">
 			<label class="uk-align-center uk-text-center">
