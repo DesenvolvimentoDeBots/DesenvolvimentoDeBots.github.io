@@ -29,6 +29,17 @@
 	}],
 	"description": "É uma ferramenta rápida para obter a taxa de câmbio e conversão de moedas em tempo real, com suporte para Reais, Dólares e Bitcoins."
 }, {
+	"name": "F.R.I.D.A.Y.",
+	"urls": [{
+		"title": "GitHub",
+		"url": "https://github.com/VycktorStark/Friday"
+	}],
+	"authors": [{
+		"name": "Vycktor Stark",
+		"url": "https://github.com/VycktorStark"
+	}],
+	"description": "Bot escrito em Python, com gerenciamento de plugins."
+}, {
 	"name": "ImageVisionBot",
 	"urls": [{
 		"title": "GitHub",
@@ -51,6 +62,17 @@
 		"url": "https://github.com/heylouiz"
 	}],
 	"description": "Um Telegram Bot que busca sons no Myintants e os manda como mensagens de voz."
+}, {
+	"name": "Nathy Bot",
+	"urls": [{
+		"title": "GitHub",
+		"url": "https://github.com/VycktorStark/Nathy"
+	}],
+	"authors": [{
+		"name": "Vycktor Stark",
+		"url": "https://github.com/VycktorStark"
+	}],
+	"description": "Bot com AIML + Telepot."
 }, {
 	"name": "Robô Db vs 1.0",
 	"urls": [{
@@ -117,6 +139,17 @@
 	}],
 	"description": "Um webapp para enviar mensagem com suporte a Markdown no Telegram."
 }, {
+	"name": "SiD",
+	"urls": [{
+		"title": "GitHub",
+		"url": "https://github.com/TiagoDanin/SiD"
+	}],
+	"authors": [{
+		"name": "TiagoDanin",
+		"url": "https://github.com/TiagoDanin"
+	}],
+	"description": "Um bot baseado no Otouto com suporte a Inline."
+}, {
 	"name": "SiDBot",
 	"username": "sidbot",
 	"urls": [{
@@ -128,17 +161,6 @@
 		"url": "https://github.com/TiagoDanin"
 	}],
 	"description": "Um bot baseado nas antigas versões do SiD, agora feito do zero e escrito em Python."
-}, {
-	"name": "SiD",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/TiagoDanin/SiD"
-	}],
-	"authors": [{
-		"name": "TiagoDanin",
-		"url": "https://github.com/TiagoDanin"
-	}],
-	"description": "Um bot baseado no Otouto com suporte a Inline."
 }, {
 	"name": "SpotifyTelegram",
 	"urls": [{
@@ -161,26 +183,4 @@
 		"url": "https://github.com/Francis-Taylor"
 	}],
 	"description": "Bot para Telegram feito com Threads nativa da linguagem Python."
-}, {
-	"name": "Nathy Bot",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/VycktorStark/Nathy"
-	}],
-	"authors": [{
-		"name": "Vycktor Stark",
-		"url": "https://github.com/VycktorStark"
-	}],
-	"description": "Bot com AIML + Telepot."
-}, {
-	"name": "F.R.I.D.A.Y.",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/VycktorStark/Friday"
-	}],
-	"authors": [{
-		"name": "Vycktor Stark",
-		"url": "https://github.com/VycktorStark"
-	}],
-	"description": "Bot escrito em Python, com gerenciamento de plugins."
 }]
