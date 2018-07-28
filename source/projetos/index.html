@@ -1,6 +1,6 @@
 <!--
-title: Projetos criado pela comunidade!
-description: Bots desenvolvido pelos membros do grupo.
+title: Projetos!
+description: Projetos & Bots desenvolvidos pelos membros do grupo.
 regexParaUsarEmREADME: \- \[(.*)\]\((.*)\) por \[(.*)\]\((.*)\) \- (.*)$
 trocaPara: {"name": "$1", "username": "$2", "urls": [{"title": "GitHub", "url": "$2"}], "authors": [{"name":"$3", "url": "$4"}], "description": "$5"},
 -->
@@ -13,12 +13,18 @@ trocaPara: {"name": "$1", "username": "$2", "urls": [{"title": "GitHub", "url": 
 				{{#each page.data.telegram}}
 					<div>
 						<div class="uk-card uk-card-default uk-card-hover uk-card-body">
-							<h3 class="uk-card-title">
+							<h3 class="uk-margin-remove uk-card-title">
 								{{name}}
 								{{#if username}}
 									(<a href="https://telegram.me/{{username}}">@{{username}}</a>)
 								{{/if}}
 							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro(s):
+								{{#each authors}}
+									- <a href="{{url}}">{{name}}</a>
+								{{/each}}
+							</h4>
 							{{#if urls}}
 								{{#each urls}}
 									<a href="{{url}}">{{title}}</a>
@@ -38,9 +44,15 @@ trocaPara: {"name": "$1", "username": "$2", "urls": [{"title": "GitHub", "url": 
 				{{#each page.data.etc}}
 					<div>
 						<div class="uk-card uk-card-default uk-card-hover uk-card-body">
-							<h3 class="uk-card-title">
+							<h3 class="uk-margin-remove uk-card-title">
 								{{name}}
 							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro(s):
+								{{#each authors}}
+									- <a href="{{url}}">{{name}}</a>
+								{{/each}}
+							</h4>
 							{{#if urls}}
 								{{#each urls}}
 									<a href="{{url}}">{{title}}</a>
