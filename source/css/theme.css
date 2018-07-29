@@ -16,13 +16,17 @@
 	border-radius: 35%;
 }
 
-.logo {
-	max-width: 100%;
-	max-height: 80%;
+.uk-offcanvas-bar .uk-nav-primary>li>a {
+	color: #ffffffdb;
 }
 
-.menu {
-	box-shadow: 0 10px 15px 0 rgba(0,0,0,0.05)
+.uk-offcanvas-bar .uk-nav-primary>li>a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.uk-offcanvas-bar {
+	background: #607d8bf5;
 }
 
 .uk-navbar-left>.uk-navbar-nav>li>a:hover {
@@ -34,10 +38,38 @@
 	text-decoration: underline;
 }
 
+.logo {
+	max-width: 100%;
+	max-height: 80%;
+}
+
+
+.logo-mobile {
+	max-width: 60%;
+	max-height: 40%;
+	border-radius: 10%;
+}
+
+.menu {
+	box-shadow: 0 10px 15px 0 rgba(0,0,0,0.05)
+}
+
 .card-red {
 	background: #d9414f;
 }
 
 .card-green {
 	background: #41d9a1;
+}
+
+.card-yellow {
+	background: #d9d641;
+}
+
+.card-orange {
+	background: #f5893c;
+}
+
+.card-grey {
+	background: #afafaf;
 }
