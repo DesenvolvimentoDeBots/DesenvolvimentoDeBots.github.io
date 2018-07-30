@@ -1,8 +1,8 @@
 const jsonfile = require('jsonfile')
 
 const files = [
-	'source/bots/telegram.json',
-	'source/bots/etc.json'
+	'source/projetos/telegram.json',
+	'source/projetos/etc.json'
 ]
 
 function ordList(file) {

@@ -19,7 +19,10 @@
     "ignored": "2.0.4",
     "jus": "0.26.0",
     "node-sass": "4.5.0",
-    "require-dir": "0.3.2"
+    "require-dir": "0.3.2",
+    "graceful-fs": "4.1.6",
+    "jsonfile": "4.0.0",
+    "mustache": "2.3.0"
   },
   "devDependencies": {
     "npx": "10.2.0"
