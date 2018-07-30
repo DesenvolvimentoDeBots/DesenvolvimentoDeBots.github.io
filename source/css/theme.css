@@ -59,7 +59,7 @@
 }
 
 .card-green {
-	background: #41d9a1;
+	background: #2da97b;
 }
 
 .card-yellow {
@@ -74,6 +74,9 @@
 	background: #afafaf;
 }
 
+.project-card-body {
+	border-radius: 2%;
+}
 
 .project-card-body>p {
 	height: 100px;

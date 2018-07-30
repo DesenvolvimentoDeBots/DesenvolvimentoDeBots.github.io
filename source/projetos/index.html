@@ -23,7 +23,7 @@ trocaPara: {"name": "$1", "username": "$2", "urls": [{"title": "GitHub", "url": 
 								{{/if}}
 							</h3>
 							<h4 class="uk-text-small uk-margin-remove">
-								Membro(s):
+								{{inflect (length authors) "Membro:" "Membros:"}}
 								{{#each authors}}
 									- <a href="{{url}}">{{name}}</a>
 								{{/each}}
@@ -55,7 +55,7 @@ trocaPara: {"name": "$1", "username": "$2", "urls": [{"title": "GitHub", "url": 
 								{{name}}
 							</h3>
 							<h4 class="uk-text-small uk-margin-remove">
-								Membro(s):
+								{{inflect (length authors) "Membro" "Membros"}}
 								{{#each authors}}
 									- <a href="{{url}}">{{name}}</a>
 								{{/each}}
