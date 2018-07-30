@@ -73,3 +73,8 @@
 .card-grey {
 	background: #afafaf;
 }
+
+
+.project-card-body>p {
+	height: 100px;
+}
