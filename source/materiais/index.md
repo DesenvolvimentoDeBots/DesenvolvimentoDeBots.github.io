@@ -17,6 +17,7 @@ article: true
 - [Telegraf - JavaScript](https://github.com/telegraf/telegraf)
 - [Telegram Bot Bash - Bash](https://github.com/topkecleon/telegram-bot-bash)
 - [Telegram Bot PHP SDK - PHP](https://telegram-bot-sdk.readme.io/docs)
+- [Telegram Bot Java Library - Java](https://github.com/rubenlagus/TelegramBots)
 - [Telegram Cli Client - PHP](https://github.com/zyberspace/php-telegram-cli-client)
 - [Telepot - JavaScript](https://github.com/mullwar/telebot)
 - [Telepot - Python](https://github.com/nickoala/telepot)

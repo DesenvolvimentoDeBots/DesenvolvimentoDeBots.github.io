@@ -40,6 +40,17 @@
 	}],
 	"description": "Bot escrito em Python, com gerenciamento de plugins."
 }, {
+	"name": "F.R.I.D.A.Y.",
+	"urls": [{
+		"title": "GitHub",
+		"url": "https://github.com/DialogWizards/Friday"
+	}],
+	"authors": [{
+		"name": "Vycktor Stark",
+		"url": "https://github.com/VycktorStark"
+	}],
+	"description": "Bot escrito em Python, com gerenciamento de plugins."
+}, {
 	"name": "ImageVisionBot",
 	"urls": [{
 		"title": "GitHub",
@@ -62,6 +73,17 @@
 		"url": "https://github.com/heylouiz"
 	}],
 	"description": "Um Telegram Bot que busca sons no Myintants e os manda como mensagens de voz."
+}, {
+	"name": "Nathy BOT",
+	"urls": [{
+		"title": "GitHub",
+		"url": "https://github.com/VycktorStark/Nathy"
+	}],
+	"authors": [{
+		"name": "Vycktor Stark",
+		"url": "https://github.com/VycktorStark"
+	}],
+	"description": "Bot com AIML + Telepot."
 }, {
 	"name": "Nathy Bot",
 	"urls": [{
