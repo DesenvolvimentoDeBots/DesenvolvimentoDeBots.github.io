@@ -15,7 +15,7 @@
   "author": "TiagoDanin",
   "license": "MIT",
   "dependencies": {
-    "chokidar": "1.4.2",
+    "chokidar": "1.7.0",
     "ignored": "2.0.4",
     "jus": "0.26.0",
     "node-sass": "4.5.0",
