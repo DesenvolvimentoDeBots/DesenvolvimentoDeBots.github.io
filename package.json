@@ -1,7 +1,7 @@
 {
   "name": "desenvolvimentodebots-site",
   "version": "1.0.0",
-  "description": "DesenvolvimentoDeBots.github.io",
+  "description": "Site do grupo - https://DesenvolvimentoDeBots.github.io",
   "main": "README.md",
   "scripts": {
     "start": "bash scripts/test.sh",
