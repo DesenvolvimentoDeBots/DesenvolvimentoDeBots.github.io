@@ -62,6 +62,14 @@
 	}],
 	"description": "Um Telegram bot que usa visão computacional para descrever imagens."
 }, {
+	"name": "imguradbot",
+	"username": "imguradbot",
+	"authors": [{
+		"name": "Juliano Dorneles",
+		"url": "https://t.me/julianodorneles"
+	}],
+	"description": "Um bot para baixar imagens de álbuns do Imgur."
+}, {
 	"name": "Myinstantsbot",
 	"username": "Myinstantsbot",
 	"urls": [{
@@ -205,4 +213,12 @@
 		"url": "https://github.com/Francis-Taylor"
 	}],
 	"description": "Bot para Telegram feito com Threads nativa da linguagem Python."
+}, {
+	"name": "ts2chbot",
+	"username": "ts2chbot",
+	"authors": [{
+		"name": "Juliano Dorneles",
+		"url": "https://t.me/julianodorneles"
+	}],
+	"description": "Um bot para conversão de vídeos comuns para Telescopes (é possível enviar vídeos diretamente ou postar links do Instagram e Youtube - sempre observando o limite máximo de upload para Telescopes, que gira em torno dos 9Mb, independente da duração)."
 }]
