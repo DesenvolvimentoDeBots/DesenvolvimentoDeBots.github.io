@@ -1,0 +1,92 @@
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: #fff;
+  padding-left: 2%;
+}
+
+.uk-card-primary {
+  background: #419FD9;
+}
+
+.uk-card-primary.uk-card-body,
+.uk-card-primary>:not([class*=uk-card-media]),
+.uk-card-secondary.uk-card-body,
+.uk-card-secondary>:not([class*=uk-card-media]),
+.uk-light,
+.uk-offcanvas-bar,
+.uk-overlay-primary,
+.uk-section-primary:not(.uk-preserve-color),
+.uk-section-secondary:not(.uk-preserve-color),
+.uk-tile-primary:not(.uk-preserve-color),
+.uk-tile-secondary:not(.uk-preserve-color) {
+  color: rgba(255,255,255,0.9490196078431372);
+}
+
+.uk-accordion-title::after {
+  background-color: rgba(249,249,249,0.7490196078431373);
+  border-radius: 35%;
+}
+
+.uk-offcanvas-bar .uk-nav-primary>li>a {
+  color: rgba(255,255,255,0.8588235294117647);
+}
+
+.uk-offcanvas-bar .uk-nav-primary>li>a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.uk-offcanvas-bar {
+  background: rgba(96,125,139,0.9607843137254902);
+}
+
+.uk-navbar-left>.uk-navbar-nav>li>a:hover {
+  text-decoration: underline;
+}
+
+.uk-navbar-right>.uk-navbar-nav>li>a:hover {
+  background: rgba(240,255,255,0.3215686274509804);
+  text-decoration: underline;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 80%;
+}
+
+.logo-mobile {
+  max-width: 60%;
+  max-height: 40%;
+  border-radius: 10%;
+}
+
+.menu {
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.05);
+}
+
+.card-red {
+  background: #d9414f;
+}
+
+.card-green {
+  background: #2da97b;
+}
+
+.card-yellow {
+  background: #d9d641;
+}
+
+.card-orange {
+  background: #f5893c;
+}
+
+.card-grey {
+  background: #afafaf;
+}
+
+.project-card-body {
+  border-radius: 2%;
+}
+
+.project-card-body>p {
+  height: 100px;
+}

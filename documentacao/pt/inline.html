@@ -1,0 +1,785 @@
+<html>
+
+<head>
+	<title>Documenta&#xE7;&#xE3;o de InlineQuery</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Documenta&#xE7;&#xE3;o de InlineQuery em PT">
+	<meta name="keywords" content="Documenta&#xE7;&#xE3;o de InlineQuery">
+
+	<meta property="og:title" content="Documenta&#xE7;&#xE3;o de InlineQuery">
+	<meta property="og:url" content="http://DesenvolvimentoDeBots.github.io/documentacao/pt/inline">
+	<meta property="og:site_name" content="Documenta&#xE7;&#xE3;o de InlineQuery">
+	<meta property="og:description" content="Documenta&#xE7;&#xE3;o de InlineQuery em PT">
+	<meta name="twitter:title" content="Documenta&#xE7;&#xE3;o de InlineQuery">
+	<meta name="twitter:url" content="http://DesenvolvimentoDeBots.github.io/documentacao/pt/inline">
+
+	<!--<link rel="shortcut icon" href="/images/favicon.ico">-->
+	<link rel="stylesheet" href="/uikit-3.0.0-beta.40/css/uikit.min.css">
+	<link rel="stylesheet" href="/css/theme.css">
+	<link rel="stylesheet" href="/css/reset.css">
+	<script src="/uikit-3.0.0-beta.40/js/uikit.min.js"></script>
+	<script src="/uikit-3.0.0-beta.40/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+	<nav class="uk-navbar-container menu" uk-navbar="">
+		<div class="uk-navbar-left">
+			<ul class="uk-navbar-nav">
+				<li class="uk-active">
+					<a href="/">
+						<img src="/images/logo.png" class="logo uk-margin-small-right">
+						<label class="uk-visible@s">Desenvolvimento De Bots</label>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="uk-navbar-right">
+			<ul class="uk-navbar-nav uk-visible@s">
+				<li><a href="/projetos">Projetos da Comunidade</a></li>
+				<li><a href="/materiais">Materiais de Apoio</a></li>
+				<li>
+					<a href="/documentacao">Documenta&#xE7;&#xE3;o</a>
+					<div class="uk-navbar-dropdown uk-margin-remove">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a href="/documentacao/pt/types">Types (PT)</a></li>
+							<li><a href="/documentacao/pt/methods">Methods (PT)</a></li>
+							<li><a href="/documentacao/pt/inline">InlineQuery (PT)</a></li>
+							<li><a href="/documentacao/en/types">Types (EN)</a></li>
+							<li><a href="/documentacao/en/methods">Methods (EN)</a></li>
+							<li><a href="/documentacao/en/inline">InlineQuery (EN)</a></li>
+							<li><a href="https://core.telegram.org/bots/api">Site Official</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<button class="uk-hidden@s uk-button uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary" uk-icon="more-vertical"> Menu</button>
+		</div>
+	</nav>
+		<div class="uk-hidden-small uk-card uk-card-body uk-card-primary uk-panel">
+			<h3 class="uk-card-title"><span uk-icon="info"></span> Documenta&#xE7;&#xE3;o de InlineQuery</h3>
+			<p>Documenta&#xE7;&#xE3;o de InlineQuery em PT</p>
+		</div>
+	<!--FIXME: Bug in jus-->
+		<br>
+		<div class="uk-container">
+			<article class="uk-margin-auto">
+				<!--
+title: Documentação de InlineQuery
+description: Documentação de InlineQuery em PT
+article: true
+-->
+
+<h1>Inline Query</h1>
+<ul>
+<li><a href="#inlinequeryresultarticle">InlineQueryResultArticle</a></li>
+<li><a href="#inlinequeryresultphoto">InlineQueryResultPhoto</a></li>
+<li><a href="#inlinequeryresultgif">InlineQueryResultGif</a></li>
+<li><a href="#inlinequeryresultmpeg4gif">InlineQueryResultMpeg4Gif</a></li>
+<li><a href="#inlinequeryresultvideo">InlineQueryResultVideo</a></li>
+<li><a href="#inlinequeryresultaudio">InlineQueryResultAudio</a></li>
+<li><a href="#inlinequeryresultvoice">InlineQueryResultVoice</a></li>
+<li><a href="#inlinequeryresultdocument">InlineQueryResultDocument</a></li>
+<li><a href="#inlinequeryresultlocation">InlineQueryResultLocation</a></li>
+<li><a href="#inlinequeryresultvenue">InlineQueryResultVenue</a></li>
+<li><a href="#inlinequeryresultcontact">InlineQueryResultContact</a></li>
+<li><a href="#inlinequeryresultgame">InlineQueryResultGame</a></li>
+<li><a href="#inlinequeryresultcachedphoto">InlineQueryResultCachedPhoto</a></li>
+<li><a href="#inlinequeryresultcachedgif">InlineQueryResultCachedGif</a></li>
+<li><a href="#inlinequeryresultcachedmpeg4gif">InlineQueryResultCachedMpeg4Gif</a></li>
+<li><a href="#inlinequeryresultcachedsticker">InlineQueryResultCachedSticker</a></li>
+<li><a href="#inlinequeryresultcacheddocument">InlineQueryResultCachedDocument</a></li>
+<li><a href="#inlinequeryresultcachedvideo">InlineQueryResultCachedVideo</a></li>
+<li><a href="#inlinequeryresultcachedvoice">InlineQueryResultCachedVoice</a></li>
+<li><a href="#inlinequeryresultcachedaudio">InlineQueryResultCachedAudio</a></li>
+</ul>
+<h2>InlineQueryResultArticle</h2>
+<p>Representa um link para um artigo ou p&#xE1;gina da web.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;article&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>T&#xED;tulo do result</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>true (Verdadeiro)</td><td>O conte&#xFA;do da mensagem a ser enviada</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>URL do resultado</td></tr>
+<tr><td>hide_url</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Passe True se voc&#xEA; n&#xE3;o deseja que o URL seja mostrado na mensagem</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Breve descri&#xE7;&#xE3;o do result</td></tr>
+<tr><td>thumb_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>URL da miniatura do result</td></tr>
+<tr><td>thumb_width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura da miniatura</td></tr>
+<tr><td>thumb_height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura da miniatura</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String (Sequ&#xEA;ncia de caracteres),
+    id = String (Sequ&#xEA;ncia de caracteres),
+    title = String (Sequ&#xEA;ncia de caracteres),
+    input_message_content = InputMessageContent,
+    reply_markup = InlineKeyboardMarkup,
+    url = String (Sequ&#xEA;ncia de caracteres),
+    hide_url = Boolean (Booleano),
+    description = String (Sequ&#xEA;ncia de caracteres),
+    thumb_url = String (Sequ&#xEA;ncia de caracteres),
+    thumb_width = Integer (N&#xFA;mero),
+    thumb_height = Integer (N&#xFA;mero),
+}]
+</code></pre>
+<h2>InlineQueryResultPhoto</h2>
+<p>Representa um link para um objeto do tipo photo. Por padr&#xE3;o essa foto ser&#xE1; enviada pelo usu&#xE1;rio com legenda opcional. Como alternativa, voc&#xEA; pode usar o input_message_content para enviar uma mensagem com um conte&#xFA;do especificado em vez da foto.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;photo&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>photo_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Uma URL v&#xE1;lida da foto. A foto deve estar no formato jpeg. Tamanho da foto n&#xE3;o deve ultrapassar 5MB</td></tr>
+<tr><td>thumb_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>URL da miniatura da foto</td></tr>
+<tr><td>photo_width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura da foto</td></tr>
+<tr><td>photo_height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura da foto</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>T&#xED;tulo do result</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Breve descri&#xE7;&#xE3;o do result</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda da foto a ser enviada, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda do GIF.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>O conte&#xFA;do da mensagem a ser enviada, em vez da foto</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String (Sequ&#xEA;ncia de caracteres),
+    id = String (Sequ&#xEA;ncia de caracteres),
+    photo_url = String (Sequ&#xEA;ncia de caracteres),
+    thumb_url = String (Sequ&#xEA;ncia de caracteres),
+    photo_width = Integer (N&#xFA;mero),
+    photo_height = Integer (N&#xFA;mero),
+    title = String (Sequ&#xEA;ncia de caracteres),
+    description = String (Sequ&#xEA;ncia de caracteres),
+    caption = String (Sequ&#xEA;ncia de caracteres),
+    parse_mode = String (Sequ&#xEA;ncia de caracteres),
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultGif</h2>
+<p>Representa um link para um arquivo GIF animado. Por padr&#xE3;o esse GIF animado ser&#xE1; enviado pelo usu&#xE1;rio com legenda opcional. Como alternativa, voc&#xEA; pode usar o input_message_content para enviar uma mensagem com um conte&#xFA;do especificado em vez de uma anima&#xE7;&#xE3;o.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;gif&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>gif_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Uma URL v&#xE1;lida para o arquivo GIF. O tamanho do arquivo n&#xE3;o deve ultrapassar 1MB</td></tr>
+<tr><td>gif_width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura do GIF</td></tr>
+<tr><td>gif_height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura do GIF</td></tr>
+<tr><td>gif_duration</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Dura&#xE7;&#xE3;o do GIF</td></tr>
+<tr><td>thumb_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>URL da miniatura est&#xE1;tica para o result (jpeg ou gif)</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>T&#xED;tulo do result</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda do GIF a ser enviado, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>O conte&#xFA;do da mensagem a ser enviada, em vez do GIF</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String (Sequ&#xEA;ncia de caracteres),
+    id = String (Sequ&#xEA;ncia de caracteres),
+    gif_url = String (Sequ&#xEA;ncia de caracteres),
+    gif_width = Integer (N&#xFA;mero),
+    gif_height = Integer (N&#xFA;mero),
+    gif_duration = Integer (N&#xFA;mero),
+    thumb_url = String (Sequ&#xEA;ncia de caracteres),
+    title = String (Sequ&#xEA;ncia de caracteres),
+    caption = String (Sequ&#xEA;ncia de caracteres),
+    parse_mode = String (Sequ&#xEA;ncia de caracteres),
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultMpeg4Gif</h2>
+<p>Representa um link para um arquivo de v&#xED;deo animado (H.264/MPEG-4 AVC de v&#xED;deo sem audio). Por padr&#xE3;o esse MPEG-4 animado ser&#xE1; enviado pelo usu&#xE1;rio com legenda opcional. Como alternativa, voc&#xEA; pode usar o input_message_content para enviar uma mensagem com um conte&#xFA;do especificado em vez de uma anima&#xE7;&#xE3;o.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;mpeg4_gif&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>mpeg4_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Uma URL v&#xE1;lida para o arquivo MP4. O tamanho do arquivo n&#xE3;o deve ultrapassar 1MB</td></tr>
+<tr><td>mpeg4_width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura do v&#xED;deo</td></tr>
+<tr><td>mpeg4_height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura do v&#xED;deo</td></tr>
+<tr><td>mpeg4_duration</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Dura&#xE7;&#xE3;o do v&#xED;deo</td></tr>
+<tr><td>thumb_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>URL da miniatura est&#xE1;tica (gif ou jpeg) para o resultado</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>T&#xED;tulo do result</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda do arquivo MPEG-4 a ser enviado, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda do GIF.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Content of the message to be sent instead of the video animation</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    mpeg4_url = String,
+    mpeg4_width = Integer,
+    mpeg4_height = Integer,
+    mpeg4_duration = Integer,
+    thumb_url = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultVideo</h2>
+<p>Representa um link para uma p&#xE1;gina que cont&#xE9;m um reprodutor de v&#xED;deo incorporado ou um arquivo de v&#xED;deo. Por padr&#xE3;o, esse arquivo de v&#xED;deo ser&#xE1; enviado pelo usu&#xE1;rio com uma legenda opcional. Como alternativa, voc&#xEA; pode usar o input_message_content para enviar uma mensagem com um conte&#xFA;do especificado em vez da v&#xED;deo.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;video&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>video_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Uma URL v&#xE1;lida para o player de v&#xED;deo incorporado ou um arquivo de v&#xED;deo</td></tr>
+<tr><td>mime_type</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Mime type of the content of video url, &#x201C;text/html&#x201D; or &#x201C;video/mp4&#x201D;</td></tr>
+<tr><td>thumb_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>URL da miniatura est&#xE1;tica (jpeg somente) para o v&#xED;deo</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>T&#xED;tulo do result</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda da v&#xED;deo a ser enviada, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>video_width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura do v&#xED;deo</td></tr>
+<tr><td>video_height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura do v&#xED;deo</td></tr>
+<tr><td>video_duration</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Definir a dura&#xE7;&#xE3;o do v&#xED;deo em segundos</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Breve descri&#xE7;&#xE3;o do result</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Conte&#xFA;do da mensagem a ser enviada, em vez do v&#xED;deo. Este campo &#xE9; obrigat&#xF3;rio se InlineQueryResultVideo &#xE9; usado para enviar uma p&#xE1;gina HTML como um resultado (por exemplo, um v&#xED;deo do YouTube).</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    video_url = String,
+    mime_type = String,
+    thumb_url = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    video_width = Integer,
+    video_height = Integer,
+    video_duration = Integer,
+    description = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultAudio</h2>
+<p>Representa um link para um arquivo em mp3. Por padr&#xE3;o, esse arquivo de &#xE1;udio ser&#xE1; enviado pelo usu&#xE1;rio. Como alternativa, voc&#xEA; pode usar o input_message_content para enviar uma mensagem com um conte&#xFA;do especificado em vez da &#xE1;udio.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;audio&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>audio_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Uma URL v&#xE1;lida para o arquivo de audio</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>T&#xED;tulo</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda, 0-200 caracteres no m&#xE1;ximo</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>performer</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Artista</td></tr>
+<tr><td>audio_duration</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Definir a dura&#xE7;&#xE3;o do &#xE1;udio em segundos</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Conte&#xFA;do da mensagem a ser enviada em vez do &#xE1;udio</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    audio_url = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    performer = String,
+    audio_duration = Integer,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultVoice</h2>
+<p>Represents a link to a voice recording in an .ogg container encoded with OPUS. By default, this voice recording will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the the voice message.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;voice&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>voice_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Uma URL v&#xE1;lida para a grava&#xE7;&#xE3;o de voz</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>T&#xED;tulo da grava&#xE7;&#xE3;o</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda, 0-200 caracteres no m&#xE1;ximo</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>voice_duration</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Dura&#xE7;&#xE3;o da grava&#xE7;&#xE3;o em segundos</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Conte&#xFA;do da mensagem a ser enviada em vez da grava&#xE7;&#xE3;o de voz</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String (Sequ&#xEA;ncia de caracteres),
+    id = String (Sequ&#xEA;ncia de caracteres),
+    photo_url = String (Sequ&#xEA;ncia de caracteres),
+    thumb_url = String (Sequ&#xEA;ncia de caracteres),
+    photo_width = Integer (N&#xFA;mero),
+    photo_height = Integer (N&#xFA;mero),
+    title = String (Sequ&#xEA;ncia de caracteres),
+    description = String (Sequ&#xEA;ncia de caracteres),
+    caption = String (Sequ&#xEA;ncia de caracteres),
+    parse_mode = String (Sequ&#xEA;ncia de caracteres),
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultDocument</h2>
+<p>Representa um link para um arquivo. Por padr&#xE3;o, este arquivo ser&#xE1; enviado pelo usu&#xE1;rio com uma legenda opcional. Alternatively, you can use input_message_content to send a message with the specified content instead of the file. Currently, only .PDF and .ZIP files can be sent using this method.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;document&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>T&#xED;tulo do result</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda do documento a ser enviado, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda do GIF.</td></tr>
+<tr><td>document_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Uma URL v&#xE1;lida para o arquivo</td></tr>
+<tr><td>mime_type</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Mime type of the content of the file, either &#x201C;application/pdf&#x201D; or &#x201C;application/zip&#x201D;</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Breve descri&#xE7;&#xE3;o do result</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Content of the message to be sent instead of the file</td></tr>
+<tr><td>thumb_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>URL of the thumbnail (jpeg only) for the file</td></tr>
+<tr><td>thumb_width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura da miniatura</td></tr>
+<tr><td>thumb_height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura da miniatura</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    document_url = String,
+    mime_type = String,
+    description = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+    thumb_url = String,
+    thumb_width = Integer,
+    thumb_height = Integer,
+}]
+</code></pre>
+<h2>InlineQueryResultLocation</h2>
+<p>Represents a location on a map. By default, the location will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the location.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Type of the result, must be location</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>latitude</td><td>Float n&#xFA;mero</td><td>true (Verdadeiro)</td><td>Location latitude in degrees</td></tr>
+<tr><td>longitude</td><td>Float n&#xFA;mero</td><td>true (Verdadeiro)</td><td>Location longitude in degrees</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Location title</td></tr>
+<tr><td>live_period</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Per&#xED;odo em segundos para que a localiza&#xE7;&#xE3;o possa ser atualizada, deve estar entre 60 e 86400.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Conte&#xFA;do da mensagem a ser enviada em vez da localiza&#xE7;&#xE3;o</td></tr>
+<tr><td>thumb_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>URL da miniatura do result</td></tr>
+<tr><td>thumb_width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura da miniatura</td></tr>
+<tr><td>thumb_height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura da miniatura</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    latitude = Float number,
+    longitude = Float number,
+    title = String,
+    live_period = Integer,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+    thumb_url = String,
+    thumb_width = Integer,
+    thumb_height = Integer,
+}]
+</code></pre>
+<h2>InlineQueryResultVenue</h2>
+<p>Represents a venue. By default, the venue will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the venue.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Type of the result, must be venue</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>latitude</td><td>Float</td><td>true (Verdadeiro)</td><td>Latitude of the venue location in degrees</td></tr>
+<tr><td>longitude</td><td>Float</td><td>true (Verdadeiro)</td><td>Longitude of the venue location in degrees</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Title of the venue</td></tr>
+<tr><td>address</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Address of the venue</td></tr>
+<tr><td>foursquare_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Foursquare identifier of the venue if known</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Content of the message to be sent instead of the venue</td></tr>
+<tr><td>thumb_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>URL da miniatura do result</td></tr>
+<tr><td>thumb_width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura da miniatura</td></tr>
+<tr><td>thumb_height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura da miniatura</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    latitude = Float,
+    longitude = Float,
+    title = String,
+    address = String,
+    foursquare_id = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+    thumb_url = String,
+    thumb_width = Integer,
+    thumb_height = Integer,
+}]
+</code></pre>
+<h2>InlineQueryResultContact</h2>
+<p>Represents a contact with a phone number. By default, this contact will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the contact.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Type of the result, must be contact</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>phone_number</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>N&#xFA;mero de telefone do contato</td></tr>
+<tr><td>first_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Primeiro nome do contato</td></tr>
+<tr><td>last_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&#xDA;ltimo nome do contato</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Content of the message to be sent instead of the contact</td></tr>
+<tr><td>thumb_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>URL da miniatura do result</td></tr>
+<tr><td>thumb_width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura da miniatura</td></tr>
+<tr><td>thumb_height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura da miniatura</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    phone_number = String,
+    first_name = String,
+    last_name = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+    thumb_url = String,
+    thumb_width = Integer,
+    thumb_height = Integer,
+}]
+</code></pre>
+<h2>InlineQueryResultGame</h2>
+<p>Representa um Jogo.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;game&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>game_short_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Nome abreviado do jogo</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    game_short_name = String,
+    reply_markup = InlineKeyboardMarkup,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedPhoto</h2>
+<p>Representa um link para uma foto armazenada nos servidores do Telegram. Por padr&#xE3;o, essa foto ser&#xE1; enviada pelo usu&#xE1;rio com uma legenda opcional. Como alternativa, voc&#xEA; pode usar o input_message_content para enviar uma mensagem com um conte&#xFA;do especificado em vez da foto.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;photo&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>photo_file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>A valid file identifier of the photo</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>T&#xED;tulo do result</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Breve descri&#xE7;&#xE3;o do result</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda da foto a ser enviada, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>O conte&#xFA;do da mensagem a ser enviada, em vez da foto</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    photo_file_id = String,
+    title = String,
+    description = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedGif</h2>
+<p>Represents a link to an animated GIF file stored on the Telegram servers. By default, this animated GIF file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with specified content instead of the animation.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;gif&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>gif_file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>A valid file identifier for the GIF file</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>T&#xED;tulo do result</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda do GIF a ser enviado, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>O conte&#xFA;do da mensagem a ser enviada, em vez do GIF</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    gif_file_id = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedMpeg4Gif</h2>
+<p>Represents a link to a video animation (H.264/MPEG-4 AVC video without sound) stored on the Telegram servers. By default, this animated MPEG-4 file will be sent by the user with an optional caption. Como alternativa, voc&#xEA; pode usar o input_message_content para enviar uma mensagem com um conte&#xFA;do especificado em vez de uma gif.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;mpeg4_gif&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>mpeg4_file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>A valid file identifier for the MP4 file</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>T&#xED;tulo do result</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda do arquivo MPEG-4 a ser enviado, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Content of the message to be sent instead of the video animation</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    mpeg4_file_id = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedSticker</h2>
+<p>Represents a link to a sticker stored on the Telegram servers. By default, this sticker will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the sticker.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Type of the result, must be sticker</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>sticker_file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>A valid file identifier of the sticker</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Content of the message to be sent instead of the sticker</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    sticker_file_id = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedDocument</h2>
+<p>Representa um link para um arquivo armazenado nos servidores do Telegram. Por padr&#xE3;o, este arquivo ser&#xE1; enviado pelo usu&#xE1;rio com uma legenda opcional. Alternatively, you can use input_message_content to send a message with the specified content instead of the file.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;document&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>T&#xED;tulo do result</td></tr>
+<tr><td>document_file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Um identificador de arquivo v&#xE1;lido para o arquivo</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Breve descri&#xE7;&#xE3;o do result</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda do documento a ser enviado, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda do GIF.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Content of the message to be sent instead of the file</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String (Sequ&#xEA;ncia de caracteres),
+    id = String (Sequ&#xEA;ncia de caracteres),
+    photo_url = String (Sequ&#xEA;ncia de caracteres),
+    thumb_url = String (Sequ&#xEA;ncia de caracteres),
+    photo_width = Integer (N&#xFA;mero),
+    photo_height = Integer (N&#xFA;mero),
+    title = String (Sequ&#xEA;ncia de caracteres),
+    description = String (Sequ&#xEA;ncia de caracteres),
+    caption = String (Sequ&#xEA;ncia de caracteres),
+    parse_mode = String (Sequ&#xEA;ncia de caracteres),
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedVideo</h2>
+<p>Representa um link para um arquivo de v&#xED;deo armazenado nos servidores do Telegram. Por padr&#xE3;o, esse arquivo de v&#xED;deo ser&#xE1; enviado pelo usu&#xE1;rio com uma legenda opcional. Como alternativa, voc&#xEA; pode usar o input_message_content para enviar uma mensagem com um conte&#xFA;do especificado em vez da v&#xED;deo.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;video&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>video_file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>A valid file identifier for the video file</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>T&#xED;tulo do result</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Breve descri&#xE7;&#xE3;o do result</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda da v&#xED;deo a ser enviada, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda do GIF.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Conte&#xFA;do da mensagem a ser enviada, em vez do v&#xED;deo</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    video_file_id = String,
+    title = String,
+    description = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedVoice</h2>
+<p>Represents a link to a voice message stored on the Telegram servers. By default, this voice message will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the voice message.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;voice&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>voice_file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>A valid file identifier for the voice message</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>T&#xED;tulo da mensagem de voz</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda, 0-200 caracteres no m&#xE1;ximo</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Conte&#xFA;do da mensagem a ser enviada em vez da mensagem de voz</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    voice_file_id = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedAudio</h2>
+<p>Representa um link para um a&#xFA;dio mp3 armazenado nos servidores do Telegram. Por padr&#xE3;o, esse arquivo de &#xE1;udio ser&#xE1; enviado pelo usu&#xE1;rio. Como alternativa, voc&#xEA; pode usar o input_message_content para enviar uma mensagem com um conte&#xFA;do especificado em vez da &#xE1;udio.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;audio&quot;</td></tr>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse result, 1-64 Bytes</td></tr>
+<tr><td>audio_file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>A valid file identifier for the audio file</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda, 0-200 caracteres no m&#xE1;ximo</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda do GIF.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>Inline keyboard referente &#xE0; mensagem</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false (Falso)</td><td>Conte&#xFA;do da mensagem a ser enviada em vez do &#xE1;udio</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    audio_file_id = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+
+
+			</article>
+		</div>
+	<footer>
+		<div class="uk-card uk-card-secondary uk-card-body">
+			<label class="uk-align-center uk-text-center">
+				<small>
+					<span uk-icon="github"></span> Projetos totalmente Open Source, veja nosso <a href="https://github.com/DesenvolvimentoDeBots" target="_blank">GitHub</a>.
+					<br><span uk-icon="code"></span> com <span uk-icon="heart"></span> pelos <a href="https://telegram.me/DesenvolvimentoDeBots" target="_blank">membros do grupo</a>.
+					<br>Construido usado <a href="https://jus.js.org" target="_blank">Jus</a> e <a href="https://getuikit.com" target="_blank">UiKit</a>
+					<br>Hospedado em <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+				</small>
+			</label>
+		</div>
+	</footer>
+
+	<div class="uk-offcanvas-content">
+		<div id="offcanvas-nav-primary" uk-offcanvas="overlay: false">
+			<div class="uk-offcanvas-bar uk-flex uk-flex-column">
+				<ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+					<a href="/">
+						<img src="/images/logo.png" class="logo-mobile uk-margin-small-right">
+						<label>Desenvolvimento De Bots</label>
+					</a>
+					<hr class="uk-divider-icon">
+					<li><a href="/projetos">Projetos da Comunidade</a></li>
+					<li><a href="/materiais">Materiais de Apoio</a></li>
+					<li><a href="/documentacao">Documenta&#xE7;&#xE3;o</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="/js/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>

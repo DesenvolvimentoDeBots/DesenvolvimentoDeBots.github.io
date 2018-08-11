@@ -1,0 +1,1389 @@
+<html>
+
+<head>
+	<title>Documenta&#xE7;&#xE3;o de Methods</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Documenta&#xE7;&#xE3;o de Methods em PT">
+	<meta name="keywords" content="Documenta&#xE7;&#xE3;o de Methods">
+
+	<meta property="og:title" content="Documenta&#xE7;&#xE3;o de Methods">
+	<meta property="og:url" content="http://DesenvolvimentoDeBots.github.io/documentacao/pt/methods">
+	<meta property="og:site_name" content="Documenta&#xE7;&#xE3;o de Methods">
+	<meta property="og:description" content="Documenta&#xE7;&#xE3;o de Methods em PT">
+	<meta name="twitter:title" content="Documenta&#xE7;&#xE3;o de Methods">
+	<meta name="twitter:url" content="http://DesenvolvimentoDeBots.github.io/documentacao/pt/methods">
+
+	<!--<link rel="shortcut icon" href="/images/favicon.ico">-->
+	<link rel="stylesheet" href="/uikit-3.0.0-beta.40/css/uikit.min.css">
+	<link rel="stylesheet" href="/css/theme.css">
+	<link rel="stylesheet" href="/css/reset.css">
+	<script src="/uikit-3.0.0-beta.40/js/uikit.min.js"></script>
+	<script src="/uikit-3.0.0-beta.40/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+	<nav class="uk-navbar-container menu" uk-navbar="">
+		<div class="uk-navbar-left">
+			<ul class="uk-navbar-nav">
+				<li class="uk-active">
+					<a href="/">
+						<img src="/images/logo.png" class="logo uk-margin-small-right">
+						<label class="uk-visible@s">Desenvolvimento De Bots</label>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="uk-navbar-right">
+			<ul class="uk-navbar-nav uk-visible@s">
+				<li><a href="/projetos">Projetos da Comunidade</a></li>
+				<li><a href="/materiais">Materiais de Apoio</a></li>
+				<li>
+					<a href="/documentacao">Documenta&#xE7;&#xE3;o</a>
+					<div class="uk-navbar-dropdown uk-margin-remove">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a href="/documentacao/pt/types">Types (PT)</a></li>
+							<li><a href="/documentacao/pt/methods">Methods (PT)</a></li>
+							<li><a href="/documentacao/pt/inline">InlineQuery (PT)</a></li>
+							<li><a href="/documentacao/en/types">Types (EN)</a></li>
+							<li><a href="/documentacao/en/methods">Methods (EN)</a></li>
+							<li><a href="/documentacao/en/inline">InlineQuery (EN)</a></li>
+							<li><a href="https://core.telegram.org/bots/api">Site Official</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<button class="uk-hidden@s uk-button uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary" uk-icon="more-vertical"> Menu</button>
+		</div>
+	</nav>
+		<div class="uk-hidden-small uk-card uk-card-body uk-card-primary uk-panel">
+			<h3 class="uk-card-title"><span uk-icon="info"></span> Documenta&#xE7;&#xE3;o de Methods</h3>
+			<p>Documenta&#xE7;&#xE3;o de Methods em PT</p>
+		</div>
+	<!--FIXME: Bug in jus-->
+		<br>
+		<div class="uk-container">
+			<article class="uk-margin-auto">
+				<!--
+title: Documentação de Methods
+description: Documentação de Methods em PT
+article: true
+-->
+
+<h1>M&#xE9;todos</h1>
+<ul>
+<li><a href="#getupdates">getUpdates</a></li>
+<li><a href="#setwebhook">setWebhook</a></li>
+<li><a href="#sendmessage">sendMessage</a></li>
+<li><a href="#forwardmessage">forwardMessage</a></li>
+<li><a href="#sendphoto">sendPhoto</a></li>
+<li><a href="#sendaudio">sendAudio</a></li>
+<li><a href="#senddocument">sendDocument</a></li>
+<li><a href="#sendvideo">sendVideo</a></li>
+<li><a href="#sendvoice">sendVoice</a></li>
+<li><a href="#sendvideonote">sendVideoNote</a></li>
+<li><a href="#sendmediagroup">sendMediaGroup</a></li>
+<li><a href="#sendlocation">sendLocation</a></li>
+<li><a href="#editmessagelivelocation">editMessageLiveLocation</a></li>
+<li><a href="#stopmessagelivelocation">stopMessageLiveLocation</a></li>
+<li><a href="#sendvenue">sendVenue</a></li>
+<li><a href="#sendcontact">sendContact</a></li>
+<li><a href="#getuserprofilephotos">getUserProfilePhotos</a></li>
+<li><a href="#getfile">getFile</a></li>
+<li><a href="#kickchatmember">kickChatMember</a></li>
+<li><a href="#unbanchatmember">unbanChatMember</a></li>
+<li><a href="#restrictchatmember">restrictChatMember</a></li>
+<li><a href="#promotechatmember">promoteChatMember</a></li>
+<li><a href="#exportchatinvitelink">exportChatInviteLink</a></li>
+<li><a href="#setchatphoto">setChatPhoto</a></li>
+<li><a href="#deletechatphoto">deleteChatPhoto</a></li>
+<li><a href="#setchattitle">setChatTitle</a></li>
+<li><a href="#setchatdescription">setChatDescription</a></li>
+<li><a href="#pinchatmessage">pinChatMessage</a></li>
+<li><a href="#unpinchatmessage">unpinChatMessage</a></li>
+<li><a href="#leavechat">leaveChat</a></li>
+<li><a href="#getchat">getChat</a></li>
+<li><a href="#getchatadministrators">getChatAdministrators</a></li>
+<li><a href="#getchatmemberscount">getChatMembersCount</a></li>
+<li><a href="#getchatmember">getChatMember</a></li>
+<li><a href="#setchatstickerset">setChatStickerSet</a></li>
+<li><a href="#deletechatstickerset">deleteChatStickerSet</a></li>
+<li><a href="#answercallbackquery">answerCallbackQuery</a></li>
+<li><a href="#editmessagetext">editMessageText</a></li>
+<li><a href="#editmessagecaption">editMessageCaption</a></li>
+<li><a href="#editmessagereplymarkup">editMessageReplyMarkup</a></li>
+<li><a href="#deletemessage">deleteMessage</a></li>
+<li><a href="#sendsticker">sendSticker</a></li>
+<li><a href="#getstickerset">getStickerSet</a></li>
+<li><a href="#uploadstickerfile">uploadStickerFile</a></li>
+<li><a href="#createnewstickerset">createNewStickerSet</a></li>
+<li><a href="#addstickertoset">addStickerToSet</a></li>
+<li><a href="#setstickerpositioninset">setStickerPositionInSet</a></li>
+<li><a href="#deletestickerfromset">deleteStickerFromSet</a></li>
+<li><a href="#answerinlinequery">answerInlineQuery</a></li>
+<li><a href="#sendinvoice">sendInvoice</a></li>
+<li><a href="#answershippingquery">answerShippingQuery</a></li>
+<li><a href="#answerprecheckoutquery">answerPreCheckoutQuery</a></li>
+<li><a href="#sendgame">sendGame</a></li>
+<li><a href="#setgamescore">setGameScore</a></li>
+<li><a href="#getgamehighscores">getGameHighScores</a></li>
+</ul>
+<h2>getUpdates</h2>
+<p>Use este m&#xE9;todo para receber atualiza&#xE7;&#xF5;es atrav&#xE9;s de consulta diretas (pooling). Uma Array (Matriz) de objetos &#xE9; retornado com o &quot;Update&quot;.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>offset</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Identificador da primeira atualiza&#xE7;&#xE3;o a ser retornado. Must be greater by one than the highest among the identifiers of previously received updates. Por padr&#xE3;o, as atualiza&#xE7;&#xF5;es come&#xE7;ando com a mais recente atualiza&#xE7;&#xE3;o n&#xE3;o linda pelo bot, elas s&#xE3;o retornados. An update is considered confirmed as soon as getUpdates is called with an offset higher than its update_id. O offset negativo pode ser especificado para recuperar Updates Iniciando em -offset a partir do final da fila de atualiza&#xE7;&#xF5;es. Todas as atualiza&#xE7;&#xF5;es anteriores ser&#xE3;o esquecidas.</td></tr>
+<tr><td>limit</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Limita o n&#xFA;mero de atualiza&#xE7;&#xF5;es a serem retornadas. Valores entre 1-100 s&#xE3;o aceitos. Padr&#xE3;o &#xE9; 100.</td></tr>
+<tr><td>timeout</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Tempo limite em segundos para a polling. O padr&#xE3;o &#xE9; 0, exemplo habitual de consulta curta. Should be positive, short polling should be used for testing purposes only.</td></tr>
+<tr><td>allowed_updates</td><td>Array de String</td><td>false (Falso)</td><td>Lista os tipos de atualiza&#xE7;&#xF5;es que voc&#xEA; deseja que o seu bot para receba. Por exemplo, especifique [&#x201C;message&#x201D;, &#x201C;edited_channel_post&#x201D;, &#x201C;callback_query&#x201D;] para receber apenas as atualiza&#xE7;&#xF5;es desses tipos. Consulte o Update para obter uma lista completa dos tipos de atualiza&#xE7;&#xE3;o. Especifique uma lista vazia para receber todas as atualiza&#xE7;&#xF5;es independentemente do tipo (padr&#xE3;o). Se n&#xE3;o especificado, a configura&#xE7;&#xE3;o antiga ser&#xE1; usada. Note que esse par&#xE2;metro n&#xE3;o afeta updates criados antes da chamada do getUpdates, portanto updates indesejados podem ser recebidos por um breve per&#xED;odo.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">getUpdates({
+    offset = Integer,
+    limit = Integer,
+    timeout = Integer,
+    allowed_updates = Array of String,
+})
+</code></pre>
+<h2>setWebhook</h2>
+<p>Use this method to specify a url and receive incoming updates via an outgoing webhook. Whenever there is an update for the bot, we will send an HTTPS POST request to the specified url, containing a JSON-serialized Update. In case of an unsuccessful request, we will give up after a reasonable amount of attempts. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>HTTPS url to send updates to. Use an empty string to remove webhook integration</td></tr>
+<tr><td>certificate</td><td>InputFile</td><td>false (Falso)</td><td>Upload your public key certificate so that the root certificate in use can be checked. See our self-signed guide for details.</td></tr>
+<tr><td>max_connections</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100. Padr&#xE3;o &#xE9; 40. Use lower values to limit the load on your bot&#x2018;s server, and higher values to increase your bot&#x2019;s throughput.</td></tr>
+<tr><td>allowed_updates</td><td>Array de String</td><td>false (Falso)</td><td>Lista os tipos de atualiza&#xE7;&#xF5;es que voc&#xEA; deseja que o seu bot para receba. Por exemplo, especifique [&#x201C;message&#x201D;, &#x201C;edited_channel_post&#x201D;, &#x201C;callback_query&#x201D;] para receber apenas as atualiza&#xE7;&#xF5;es desses tipos. Consulte o Update para obter uma lista completa dos tipos de atualiza&#xE7;&#xE3;o. Especifique uma lista vazia para receber todas as atualiza&#xE7;&#xF5;es independentemente do tipo (padr&#xE3;o). Se n&#xE3;o especificado, a configura&#xE7;&#xE3;o antiga ser&#xE1; usada. Note que esse par&#xE2;metro n&#xE3;o afeta updates criados antes da chamada do setWebhook, portanto updates indesejados podem ser recebidos por um breve per&#xED;odo.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">setWebhook({
+    url = String,
+    certificate = InputFile,
+    max_connections = Integer,
+    allowed_updates = Array of String,
+})
+</code></pre>
+<h2>sendMessage</h2>
+<p>Use this method to send text messages. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>text</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Text of the message to be sent</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in your bot&apos;s message.</td></tr>
+<tr><td>disable_web_page_preview</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Disables link previews for links in this message</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup ou ReplyKeyboardMarkup ou ReplyKeyboardRemove ou ForceReply</td><td>false (Falso)</td><td>Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendMessage({
+    chat_id = Integer or String,
+    text = String,
+    parse_mode = String,
+    disable_web_page_preview = Boolean,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply,
+})
+</code></pre>
+<h2>forwardMessage</h2>
+<p>Use this method to forward messages of any kind. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>from_chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the chat where the original message was sent (or channel username in the format @channelusername)</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>message_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Message identifier in the chat specified in from_chat_id</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">forwardMessage({
+    chat_id = Integer or String,
+    from_chat_id = Integer or String,
+    disable_notification = Boolean,
+    message_id = Integer,
+})
+</code></pre>
+<h2>sendPhoto</h2>
+<p>Use este m&#xE9;todo para enviar fotos. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>photo</td><td>InputFile ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a photo from the Internet, or upload a new photo using multipart/form-data. More info on Sending Files &#xBB;</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Photo caption (may also be used when resending photos by file_id), 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda do GIF.</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup ou ReplyKeyboardMarkup ou ReplyKeyboardRemove ou ForceReply</td><td>false (Falso)</td><td>Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendPhoto({
+    chat_id = Integer or String,
+    photo = InputFile or String,
+    caption = String,
+    parse_mode = String,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply,
+})
+</code></pre>
+<h2>sendAudio</h2>
+<p>Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>audio</td><td>InputFile ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Audio file to send. Pass a file_id as String to send an audio file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an audio file from the Internet, or upload a new one using multipart/form-data. More info on Sending Files &#xBB;</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Audio caption, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>duration</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Duration of the audio in seconds</td></tr>
+<tr><td>performer</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Artista</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Track name</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup ou ReplyKeyboardMarkup ou ReplyKeyboardRemove ou ForceReply</td><td>false (Falso)</td><td>Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendAudio({
+    chat_id = Integer or String,
+    audio = InputFile or String,
+    caption = String,
+    parse_mode = String,
+    duration = Integer,
+    performer = String,
+    title = String,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply,
+})
+</code></pre>
+<h2>sendDocument</h2>
+<p>Use this method to send general files. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada. Bots can currently send files of any type of up to 50 MB in size, this limit may be changed in the future.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>document</td><td>InputFile ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>File to send. Pass a file_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. More info on Sending Files &#xBB;</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Document caption (may also be used when resending documents by file_id), 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda do GIF.</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup ou ReplyKeyboardMarkup ou ReplyKeyboardRemove ou ForceReply</td><td>false (Falso)</td><td>Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendDocument({
+    chat_id = Integer or String,
+    document = InputFile or String,
+    caption = String,
+    parse_mode = String,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply,
+})
+</code></pre>
+<h2>sendVideo</h2>
+<p>Use this method to send video files, Telegram clients support mp4 videos (other formats may be sent as Document). Em caso de sucesso, a mensagem enviada ser&#xE1; retornada. Bots can currently send video files of up to 50 MB in size, this limit may be changed in the future.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>video</td><td>InputFile ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Video to send. Pass a file_id as String to send a video that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a video from the Internet, or upload a new video using multipart/form-data. More info on Sending Files &#xBB;</td></tr>
+<tr><td>duration</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Duration of sent video in seconds</td></tr>
+<tr><td>width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura do v&#xED;deo</td></tr>
+<tr><td>height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura do v&#xED;deo</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Video caption (may also be used when resending videos by file_id), 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>supports_streaming</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the uploaded video is suitable for streaming</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup ou ReplyKeyboardMarkup ou ReplyKeyboardRemove ou ForceReply</td><td>false (Falso)</td><td>Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendVideo({
+    chat_id = Integer or String,
+    video = InputFile or String,
+    duration = Integer,
+    width = Integer,
+    height = Integer,
+    caption = String,
+    parse_mode = String,
+    supports_streaming = Boolean,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply,
+})
+</code></pre>
+<h2>sendVoice</h2>
+<p>Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as Audio or Document). Em caso de sucesso, a mensagem enviada ser&#xE1; retornada. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>voice</td><td>InputFile ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Audio file to send. Pass a file_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. More info on Sending Files &#xBB;</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Voice message caption, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>duration</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Duration of the voice message in seconds</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup ou ReplyKeyboardMarkup ou ReplyKeyboardRemove ou ForceReply</td><td>false (Falso)</td><td>Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendVoice({
+    chat_id = Integer or String,
+    voice = InputFile or String,
+    caption = String,
+    parse_mode = String,
+    duration = Integer,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply,
+})
+</code></pre>
+<h2>sendVideoNote</h2>
+<p>As of v.4.0, Telegram clients support rounded square mp4 videos of up to 1 minute long. Use this method to send video messages. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>video_note</td><td>InputFile ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Video note to send. Pass a file_id as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data. More info on Sending Files &#xBB;. Sending video notes by a URL is currently unsupported</td></tr>
+<tr><td>duration</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Duration of sent video in seconds</td></tr>
+<tr><td>lenght</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Video width and height</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup ou ReplyKeyboardMarkup ou ReplyKeyboardRemove ou ForceReply</td><td>false (Falso)</td><td>Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendVideoNote({
+    chat_id = Integer or String,
+    video_note = InputFile or String,
+    duration = Integer,
+    length = Integer,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply,
+})
+</code></pre>
+<h2>sendMediaGroup</h2>
+<p>Use this method to send a group of photos or videos as an album. On success, an array of the sent Messages is returned.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>media</td><td>Array of InputMedia</td><td>true (Verdadeiro)</td><td>A JSON-serialized array describing photos and videos to be sent, must include 2&#x2013;10 items</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Sends the messages silently. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the messages are a reply, ID of the original message</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendMediaGroup({
+    chat_id = Integer or String,
+    media = Array of InputMedia,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+})
+</code></pre>
+<h2>sendLocation</h2>
+<p>Use this method to send point on the map. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>latitude</td><td>Float n&#xFA;mero</td><td>true (Verdadeiro)</td><td>Latitude of the location</td></tr>
+<tr><td>longitude</td><td>Float n&#xFA;mero</td><td>true (Verdadeiro)</td><td>Longitude of the location</td></tr>
+<tr><td>live_period</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Period in seconds for which the location will be updated (see Live Locations, should be between 60 and 86400.</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup ou ReplyKeyboardMarkup ou ReplyKeyboardRemove ou ForceReply</td><td>false (Falso)</td><td>Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendLocation({
+    chat_id = Integer or String,
+    latitude = Float number,
+    longitude = Float number,
+    live_period = Integer,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply,
+})
+</code></pre>
+<h2>editMessageLiveLocation</h2>
+<p>Use this method to edit live location messages sent by the bot or via the bot (for inline bots). A location can be edited until its live_period expires or editing is explicitly disabled by a call to stopMessageLiveLocation. On success, if the edited message was sent by the bot, the edited Message is returned, otherwise True is returned.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Identifier of the sent message</td></tr>
+<tr><td>inline_message_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if chat_id and message_id are not specified. Identifier of the inline message</td></tr>
+<tr><td>latitude</td><td>Float n&#xFA;mero</td><td>true (Verdadeiro)</td><td>Latitude of new location</td></tr>
+<tr><td>longitude</td><td>Float n&#xFA;mero</td><td>true (Verdadeiro)</td><td>Longitude of new location</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>A JSON-serialized object for a new inline keyboard.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">editMessageLiveLocation({
+    chat_id = Integer or String,
+    message_id = Integer,
+    inline_message_id = String,
+    latitude = Float number,
+    longitude = Float number,
+    reply_markup = InlineKeyboardMarkup,
+})
+</code></pre>
+<h2>stopMessageLiveLocation</h2>
+<p>Use this method to stop updating a live location message sent by the bot or via the bot (for inline bots) before live_period expires. On success, if the message was sent by the bot, the sent Message is returned, otherwise True is returned.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Identifier of the sent message</td></tr>
+<tr><td>inline_message_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if chat_id and message_id are not specified. Identifier of the inline message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>A JSON-serialized object for a new inline keyboard.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">stopMessageLiveLocation({
+    chat_id = Integer ou String,
+    message_id = Integer,
+    inline_message_id = String,
+    reply_markup = InlineKeyboardMarkup,
+})
+</code></pre>
+<h2>sendVenue</h2>
+<p>Use this method to send information about a venue. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>latitude</td><td>Float n&#xFA;mero</td><td>true (Verdadeiro)</td><td>Latitude of the venue</td></tr>
+<tr><td>longitude</td><td>Float n&#xFA;mero</td><td>true (Verdadeiro)</td><td>Longitude of the venue</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Name of the venue</td></tr>
+<tr><td>address</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Address of the venue</td></tr>
+<tr><td>foursquare_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Foursquare identifier of the venue</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup ou ReplyKeyboardMarkup ou ReplyKeyboardRemove ou ForceReply</td><td>false (Falso)</td><td>Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendVenue({
+    chat_id = Integer or String,
+    latitude = Float number,
+    longitude = Float number,
+    title = String,
+    address = String,
+    foursquare_id = String,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply,
+})
+</code></pre>
+<h2>sendContact</h2>
+<p>Use this method to send phone contacts. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>phone_number</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>N&#xFA;mero de telefone do contato</td></tr>
+<tr><td>first_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Primeiro nome do contato</td></tr>
+<tr><td>last_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&#xDA;ltimo nome do contato</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup ou ReplyKeyboardMarkup ou ReplyKeyboardRemove ou ForceReply</td><td>false (Falso)</td><td>Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove keyboard or to force a reply from the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendContact({
+    chat_id = Integer or String,
+    phone_number = String,
+    first_name = String,
+    last_name = String,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply,
+})
+</code></pre>
+<h2>getUserProfilePhotos</h2>
+<p>Use this method to get a list of profile pictures for a user. Returns a UserProfilePhotos object.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Unique identifier of the target user</td></tr>
+<tr><td>offset</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Sequential number of the first photo to be returned. By default, all photos are returned.</td></tr>
+<tr><td>limit</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Limits the number of photos to be retrieved. Valores entre 1-100 s&#xE3;o aceitos. Padr&#xE3;o &#xE9; 100.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">getUserProfilePhotos({
+    user_id = Integer,
+    offset = Integer,
+    limit = Integer,
+})
+</code></pre>
+<h2>getFile</h2>
+<p>Use this method to get basic info about a file and prepare it for downloading. For the moment, bots can download files of up to 20MB in size. On success, a File object is returned. The file can then be downloaded via the link <a href="https://api.telegram.org/file/bot">https://api.telegram.org/file/bot</a><token>/<file_path>, where <file_path> is taken from the response. It is guaranteed that the link will be valid for at least 1 hour. When the link expires, a new one can be requested by calling getFile again.</file_path></file_path></token></p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>File identifier to get info about</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">getFile({
+    file_id = String,
+})
+</code></pre>
+<h2>kickChatMember</h2>
+<p>Use this method to kick a user from a group, a supergroup or a channel. In the case of supergroups and channels, the user will not be able to return to the group on their own using invite links, etc., unless unbanned first. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target group or username of the target supergroup or channel (in the format @channelusername)</td></tr>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Unique identifier of the target user</td></tr>
+<tr><td>until_date</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Date when the user will be unbanned, unix time. If user is banned for more than 366 days or less than 30 seconds from the current time they are considered to be banned forever</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">kickChatMember({
+    chat_id = Integer or String,
+    user_id = Integer,
+    until_date = Integer,
+})
+</code></pre>
+<h2>unbanChatMember</h2>
+<p>Use this method to unban a previously kicked user in a supergroup or channel. The user will not return to the group or channel automatically, but will be able to join via link, etc. The bot must be an administrator for this to work. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target group or username of the target supergroup or channel (in the format @username)</td></tr>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Unique identifier of the target user</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">unbanChatMember({
+    chat_id = Integer or String,
+    user_id = Integer,
+})
+</code></pre>
+<h2>restrictChatMember</h2>
+<p>Use this method to restrict a user in a supergroup. The bot must be an administrator in the supergroup for this to work and must have the appropriate admin rights. Pass True for all boolean parameters to lift restrictions from a user. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)</td></tr>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Unique identifier of the target user</td></tr>
+<tr><td>until_date</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Date when restrictions will be lifted for the user, unix time. If user is restricted for more than 366 days or less than 30 seconds from the current time, they are considered to be restricted forever</td></tr>
+<tr><td>can_send_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the user can send text messages, contacts, locations and venues</td></tr>
+<tr><td>can_send_media_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the user can send audios, documents, photos, videos, video notes and voice notes, implies can_send_messages</td></tr>
+<tr><td>can_send_other_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the user can send animations, games, stickers and use inline bots, implies can_send_media_messages</td></tr>
+<tr><td>can_add_web_page_previews</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the user may add web page previews to their messages, implies can_send_media_messages</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">restrictChatMember({
+    chat_id = Integer or String,
+    user_id = Integer,
+    until_date = Integer,
+    can_send_messages = Boolean,
+    can_send_media_messages = Boolean,
+    can_send_other_messages = Boolean,
+    can_add_web_page_previews = Boolean,
+})
+</code></pre>
+<h2>promoteChatMember</h2>
+<p>Use this method to promote or demote a user in a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Pass False for all boolean parameters to demote a user. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Unique identifier of the target user</td></tr>
+<tr><td>can_change_info</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the administrator can change chat title, photo and other settings</td></tr>
+<tr><td>can_post_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the administrator can create channel posts, channels only</td></tr>
+<tr><td>can_edit_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the administrator can edit messages of other users and can pin messages, channels only</td></tr>
+<tr><td>can_delete_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the administrator can delete messages of other users</td></tr>
+<tr><td>can_invite_users</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the administrator can invite new users to the chat</td></tr>
+<tr><td>can_restrict_members</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the administrator can restrict, ban or unban chat members</td></tr>
+<tr><td>can_pin_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the administrator can pin messages, supergroups only</td></tr>
+<tr><td>can_promote_members</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the administrator can add new administrators with a subset of his own privileges or demote administrators that he has promoted, directly or indirectly (promoted by administrators that were appointed by him)</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">promoteChatMember({
+    chat_id = Integer or String,
+    user_id = Integer,
+    can_change_info = Boolean,
+    can_post_messages = Boolean,
+    can_edit_messages = Boolean,
+    can_delete_messages = Boolean,
+    can_invite_users = Boolean,
+    can_restrict_members = Boolean,
+    can_pin_messages = Boolean,
+    can_promote_members = Boolean,
+})
+</code></pre>
+<h2>exportChatInviteLink</h2>
+<p>Use this method to generate a new invite link for a chat; any previously generated link is revoked. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns the new invite link as String on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">exportChatInviteLink({
+    chat_id = Integer or String,
+})
+</code></pre>
+<h2>setChatPhoto</h2>
+<p>Use this method to set a new profile photo for the chat. Photos can&apos;t be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>photo</td><td>InputFile</td><td>true (Verdadeiro)</td><td>New chat photo, uploaded using multipart/form-data</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">setChatPhoto({
+    chat_id = Integer or String,
+    photo = InputFile,
+})
+</code></pre>
+<h2>deleteChatPhoto</h2>
+<p>Use this method to delete a chat photo. Photos can&apos;t be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">deleteChatPhoto({
+    chat_id = Integer or String,
+})
+</code></pre>
+<h2>setChatTitle</h2>
+<p>Use this method to change the title of a chat. Titles can&apos;t be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>New chat title, 1-255 characters</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">setChatTitle({
+    chat_id = Integer or String,
+    title = String,
+})
+</code></pre>
+<h2>setChatDescription</h2>
+<p>Use this method to change the description of a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Nova descri&#xE7;&#xE3;o do chat, 0-255 caracteres</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">setChatDescription({
+    chat_id = Integer or String,
+    description = String,
+})
+</code></pre>
+<h2>pinChatMessage</h2>
+<p>Use this method to pin a message in a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the &#x2018;can_pin_messages&#x2019; admin right in the supergroup or &#x2018;can_edit_messages&#x2019; admin right in the channel. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>message_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Identificador de uma mensagem fixada</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if it is not necessary to send a notification to all chat members about the new pinned message. Notifications are always disabled in channels.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">pinChatMessage({
+    chat_id = Integer or String,
+    message_id = Integer,
+    disable_notification = Boolean,
+})
+</code></pre>
+<h2>unpinChatMessage</h2>
+<p>Use this method to unpin a message in a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the &#x2018;can_pin_messages&#x2019; admin right in the supergroup or &#x2018;can_edit_messages&#x2019; admin right in the channel. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">unpinChatMessage({
+    chat_id = Integer or String,
+})
+</code></pre>
+<h2>leaveChat</h2>
+<p>Use this method for your bot to leave a group, supergroup or channel. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername)</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">leaveChat({
+    chat_id = Integer or String,
+})
+</code></pre>
+<h2>getChat</h2>
+<p>Use this method to get up to date information about the chat (current name of the user for one-on-one conversations, current username of a user, group or channel, etc.). Returns a Chat object on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername)</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">getChat({
+    chat_id = Integer or String,
+})
+</code></pre>
+<h2>getChatAdministrators</h2>
+<p>Use this method to get a list of administrators in a chat. On success, returns an Array of ChatMember objects that contains information about all chat administrators except other bots. If the chat is a group or a supergroup and no administrators were appointed, only the creator will be returned.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername)</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">getChatAdministrators({
+    chat_id = Integer or String,
+})
+</code></pre>
+<h2>getChatMembersCount</h2>
+<p>Use this method to get the number of members in a chat. Returns Int on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername)</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">getChatMembersCount({
+    chat_id = Integer or String,
+})
+</code></pre>
+<h2>getChatMember</h2>
+<p>Use this method to get information about a member of a chat. Returns a ChatMember object on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername)</td></tr>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Unique identifier of the target user</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">getChatMember({
+    chat_id = Integer or String,
+    user_id = Integer,
+})
+</code></pre>
+<h2>setChatStickerSet</h2>
+<p>Use this method to set a new group sticker set for a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field can_set_sticker_set optionally returned in getChat requests to check if the bot can use this method. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)</td></tr>
+<tr><td>sticker_set_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Name of the sticker set to be set as the group sticker set</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">setChatStickerSet({
+    chat_id = Integer or String,
+    sticker_set_name = String,
+})
+</code></pre>
+<h2>deleteChatStickerSet</h2>
+<p>Use this method to delete a group sticker set from a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Use the field can_set_sticker_set optionally returned in getChat requests to check if the bot can use this method. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">deleteChatStickerSet({
+    chat_id = Integer or String,
+})
+</code></pre>
+<h2>answerCallbackQuery</h2>
+<p>Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, True is returned.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>callback_query_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the query to be answered</td></tr>
+<tr><td>text</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters</td></tr>
+<tr><td>show_alert</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>If true, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to false.</td></tr>
+<tr><td>url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>URL that will be opened by the user&apos;s client. If you have created a Game and accepted the conditions via @Botfather, specify the URL that opens your game &#x2013; note that this will only work if the query comes from a callback_game button.Otherwise, you may use links like <a href="http://t.me/your_bot?start=XXXX">t.me/your_bot?start=XXXX</a> that open your bot with a parameter.</td></tr>
+<tr><td>cache_time</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>The maximum amount of time in seconds that the result of the callback query may be cached client-side. Telegram apps will support caching starting in version 3.14. Padr&#xE3;o &#xE9; 0.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">answerCallbackQuery({
+    callback_query_id = String,
+    text = String,
+    show_alert = Boolean,
+    url = String,
+    cache_time = Integer,
+})
+</code></pre>
+<h2>editMessageText</h2>
+<p>Use this method to edit text and game messages sent by the bot or via the bot (for inline bots). On success, if edited message is sent by the bot, the edited Message is returned, otherwise True is returned.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Identifier of the sent message</td></tr>
+<tr><td>inline_message_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if chat_id and message_id are not specified. Identifier of the inline message</td></tr>
+<tr><td>text</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>New text of the message</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in your bot&apos;s message.</td></tr>
+<tr><td>disable_web_page_preview</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Disables link previews for links in this message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>A JSON-serialized object for an inline keyboard.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">editMessageText({
+    chat_id = Integer or String,
+    message_id = Integer,
+    inline_message_id = String,
+    text = String,
+    parse_mode = String,
+    disable_web_page_preview = Boolean,
+    reply_markup = InlineKeyboardMarkup,
+})
+</code></pre>
+<h2>editMessageCaption</h2>
+<p>Use this method to edit captions of messages sent by the bot or via the bot (for inline bots). On success, if edited message is sent by the bot, the edited Message is returned, otherwise True is returned.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Identifier of the sent message</td></tr>
+<tr><td>inline_message_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if chat_id and message_id are not specified. Identifier of the inline message</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>New caption of the message</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda do GIF.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>A JSON-serialized object for an inline keyboard.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">editMessageCaption({
+    chat_id = Integer or String,
+    message_id = Integer,
+    inline_message_id = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+})
+</code></pre>
+<h2>editMessageReplyMarkup</h2>
+<p>Use this method to edit only the reply markup of messages sent by the bot or via the bot (for inline bots). On success, if edited message is sent by the bot, the edited Message is returned, otherwise True is returned.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Identifier of the sent message</td></tr>
+<tr><td>inline_message_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if chat_id and message_id are not specified. Identifier of the inline message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>A JSON-serialized object for an inline keyboard.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">editMessageReplyMarkup({
+    chat_id = Integer or String,
+    message_id = Integer,
+    inline_message_id = String,
+    reply_markup = InlineKeyboardMarkup,
+})
+</code></pre>
+<h2>deleteMessage</h2>
+<p>Use this method to delete a message, including service messages, with the following limitations:- A message can only be deleted if it was sent less than 48 hours ago.- Bots can delete outgoing messages in groups and supergroups.- Bots granted can_post_messages permissions can delete outgoing messages in channels.- If the bot is an administrator of a group, it can delete any message there.- If the bot has can_delete_messages permission in a supergroup or a channel, it can delete any message there.Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>message_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Identifier of the message to delete</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">deleteMessage({
+    chat_id = Integer or String,
+    message_id = Integer,
+})
+</code></pre>
+<h2>sendSticker</h2>
+<p>Use this method to send .webp stickers. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Interger (N&#xFA;mero) ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat or username of the target channel (in the format @channelusername)</td></tr>
+<tr><td>sticker</td><td>InputFile ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Sticker to send. Pass a file_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a .webp file from the Internet, or upload a new one using multipart/form-data. More info on Sending Files &#xBB;</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup ou ReplyKeyboardMarkup ou ReplyKeyboardRemove ou ForceReply</td><td>false (Falso)</td><td>Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendSticker({
+    chat_id = Integer or String,
+    sticker = InputFile or String,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup or ReplyKeyboardMarkup or ReplyKeyboardRemove or ForceReply,
+})
+</code></pre>
+<h2>getStickerSet</h2>
+<p>Use this method to get a sticker set. On success, a StickerSet object is returned.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Name of the sticker set</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">getStickerSet({
+    name = String,
+})
+</code></pre>
+<h2>uploadStickerFile</h2>
+<p>Use this method to upload a .png file with a sticker for later use in createNewStickerSet and addStickerToSet methods (can be used multiple times). Returns the uploaded File on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>User identifier of sticker file owner</td></tr>
+<tr><td>png_sticker</td><td>InputFile</td><td>true (Verdadeiro)</td><td>Png image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. More info on Sending Files &#xBB;</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">uploadStickerFile({
+    user_id = Integer,
+    png_sticker = InputFile,
+})
+</code></pre>
+<h2>createNewStickerSet</h2>
+<p>Use this method to create new sticker set owned by a user. The bot will be able to edit the created sticker set. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>User identifier of created sticker set owner</td></tr>
+<tr><td>name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Short name of sticker set, to be used in t.me/addstickers/ URLs (e.g., animals). Can contain only english letters, digits and underscores. Must begin with a letter, can&apos;t contain consecutive underscores and must end in &#x201C;<em>by</em><bot username="">&#x201D;. <bot_username> is case insensitive. 1-64 characters.</bot_username></bot></td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Sticker set title, 1-64 characters</td></tr>
+<tr><td>png_sticker</td><td>InputFile ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Png image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a file_id as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. More info on Sending Files &#xBB;</td></tr>
+<tr><td>emojis</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>One or more emoji corresponding to the sticker</td></tr>
+<tr><td>contains_masks</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if a set of mask stickers should be created</td></tr>
+<tr><td>mask_position</td><td>MaskPosition</td><td>false (Falso)</td><td>A JSON-serialized object for position where the mask should be placed on faces</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">createNewStickerSet({
+    user_id = Integer,
+    name = String,
+    title = String,
+    png_sticker = InputFile or String,
+    emojis = String,
+    contains_masks = Boolean,
+    mask_position = MaskPosition,
+})
+</code></pre>
+<h2>addStickerToSet</h2>
+<p>Use this method to add a new sticker to a set created by the bot. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>User identifier of sticker set owner</td></tr>
+<tr><td>name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Sticker set name</td></tr>
+<tr><td>png_sticker</td><td>InputFile ou String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Png image with the sticker, must be up to 512 kilobytes in size, dimensions must not exceed 512px, and either width or height must be exactly 512px. Pass a file_id as a String to send a file that already exists on the Telegram servers, pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. More info on Sending Files &#xBB;</td></tr>
+<tr><td>emojis</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>One or more emoji corresponding to the sticker</td></tr>
+<tr><td>mask_position</td><td>MaskPosition</td><td>false (Falso)</td><td>A JSON-serialized object for position where the mask should be placed on faces</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">addStickerToSet({
+    user_id = Integer,
+    name = String,
+    png_sticker = InputFile or String,
+    emojis = String,
+    mask_position = MaskPosition,
+})
+</code></pre>
+<h2>setStickerPositionInSet</h2>
+<p>Use this method to move a sticker in a set created by the bot to a specific position . Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>sticker</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>File identifier of the sticker</td></tr>
+<tr><td>position</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>New sticker position in the set, zero-based</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">setStickerPositionInSet({
+    sticker = String,
+    position = Integer,
+})
+</code></pre>
+<h2>deleteStickerFromSet</h2>
+<p>Use this method to delete a sticker from a set created by the bot. Returns True on success.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>sticker</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>File identifier of the sticker</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">deleteStickerFromSet({
+    sticker = String,
+})
+</code></pre>
+<h2>answerInlineQuery</h2>
+<p>Use this method to send answers to an inline query. On success, True is returned.No more than 50 results per query are allowed.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>inline_query_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the answered query</td></tr>
+<tr><td>results</td><td>Array of InlineQueryResult</td><td>true (Verdadeiro)</td><td>A JSON-serialized array of results for the inline query</td></tr>
+<tr><td>cache_time</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>The maximum amount of time in seconds that the result of the inline query may be cached on the server. Padr&#xE3;o &#xE9; 300.</td></tr>
+<tr><td>is_personal</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if results may be cached on the server side only for the user that sent the query. By default, results may be returned to any user who sends the same query</td></tr>
+<tr><td>next_offset</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Pass the offset that a client should send in the next query with the same text to receive more results. Pass an empty string if there are no more results or if you don&#x2018;t support pagination. Offset length can&#x2019;t exceed 64 bytes.</td></tr>
+<tr><td>switch_pm_text</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>If passed, clients will display a button with specified text that switches the user to a private chat with the bot and sends the bot a start message with the parameter switch_pm_parameter</td></tr>
+<tr><td>switch_pm_parameter</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Deep-linking parameter for the /start message sent to the bot when user presses the switch button. 1-64 characters, only A-Z, a-z, 0-9, _ and - are allowed.Example: An inline bot that sends YouTube videos can ask the user to connect the bot to their YouTube account to adapt search results accordingly. To do this, it displays a &#x2018;Connect your YouTube account&#x2019; button above the results, or even before showing any. The user presses the button, switches to a private chat with the bot and, in doing so, passes a start parameter that instructs the bot to return an oauth link. Once done, the bot can offer a switch_inline button so that the user can easily return to the chat where they wanted to use the bot&apos;s inline capabilities.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">answerInlineQuery({
+    inline_query_id = String,
+    results = Array of InlineQueryResult,
+    cache_time = Integer,
+    is_personal = Boolean,
+    next_offset = String,
+    switch_pm_text = String,
+    switch_pm_parameter = String,
+})
+</code></pre>
+<h2>sendInvoice</h2>
+<p>Use this method to send invoices. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target private chat</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Product name, 1-32 characters</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Product description, 1-255 characters</td></tr>
+<tr><td>payload</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user, use for your internal processes.</td></tr>
+<tr><td>provider_token</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Payments provider token, obtained via Botfather</td></tr>
+<tr><td>start_parameter</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique deep-linking parameter that can be used to generate this invoice when used as a start parameter</td></tr>
+<tr><td>currency</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Three-letter ISO 4217 currency code, see more on currencies</td></tr>
+<tr><td>prices</td><td>Array of LabeledPrice</td><td>true (Verdadeiro)</td><td>Price breakdown, a list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)</td></tr>
+<tr><td>provider_data</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>JSON-encoded data about the invoice, which will be shared with the payment provider. A detailed description of required fields should be provided by the payment provider.</td></tr>
+<tr><td>photo_url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>URL of the product photo for the invoice. Can be a photo of the goods or a marketing image for a service. People like it better when they see what they are paying for.</td></tr>
+<tr><td>photo_size</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Photo size</td></tr>
+<tr><td>photo_width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura da foto</td></tr>
+<tr><td>photo_height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura da foto</td></tr>
+<tr><td>need_name</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if you require the user&apos;s full name to complete the order</td></tr>
+<tr><td>need_phone_number</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if you require the user&apos;s phone number to complete the order</td></tr>
+<tr><td>need_email</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if you require the user&apos;s email address to complete the order</td></tr>
+<tr><td>need_shipping_address</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if you require the user&apos;s shipping address to complete the order</td></tr>
+<tr><td>send_phone_number_to_provider</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if user&apos;s phone number should be sent to provider</td></tr>
+<tr><td>send_email_to_provider</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if user&apos;s email address should be sent to provider</td></tr>
+<tr><td>is_flexible</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the final price depends on the shipping method</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>A JSON-serialized object for an inline keyboard. If empty, one &apos;Pay total price&apos; button will be shown. If not empty, the first button must be a Pay button.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendInvoice({
+    chat_id = Integer,
+    title = String,
+    description = String,
+    payload = String,
+    provider_token = String,
+    start_parameter = String,
+    currency = String,
+    prices = Array of LabeledPrice,
+    provider_data = String,
+    photo_url = String,
+    photo_size = Integer,
+    photo_width = Integer,
+    photo_height = Integer,
+    need_name = Boolean,
+    need_phone_number = Boolean,
+    need_email = Boolean,
+    need_shipping_address = Boolean,
+    send_phone_number_to_provider = Boolean,
+    send_email_to_provider = Boolean,
+    is_flexible = Boolean,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup,
+})
+</code></pre>
+<h2>answerShippingQuery</h2>
+<p>If you sent an invoice requesting a shipping address and the parameter is_flexible was specified, the Bot API will send an Update with a shipping_query field to the bot. Use this method to reply to shipping queries. On success, True is returned.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>shipping_query_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the query to be answered</td></tr>
+<tr><td>ok</td><td>Boolen (Boleano)</td><td>true (Verdadeiro)</td><td>Specify True if delivery to the specified address is possible and False if there are any problems (for example, if delivery to the specified address is not possible)</td></tr>
+<tr><td>shipping_options</td><td>Array of ShippingOption</td><td>false (Falso)</td><td>Required if ok is True. A JSON-serialized array of available shipping options.</td></tr>
+<tr><td>error_message</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if ok is False. Error message in human readable form that explains why it is impossible to complete the order (e.g. &quot;Sorry, delivery to your desired address is unavailable&apos;). Telegram will display this message to the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">answerShippingQuery({
+    shipping_query_id = String,
+    ok = Boolean,
+    shipping_options = Array of ShippingOption,
+    error_message = String,
+})
+</code></pre>
+<h2>answerPreCheckoutQuery</h2>
+<p>Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an Update with the field pre_checkout_query. Use this method to respond to such pre-checkout queries. On success, True is returned. Note: The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>pre_checkout_query_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for the query to be answered</td></tr>
+<tr><td>ok</td><td>Boolen (Boleano)</td><td>true (Verdadeiro)</td><td>Specify True if everything is alright (goods are available, etc.) and the bot is ready to proceed with the order. Use False if there are any problems.</td></tr>
+<tr><td>error_message</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if ok is False. Error message in human readable form that explains the reason for failure to proceed with the checkout (e.g. &quot;Sorry, somebody just bought the last of our amazing black T-shirts while you were busy filling out your payment details. Please choose a different color or garment!&quot;). Telegram will display this message to the user.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">answerPreCheckoutQuery({
+    pre_checkout_query_id = String,
+    ok = Boolean,
+    error_message = String,
+})
+</code></pre>
+<h2>sendGame</h2>
+<p>Use este m&#xE9;todo para enviar um jogo. Em caso de sucesso, a mensagem enviada ser&#xE1; retornada.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>chat_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Unique identifier for the target chat</td></tr>
+<tr><td>game_short_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Short name of the game, serves as the unique identifier for the game. Set up your games via Botfather.</td></tr>
+<tr><td>disable_notification</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Envia uma mensagem silenciosamente. Os usu&#xE1;rios n&#xE3;o receber&#xE3;o uma notifica&#xE7;&#xE3;o em som.</td></tr>
+<tr><td>reply_to_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>If the message is a reply, ID of the original message</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false (Falso)</td><td>A JSON-serialized object for an inline keyboard. If empty, one &#x2018;Play game_title&#x2019; button will be shown. If not empty, the first button must launch the game.</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">sendGame({
+    chat_id = Integer,
+    game_short_name = String,
+    disable_notification = Boolean,
+    reply_to_message_id = Integer,
+    reply_markup = InlineKeyboardMarkup,
+})
+</code></pre>
+<h2>setGameScore</h2>
+<p>Use this method to set the score of the specified user in a game. On success, if the message was sent by the bot, returns the edited Message, otherwise returns True. Returns an error, if the new score is not greater than the user&apos;s current score in the chat and force is False.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>User identifier</td></tr>
+<tr><td>score</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>New score, must be non-negative</td></tr>
+<tr><td>force</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the high score is allowed to decrease. This can be useful when fixing mistakes or banning cheaters</td></tr>
+<tr><td>disable_edit_message</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the game message should not be automatically edited to include the current scoreboard</td></tr>
+<tr><td>chat_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Unique identifier for the target chat</td></tr>
+<tr><td>message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Identifier of the sent message</td></tr>
+<tr><td>inline_message_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if chat_id and message_id are not specified. Identifier of the inline message</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">setGameScore({
+    user_id = Integer,
+    score = Integer,
+    force = Boolean,
+    disable_edit_message = Boolean,
+    chat_id = Integer,
+    message_id = Integer,
+    inline_message_id = String,
+})
+</code></pre>
+<h2>getGameHighScores</h2>
+<p>Use this method to get data for high score tables. Will return the score of the specified user and several of his neighbors in a game. On success, returns an Array of GameHighScore objects.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Usu&#xE1;rio do destino, seu user_id</td></tr>
+<tr><td>chat_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Unique identifier for the target chat</td></tr>
+<tr><td>message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Required if inline_message_id is not specified. Identifier of the sent message</td></tr>
+<tr><td>inline_message_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Required if chat_id and message_id are not specified. Identifier of the inline message</td></tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<pre><code class="lang-javascript">getGameHighScores({
+    user_id = Integer,
+    chat_id = Integer,
+    message_id = Integer,
+    inline_message_id = String,
+})
+</code></pre>
+
+
+			</article>
+		</div>
+	<footer>
+		<div class="uk-card uk-card-secondary uk-card-body">
+			<label class="uk-align-center uk-text-center">
+				<small>
+					<span uk-icon="github"></span> Projetos totalmente Open Source, veja nosso <a href="https://github.com/DesenvolvimentoDeBots" target="_blank">GitHub</a>.
+					<br><span uk-icon="code"></span> com <span uk-icon="heart"></span> pelos <a href="https://telegram.me/DesenvolvimentoDeBots" target="_blank">membros do grupo</a>.
+					<br>Construido usado <a href="https://jus.js.org" target="_blank">Jus</a> e <a href="https://getuikit.com" target="_blank">UiKit</a>
+					<br>Hospedado em <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+				</small>
+			</label>
+		</div>
+	</footer>
+
+	<div class="uk-offcanvas-content">
+		<div id="offcanvas-nav-primary" uk-offcanvas="overlay: false">
+			<div class="uk-offcanvas-bar uk-flex uk-flex-column">
+				<ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+					<a href="/">
+						<img src="/images/logo.png" class="logo-mobile uk-margin-small-right">
+						<label>Desenvolvimento De Bots</label>
+					</a>
+					<hr class="uk-divider-icon">
+					<li><a href="/projetos">Projetos da Comunidade</a></li>
+					<li><a href="/materiais">Materiais de Apoio</a></li>
+					<li><a href="/documentacao">Documenta&#xE7;&#xE3;o</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="/js/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>

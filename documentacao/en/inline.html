@@ -1,0 +1,779 @@
+<html>
+
+<head>
+	<title>Documentation of InlineQuery</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Documentation of InlineQuery in EN">
+	<meta name="keywords" content="Documentation of InlineQuery">
+
+	<meta property="og:title" content="Documentation of InlineQuery">
+	<meta property="og:url" content="http://DesenvolvimentoDeBots.github.io/documentacao/en/inline">
+	<meta property="og:site_name" content="Documentation of InlineQuery">
+	<meta property="og:description" content="Documentation of InlineQuery in EN">
+	<meta name="twitter:title" content="Documentation of InlineQuery">
+	<meta name="twitter:url" content="http://DesenvolvimentoDeBots.github.io/documentacao/en/inline">
+
+	<!--<link rel="shortcut icon" href="/images/favicon.ico">-->
+	<link rel="stylesheet" href="/uikit-3.0.0-beta.40/css/uikit.min.css">
+	<link rel="stylesheet" href="/css/theme.css">
+	<link rel="stylesheet" href="/css/reset.css">
+	<script src="/uikit-3.0.0-beta.40/js/uikit.min.js"></script>
+	<script src="/uikit-3.0.0-beta.40/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+	<nav class="uk-navbar-container menu" uk-navbar="">
+		<div class="uk-navbar-left">
+			<ul class="uk-navbar-nav">
+				<li class="uk-active">
+					<a href="/">
+						<img src="/images/logo.png" class="logo uk-margin-small-right">
+						<label class="uk-visible@s">Desenvolvimento De Bots</label>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="uk-navbar-right">
+			<ul class="uk-navbar-nav uk-visible@s">
+				<li><a href="/projetos">Projetos da Comunidade</a></li>
+				<li><a href="/materiais">Materiais de Apoio</a></li>
+				<li>
+					<a href="/documentacao">Documenta&#xE7;&#xE3;o</a>
+					<div class="uk-navbar-dropdown uk-margin-remove">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a href="/documentacao/pt/types">Types (PT)</a></li>
+							<li><a href="/documentacao/pt/methods">Methods (PT)</a></li>
+							<li><a href="/documentacao/pt/inline">InlineQuery (PT)</a></li>
+							<li><a href="/documentacao/en/types">Types (EN)</a></li>
+							<li><a href="/documentacao/en/methods">Methods (EN)</a></li>
+							<li><a href="/documentacao/en/inline">InlineQuery (EN)</a></li>
+							<li><a href="https://core.telegram.org/bots/api">Site Official</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<button class="uk-hidden@s uk-button uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary" uk-icon="more-vertical"> Menu</button>
+		</div>
+	</nav>
+		<div class="uk-hidden-small uk-card uk-card-body uk-card-primary uk-panel">
+			<h3 class="uk-card-title"><span uk-icon="info"></span> Documentation of InlineQuery</h3>
+			<p>Documentation of InlineQuery in EN</p>
+		</div>
+	<!--FIXME: Bug in jus-->
+		<br>
+		<div class="uk-container">
+			<article class="uk-margin-auto">
+				<!--
+title: Documentation of InlineQuery
+description: Documentation of InlineQuery in EN
+article: true
+-->
+
+<h1>Inline Query</h1>
+<ul>
+<li><a href="#inlinequeryresultarticle">InlineQueryResultArticle</a></li>
+<li><a href="#inlinequeryresultphoto">InlineQueryResultPhoto</a></li>
+<li><a href="#inlinequeryresultgif">InlineQueryResultGif</a></li>
+<li><a href="#inlinequeryresultmpeg4gif">InlineQueryResultMpeg4Gif</a></li>
+<li><a href="#inlinequeryresultvideo">InlineQueryResultVideo</a></li>
+<li><a href="#inlinequeryresultaudio">InlineQueryResultAudio</a></li>
+<li><a href="#inlinequeryresultvoice">InlineQueryResultVoice</a></li>
+<li><a href="#inlinequeryresultdocument">InlineQueryResultDocument</a></li>
+<li><a href="#inlinequeryresultlocation">InlineQueryResultLocation</a></li>
+<li><a href="#inlinequeryresultvenue">InlineQueryResultVenue</a></li>
+<li><a href="#inlinequeryresultcontact">InlineQueryResultContact</a></li>
+<li><a href="#inlinequeryresultgame">InlineQueryResultGame</a></li>
+<li><a href="#inlinequeryresultcachedphoto">InlineQueryResultCachedPhoto</a></li>
+<li><a href="#inlinequeryresultcachedgif">InlineQueryResultCachedGif</a></li>
+<li><a href="#inlinequeryresultcachedmpeg4gif">InlineQueryResultCachedMpeg4Gif</a></li>
+<li><a href="#inlinequeryresultcachedsticker">InlineQueryResultCachedSticker</a></li>
+<li><a href="#inlinequeryresultcacheddocument">InlineQueryResultCachedDocument</a></li>
+<li><a href="#inlinequeryresultcachedvideo">InlineQueryResultCachedVideo</a></li>
+<li><a href="#inlinequeryresultcachedvoice">InlineQueryResultCachedVoice</a></li>
+<li><a href="#inlinequeryresultcachedaudio">InlineQueryResultCachedAudio</a></li>
+</ul>
+<h2>InlineQueryResultArticle</h2>
+<p>Represents a link to an article or web page.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be article</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 Bytes</td></tr>
+<tr><td>title</td><td>String</td><td>true</td><td>Title of the result</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>true</td><td>Content of the message to be sent</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>url</td><td>String</td><td>false</td><td>URL of the result</td></tr>
+<tr><td>hide_url</td><td>Boolean</td><td>false</td><td>Pass True, if you don&apos;t want the URL to be shown in the message</td></tr>
+<tr><td>description</td><td>String</td><td>false</td><td>Short description of the result</td></tr>
+<tr><td>thumb_url</td><td>String</td><td>false</td><td>Url of the thumbnail for the result</td></tr>
+<tr><td>thumb_width</td><td>Integer</td><td>false</td><td>Thumbnail width</td></tr>
+<tr><td>thumb_height</td><td>Integer</td><td>false</td><td>Thumbnail height</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    title = String,
+    input_message_content = InputMessageContent,
+    reply_markup = InlineKeyboardMarkup,
+    url = String,
+    hide_url = Boolean,
+    description = String,
+    thumb_url = String,
+    thumb_width = Integer,
+    thumb_height = Integer,
+}]
+</code></pre>
+<h2>InlineQueryResultPhoto</h2>
+<p>Represents a link to a photo. By default, this photo will be sent by the user with optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the photo.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be photo</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>photo_url</td><td>String</td><td>true</td><td>A valid URL of the photo. Photo must be in jpeg format. Photo size must not exceed 5MB</td></tr>
+<tr><td>thumb_url</td><td>String</td><td>true</td><td>URL of the thumbnail for the photo</td></tr>
+<tr><td>photo_width</td><td>Integer</td><td>false</td><td>Width of the photo</td></tr>
+<tr><td>photo_height</td><td>Integer</td><td>false</td><td>Height of the photo</td></tr>
+<tr><td>title</td><td>String</td><td>false</td><td>Title for the result</td></tr>
+<tr><td>description</td><td>String</td><td>false</td><td>Short description of the result</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption of the photo to be sent, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the photo</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    photo_url = String,
+    thumb_url = String,
+    photo_width = Integer,
+    photo_height = Integer,
+    title = String,
+    description = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultGif</h2>
+<p>Represents a link to an animated GIF file. By default, this animated GIF file will be sent by the user with optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the animation.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be gif</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>gif_url</td><td>String</td><td>true</td><td>A valid URL for the GIF file. File size must not exceed 1MB</td></tr>
+<tr><td>gif_width</td><td>Integer</td><td>false</td><td>Width of the GIF</td></tr>
+<tr><td>gif_height</td><td>Integer</td><td>false</td><td>Height of the GIF</td></tr>
+<tr><td>gif_duration</td><td>Integer</td><td>false</td><td>Duration of the GIF</td></tr>
+<tr><td>thumb_url</td><td>String</td><td>true</td><td>URL of the static thumbnail for the result (jpeg or gif)</td></tr>
+<tr><td>title</td><td>String</td><td>false</td><td>Title for the result</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption of the GIF file to be sent, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the GIF animation</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    gif_url = String,
+    gif_width = Integer,
+    gif_height = Integer,
+    gif_duration = Integer,
+    thumb_url = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultMpeg4Gif</h2>
+<p>Represents a link to a video animation (H.264/MPEG-4 AVC video without sound). By default, this animated MPEG-4 file will be sent by the user with optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the animation.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be mpeg4_gif</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>mpeg4_url</td><td>String</td><td>true</td><td>A valid URL for the MP4 file. File size must not exceed 1MB</td></tr>
+<tr><td>mpeg4_width</td><td>Integer</td><td>false</td><td>Video width</td></tr>
+<tr><td>mpeg4_height</td><td>Integer</td><td>false</td><td>Video height</td></tr>
+<tr><td>mpeg4_duration</td><td>Integer</td><td>false</td><td>Video duration</td></tr>
+<tr><td>thumb_url</td><td>String</td><td>true</td><td>URL of the static thumbnail (jpeg or gif) for the result</td></tr>
+<tr><td>title</td><td>String</td><td>false</td><td>Title for the result</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption of the MPEG-4 file to be sent, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the video animation</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    mpeg4_url = String,
+    mpeg4_width = Integer,
+    mpeg4_height = Integer,
+    mpeg4_duration = Integer,
+    thumb_url = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultVideo</h2>
+<p>Represents a link to a page containing an embedded video player or a video file. By default, this video file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the video.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be video</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>video_url</td><td>String</td><td>true</td><td>A valid URL for the embedded video player or video file</td></tr>
+<tr><td>mime_type</td><td>String</td><td>true</td><td>Mime type of the content of video url, &#x201C;text/html&#x201D; or &#x201C;video/mp4&#x201D;</td></tr>
+<tr><td>thumb_url</td><td>String</td><td>true</td><td>URL of the thumbnail (jpeg only) for the video</td></tr>
+<tr><td>title</td><td>String</td><td>true</td><td>Title for the result</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption of the video to be sent, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>video_width</td><td>Integer</td><td>false</td><td>Video width</td></tr>
+<tr><td>video_height</td><td>Integer</td><td>false</td><td>Video height</td></tr>
+<tr><td>video_duration</td><td>Integer</td><td>false</td><td>Video duration in seconds</td></tr>
+<tr><td>description</td><td>String</td><td>false</td><td>Short description of the result</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the video. This field is required if InlineQueryResultVideo is used to send an HTML-page as a result (e.g., a YouTube video).</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    video_url = String,
+    mime_type = String,
+    thumb_url = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    video_width = Integer,
+    video_height = Integer,
+    video_duration = Integer,
+    description = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultAudio</h2>
+<p>Represents a link to an mp3 audio file. By default, this audio file will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the audio.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be audio</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>audio_url</td><td>String</td><td>true</td><td>A valid URL for the audio file</td></tr>
+<tr><td>title</td><td>String</td><td>true</td><td>Title</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>performer</td><td>String</td><td>false</td><td>Performer</td></tr>
+<tr><td>audio_duration</td><td>Integer</td><td>false</td><td>Audio duration in seconds</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the audio</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    audio_url = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    performer = String,
+    audio_duration = Integer,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultVoice</h2>
+<p>Represents a link to a voice recording in an .ogg container encoded with OPUS. By default, this voice recording will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the the voice message.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be voice</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>voice_url</td><td>String</td><td>true</td><td>A valid URL for the voice recording</td></tr>
+<tr><td>title</td><td>String</td><td>true</td><td>Recording title</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>voice_duration</td><td>Integer</td><td>false</td><td>Recording duration in seconds</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the voice recording</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    voice_url = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    voice_duration = Integer,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultDocument</h2>
+<p>Represents a link to a file. By default, this file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the file. Currently, only .PDF and .ZIP files can be sent using this method.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be document</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>title</td><td>String</td><td>true</td><td>Title for the result</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption of the document to be sent, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>document_url</td><td>String</td><td>true</td><td>A valid URL for the file</td></tr>
+<tr><td>mime_type</td><td>String</td><td>true</td><td>Mime type of the content of the file, either &#x201C;application/pdf&#x201D; or &#x201C;application/zip&#x201D;</td></tr>
+<tr><td>description</td><td>String</td><td>false</td><td>Short description of the result</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the file</td></tr>
+<tr><td>thumb_url</td><td>String</td><td>false</td><td>URL of the thumbnail (jpeg only) for the file</td></tr>
+<tr><td>thumb_width</td><td>Integer</td><td>false</td><td>Thumbnail width</td></tr>
+<tr><td>thumb_height</td><td>Integer</td><td>false</td><td>Thumbnail height</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    document_url = String,
+    mime_type = String,
+    description = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+    thumb_url = String,
+    thumb_width = Integer,
+    thumb_height = Integer,
+}]
+</code></pre>
+<h2>InlineQueryResultLocation</h2>
+<p>Represents a location on a map. By default, the location will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the location.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be location</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 Bytes</td></tr>
+<tr><td>latitude</td><td>Float number</td><td>true</td><td>Location latitude in degrees</td></tr>
+<tr><td>longitude</td><td>Float number</td><td>true</td><td>Location longitude in degrees</td></tr>
+<tr><td>title</td><td>String</td><td>true</td><td>Location title</td></tr>
+<tr><td>live_period</td><td>Integer</td><td>false</td><td>Period in seconds for which the location can be updated, should be between 60 and 86400.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the location</td></tr>
+<tr><td>thumb_url</td><td>String</td><td>false</td><td>Url of the thumbnail for the result</td></tr>
+<tr><td>thumb_width</td><td>Integer</td><td>false</td><td>Thumbnail width</td></tr>
+<tr><td>thumb_height</td><td>Integer</td><td>false</td><td>Thumbnail height</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    latitude = Float number,
+    longitude = Float number,
+    title = String,
+    live_period = Integer,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+    thumb_url = String,
+    thumb_width = Integer,
+    thumb_height = Integer,
+}]
+</code></pre>
+<h2>InlineQueryResultVenue</h2>
+<p>Represents a venue. By default, the venue will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the venue.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be venue</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 Bytes</td></tr>
+<tr><td>latitude</td><td>Float</td><td>true</td><td>Latitude of the venue location in degrees</td></tr>
+<tr><td>longitude</td><td>Float</td><td>true</td><td>Longitude of the venue location in degrees</td></tr>
+<tr><td>title</td><td>String</td><td>true</td><td>Title of the venue</td></tr>
+<tr><td>address</td><td>String</td><td>true</td><td>Address of the venue</td></tr>
+<tr><td>foursquare_id</td><td>String</td><td>false</td><td>Foursquare identifier of the venue if known</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the venue</td></tr>
+<tr><td>thumb_url</td><td>String</td><td>false</td><td>Url of the thumbnail for the result</td></tr>
+<tr><td>thumb_width</td><td>Integer</td><td>false</td><td>Thumbnail width</td></tr>
+<tr><td>thumb_height</td><td>Integer</td><td>false</td><td>Thumbnail height</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    latitude = Float,
+    longitude = Float,
+    title = String,
+    address = String,
+    foursquare_id = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+    thumb_url = String,
+    thumb_width = Integer,
+    thumb_height = Integer,
+}]
+</code></pre>
+<h2>InlineQueryResultContact</h2>
+<p>Represents a contact with a phone number. By default, this contact will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the contact.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be contact</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 Bytes</td></tr>
+<tr><td>phone_number</td><td>String</td><td>true</td><td>Contact&apos;s phone number</td></tr>
+<tr><td>first_name</td><td>String</td><td>true</td><td>Contact&apos;s first name</td></tr>
+<tr><td>last_name</td><td>String</td><td>false</td><td>Contact&apos;s last name</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the contact</td></tr>
+<tr><td>thumb_url</td><td>String</td><td>false</td><td>Url of the thumbnail for the result</td></tr>
+<tr><td>thumb_width</td><td>Integer</td><td>false</td><td>Thumbnail width</td></tr>
+<tr><td>thumb_height</td><td>Integer</td><td>false</td><td>Thumbnail height</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    phone_number = String,
+    first_name = String,
+    last_name = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+    thumb_url = String,
+    thumb_width = Integer,
+    thumb_height = Integer,
+}]
+</code></pre>
+<h2>InlineQueryResultGame</h2>
+<p>Represents a Game.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be game</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>game_short_name</td><td>String</td><td>true</td><td>Short name of the game</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    game_short_name = String,
+    reply_markup = InlineKeyboardMarkup,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedPhoto</h2>
+<p>Represents a link to a photo stored on the Telegram servers. By default, this photo will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the photo.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be photo</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>photo_file_id</td><td>String</td><td>true</td><td>A valid file identifier of the photo</td></tr>
+<tr><td>title</td><td>String</td><td>false</td><td>Title for the result</td></tr>
+<tr><td>description</td><td>String</td><td>false</td><td>Short description of the result</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption of the photo to be sent, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the photo</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    photo_file_id = String,
+    title = String,
+    description = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedGif</h2>
+<p>Represents a link to an animated GIF file stored on the Telegram servers. By default, this animated GIF file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with specified content instead of the animation.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be gif</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>gif_file_id</td><td>String</td><td>true</td><td>A valid file identifier for the GIF file</td></tr>
+<tr><td>title</td><td>String</td><td>false</td><td>Title for the result</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption of the GIF file to be sent, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the GIF animation</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    gif_file_id = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedMpeg4Gif</h2>
+<p>Represents a link to a video animation (H.264/MPEG-4 AVC video without sound) stored on the Telegram servers. By default, this animated MPEG-4 file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the animation.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be mpeg4_gif</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>mpeg4_file_id</td><td>String</td><td>true</td><td>A valid file identifier for the MP4 file</td></tr>
+<tr><td>title</td><td>String</td><td>false</td><td>Title for the result</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption of the MPEG-4 file to be sent, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the video animation</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    mpeg4_file_id = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedSticker</h2>
+<p>Represents a link to a sticker stored on the Telegram servers. By default, this sticker will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the sticker.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be sticker</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>sticker_file_id</td><td>String</td><td>true</td><td>A valid file identifier of the sticker</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the sticker</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    sticker_file_id = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedDocument</h2>
+<p>Represents a link to a file stored on the Telegram servers. By default, this file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the file.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be document</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>title</td><td>String</td><td>true</td><td>Title for the result</td></tr>
+<tr><td>document_file_id</td><td>String</td><td>true</td><td>A valid file identifier for the file</td></tr>
+<tr><td>description</td><td>String</td><td>false</td><td>Short description of the result</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption of the document to be sent, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the file</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    title = String,
+    document_file_id = String,
+    description = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedVideo</h2>
+<p>Represents a link to a video file stored on the Telegram servers. By default, this video file will be sent by the user with an optional caption. Alternatively, you can use input_message_content to send a message with the specified content instead of the video.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be video</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>video_file_id</td><td>String</td><td>true</td><td>A valid file identifier for the video file</td></tr>
+<tr><td>title</td><td>String</td><td>true</td><td>Title for the result</td></tr>
+<tr><td>description</td><td>String</td><td>false</td><td>Short description of the result</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption of the video to be sent, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the video</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    video_file_id = String,
+    title = String,
+    description = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedVoice</h2>
+<p>Represents a link to a voice message stored on the Telegram servers. By default, this voice message will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the voice message.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be voice</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>voice_file_id</td><td>String</td><td>true</td><td>A valid file identifier for the voice message</td></tr>
+<tr><td>title</td><td>String</td><td>true</td><td>Voice message title</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the voice message</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    voice_file_id = String,
+    title = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+<h2>InlineQueryResultCachedAudio</h2>
+<p>Represents a link to an mp3 audio file stored on the Telegram servers. By default, this audio file will be sent by the user. Alternatively, you can use input_message_content to send a message with the specified content instead of the audio.</p>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Desc</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>String</td><td>true</td><td>Type of the result, must be audio</td></tr>
+<tr><td>id</td><td>String</td><td>true</td><td>Unique identifier for this result, 1-64 bytes</td></tr>
+<tr><td>audio_file_id</td><td>String</td><td>true</td><td>A valid file identifier for the audio file</td></tr>
+<tr><td>caption</td><td>String</td><td>false</td><td>Caption, 0-200 characters</td></tr>
+<tr><td>parse_mode</td><td>String</td><td>false</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in the media caption.</td></tr>
+<tr><td>reply_markup</td><td>InlineKeyboardMarkup</td><td>false</td><td>Inline keyboard attached to the message</td></tr>
+<tr><td>input_message_content</td><td>InputMessageContent</td><td>false</td><td>Content of the message to be sent instead of the audio</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-javascript">[{
+    type = String,
+    id = String,
+    audio_file_id = String,
+    caption = String,
+    parse_mode = String,
+    reply_markup = InlineKeyboardMarkup,
+    input_message_content = InputMessageContent,
+}]
+</code></pre>
+
+
+			</article>
+		</div>
+	<footer>
+		<div class="uk-card uk-card-secondary uk-card-body">
+			<label class="uk-align-center uk-text-center">
+				<small>
+					<span uk-icon="github"></span> Projetos totalmente Open Source, veja nosso <a href="https://github.com/DesenvolvimentoDeBots" target="_blank">GitHub</a>.
+					<br><span uk-icon="code"></span> com <span uk-icon="heart"></span> pelos <a href="https://telegram.me/DesenvolvimentoDeBots" target="_blank">membros do grupo</a>.
+					<br>Construido usado <a href="https://jus.js.org" target="_blank">Jus</a> e <a href="https://getuikit.com" target="_blank">UiKit</a>
+					<br>Hospedado em <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+				</small>
+			</label>
+		</div>
+	</footer>
+
+	<div class="uk-offcanvas-content">
+		<div id="offcanvas-nav-primary" uk-offcanvas="overlay: false">
+			<div class="uk-offcanvas-bar uk-flex uk-flex-column">
+				<ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+					<a href="/">
+						<img src="/images/logo.png" class="logo-mobile uk-margin-small-right">
+						<label>Desenvolvimento De Bots</label>
+					</a>
+					<hr class="uk-divider-icon">
+					<li><a href="/projetos">Projetos da Comunidade</a></li>
+					<li><a href="/materiais">Materiais de Apoio</a></li>
+					<li><a href="/documentacao">Documenta&#xE7;&#xE3;o</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="/js/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,882 @@
+<html>
+
+<head>
+	<title>Documenta&#xE7;&#xE3;o de Types</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Documenta&#xE7;&#xE3;o de Types em PT">
+	<meta name="keywords" content="Documenta&#xE7;&#xE3;o de Types">
+
+	<meta property="og:title" content="Documenta&#xE7;&#xE3;o de Types">
+	<meta property="og:url" content="http://DesenvolvimentoDeBots.github.io/documentacao/pt/types">
+	<meta property="og:site_name" content="Documenta&#xE7;&#xE3;o de Types">
+	<meta property="og:description" content="Documenta&#xE7;&#xE3;o de Types em PT">
+	<meta name="twitter:title" content="Documenta&#xE7;&#xE3;o de Types">
+	<meta name="twitter:url" content="http://DesenvolvimentoDeBots.github.io/documentacao/pt/types">
+
+	<!--<link rel="shortcut icon" href="/images/favicon.ico">-->
+	<link rel="stylesheet" href="/uikit-3.0.0-beta.40/css/uikit.min.css">
+	<link rel="stylesheet" href="/css/theme.css">
+	<link rel="stylesheet" href="/css/reset.css">
+	<script src="/uikit-3.0.0-beta.40/js/uikit.min.js"></script>
+	<script src="/uikit-3.0.0-beta.40/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+	<nav class="uk-navbar-container menu" uk-navbar="">
+		<div class="uk-navbar-left">
+			<ul class="uk-navbar-nav">
+				<li class="uk-active">
+					<a href="/">
+						<img src="/images/logo.png" class="logo uk-margin-small-right">
+						<label class="uk-visible@s">Desenvolvimento De Bots</label>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="uk-navbar-right">
+			<ul class="uk-navbar-nav uk-visible@s">
+				<li><a href="/projetos">Projetos da Comunidade</a></li>
+				<li><a href="/materiais">Materiais de Apoio</a></li>
+				<li>
+					<a href="/documentacao">Documenta&#xE7;&#xE3;o</a>
+					<div class="uk-navbar-dropdown uk-margin-remove">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a href="/documentacao/pt/types">Types (PT)</a></li>
+							<li><a href="/documentacao/pt/methods">Methods (PT)</a></li>
+							<li><a href="/documentacao/pt/inline">InlineQuery (PT)</a></li>
+							<li><a href="/documentacao/en/types">Types (EN)</a></li>
+							<li><a href="/documentacao/en/methods">Methods (EN)</a></li>
+							<li><a href="/documentacao/en/inline">InlineQuery (EN)</a></li>
+							<li><a href="https://core.telegram.org/bots/api">Site Official</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<button class="uk-hidden@s uk-button uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary" uk-icon="more-vertical"> Menu</button>
+		</div>
+	</nav>
+		<div class="uk-hidden-small uk-card uk-card-body uk-card-primary uk-panel">
+			<h3 class="uk-card-title"><span uk-icon="info"></span> Documenta&#xE7;&#xE3;o de Types</h3>
+			<p>Documenta&#xE7;&#xE3;o de Types em PT</p>
+		</div>
+	<!--FIXME: Bug in jus-->
+		<br>
+		<div class="uk-container">
+			<article class="uk-margin-auto">
+				<!--
+title: Documentação de Types
+description: Documentação de Types em PT
+article: true
+-->
+
+<h1>Tipos</h1>
+<ul>
+<li><a href="#update">Update</a></li>
+<li><a href="#webhookinfo">WebhookInfo</a></li>
+<li><a href="#user">User</a></li>
+<li><a href="#chat">Chat</a></li>
+<li><a href="#message">Message (Mensagem)</a></li>
+<li><a href="#messageentity">MessageEntity</a></li>
+<li><a href="#photosize">PhotoSize</a></li>
+<li><a href="#audio">Audio</a></li>
+<li><a href="#document">Document</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#voice">Voice</a></li>
+<li><a href="#videonote">VideoNote</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#venue">Venue</a></li>
+<li><a href="#userprofilephotos">UserProfilePhotos</a></li>
+<li><a href="#file">File</a></li>
+<li><a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a></li>
+<li><a href="#keyboardbutton">KeyboardButton</a></li>
+<li><a href="#replykeyboardremove">ReplyKeyboardRemove</a></li>
+<li><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></li>
+<li><a href="#inlinekeyboardbutton">InlineKeyboardButton</a></li>
+<li><a href="#callbackquery">CallbackQuery</a></li>
+<li><a href="#forcereply">ForceReply</a></li>
+<li><a href="#chatphoto">ChatPhoto</a></li>
+<li><a href="#chatmember">ChatMember</a></li>
+<li><a href="#responseparameters">ResponseParameters</a></li>
+<li><a href="#inputmediaphoto">InputMediaPhoto</a></li>
+<li><a href="#inputmediavideo">InputMediaVideo</a></li>
+<li><a href="#sticker">Sticker</a></li>
+<li><a href="#stickerset">StickerSet</a></li>
+<li><a href="#maskposition">MaskPosition</a></li>
+<li><a href="#inlinequery">InlineQuery (Consulta Inline)</a></li>
+<li><a href="#inputtextmessagecontent">InputTextMessageContent</a></li>
+<li><a href="#inputlocationmessagecontent">InputLocationMessageContent</a></li>
+<li><a href="#inputvenuemessagecontent">InputVenueMessageContent</a></li>
+<li><a href="#inputcontactmessagecontent">InputContactMessageContent</a></li>
+<li><a href="#choseninlineresult">ChosenInlineResult</a></li>
+<li><a href="#labeledprice">LabeledPrice</a></li>
+<li><a href="#invoice">Invoice</a></li>
+<li><a href="#shippingaddress">ShippingAddress</a></li>
+<li><a href="#orderinfo">OrderInfo</a></li>
+<li><a href="#shippingoption">ShippingOption</a></li>
+<li><a href="#successfulpayment">SuccessfulPayment</a></li>
+<li><a href="#shippingquery">ShippingQuery</a></li>
+<li><a href="#precheckoutquery">PreCheckoutQuery</a></li>
+<li><a href="#game">Game</a></li>
+<li><a href="#animation">Animation</a></li>
+<li><a href="#gamehighscore">GameHighScore</a></li>
+</ul>
+<h2>Update</h2>
+<p>Este objeto representa uma atualiza&#xE7;&#xE3;o vinda. Ao menos um dos par&#xE2;metros opcionais devem estar presentes em alguma atualiza&#xE7;&#xE3;o.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>update_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>O identificador da atualiza&#xE7;&#xE3;o. Atualiza&#xE7;&#xE3;o dos identificadores come&#xE7;am de um certo numero positivo e aumentam gradativamente. Este ID torna-se especialmente &#xFA;til se voc&#xEA; estiver us&#xFA;ando Webhooks, j&#xE1; que isso te permite ignorar atualiza&#xE7;&#xF5;es repetidas ou restaurar a sequ&#xEA;ncia de atualiza&#xE7;&#xE3;o correta, eles devem chegar fora de ordem. Se n&#xE3;o houver novas atualiza&#xE7;&#xF5;es por pelos uma semana, o identificador da pr&#xF3;xima atualiza&#xE7;&#xE3;o ser&#xE1; escolhido aleatoriamente ao inv&#xE9;s de sequencialmente.</td></tr>
+<tr><td>message (Mensagem)</td><td>Message</td><td>false (Falso)</td><td>Nova mensagem recebida de qualquer tipo &#x2014; texto, foto, sticker, etc.</td></tr>
+<tr><td>edited_message</td><td>Message</td><td>false (Falso)</td><td>Nova vers&#xE3;o de uma mensagem que &#xE9; conhecida pelo bot e foi editada</td></tr>
+<tr><td>channel_post</td><td>Message</td><td>false (Falso)</td><td>Nova postagem de canal recebida de qualquer tipo &#x2014; texto, foto, sticker, etc.</td></tr>
+<tr><td>edited_channel_post</td><td>Message</td><td>false (Falso)</td><td>Nova vers&#xE3;o de uma postagem de canal que &#xE9; conhecida pelo bot e foi editada</td></tr>
+<tr><td>inline_query</td><td>InlineQuery (Consulta Inline)</td><td>false (Falso)</td><td>Nova consulta inline recebida</td></tr>
+<tr><td>chosen_inline_result</td><td>ChosenInlineResult</td><td>false (Falso)</td><td>O resultado de uma consulta inline que foi escolhida por um usu&#xE1;rio e enviada para seu parceiro de chat. Por favor, consulte a nossa documenta&#xE7;&#xE3;o sobre coleta de &quot;feedback&quot; para obter mais detalhes de como ativar esse Update em seu bot.</td></tr>
+<tr><td>callback_query</td><td>CallbackQuery</td><td>false (Falso)</td><td>Nova consulta de callback query recebida</td></tr>
+<tr><td>shipping_query</td><td>ShippingQuery</td><td>false (Falso)</td><td>Nova consulta de shipping query recebida. Somente para chamadas de voz com pre&#xE7;o flex&#xED;vel</td></tr>
+<tr><td>pre_checkout_query</td><td>PreCheckoutQuery</td><td>false (Falso)</td><td>Nova consulta de pr&#xE9;-pagamento. Cont&#xE9;m informa&#xE7;&#xF5;es completas sobre o pagamento</td></tr>
+</tbody>
+</table>
+<h2>WebhookInfo</h2>
+<p>Cont&#xE9;m informa&#xE7;&#xF5;es sobre o status atual de um webhook.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Webhook URL, pode ser vazia se o webhook n&#xE3;o estiver configurado</td></tr>
+<tr><td>has_custom_certificate</td><td>Boolen (Boleano)</td><td>true (Verdadeiro)</td><td>Se isso estive como &quot;true&quot;, um certificado deve ser fornecido para uso de verifica&#xE7;&#xE3;o da integra&#xE7;&#xE3;o do webhook.</td></tr>
+<tr><td>pending_update_count</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>N&#xFA;mero de atualiza&#xE7;&#xF5;es esperando entrega</td></tr>
+<tr><td>last_error_date</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Unix time para o erro mais recente que ocorreu ao tentar entregar uma atualiza&#xE7;&#xE3;o via webhook</td></tr>
+<tr><td>last_error_message</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Error message in human-readable format for the most recent error that happened when trying to deliver an update via webhook</td></tr>
+<tr><td>max_connections</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>N&#xFA;mero m&#xE1;ximo permitido de conex&#xF5;es simult&#xE2;neas HTTPS para o webhook para a entrega de atualiza&#xE7;&#xF5;es</td></tr>
+<tr><td>allowed_updates</td><td>Array de String</td><td>false (Falso)</td><td>Uma lista de tipos de atualiza&#xE7;&#xE3;o que o bot est&#xE1; inscrito. Padr&#xE3;o para todos os tipos de atualiza&#xE7;&#xE3;o</td></tr>
+</tbody>
+</table>
+<h2>User</h2>
+<p>Esse objeto representa um usu&#xE1;rio ou um bot do Telegram.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse usu&#xE1;rio ou bot</td></tr>
+<tr><td>is_bot</td><td>Boolen (Boleano)</td><td>true (Verdadeiro)</td><td>Verdadeiro, se esse usu&#xE1;rio &#xE9; um bot</td></tr>
+<tr><td>first_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Primeiro nome de um usu&#xE1;rio ou um bot</td></tr>
+<tr><td>last_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Sobrenome de um usu&#xE1;rio ou um bot</td></tr>
+<tr><td>username</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Nome de usu&#xE1;rio de um usu&#xE1;rio ou um bot</td></tr>
+<tr><td>language_code</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>IETF language tag of the user&apos;s language</td></tr>
+</tbody>
+</table>
+<h2>Chat</h2>
+<p>Esse objeto representa um chat.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo para esse chat. Esse n&#xFA;mero pode ser maior que 32 bits e algumas linguagens de programa&#xE7;&#xE3;o podem ter defeitos de dificuldade/silencia&#xE7;&#xE3;o na interpreta&#xE7;&#xE3;o. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier.</td></tr>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo de chat, pode ser tanto quanto &#x201C;privado&#x201D;, &#x201C;grupo&#x201D;, &#x201C;supergrupo&#x201D; ou &#x201C;canal&#x201D;</td></tr>
+<tr><td>t&#xED;tulo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>T&#xED;tulo, para supergrupos, canais e grupos</td></tr>
+<tr><td>username</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Nome de usu&#xE1;rio, para chats privados, supergrupos e canais, se dispon&#xED;vel</td></tr>
+<tr><td>first_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Primeiro nome da outra parte em um chat privado</td></tr>
+<tr><td>last_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Sobrenome da outra parte em um chat privado</td></tr>
+<tr><td>all_members_are_administrators</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Verdadeiro, se um grupo tem &#x201C;Todos os Membros s&#xE3;o Admins&#x201D; ativado.</td></tr>
+<tr><td>photo</td><td>ChatPhoto</td><td>false (Falso)</td><td>Foto do Chat. Retornado somente em getChat.</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Descri&#xE7;&#xE3;o, para supergrupos e canais. Retornado somente em getChat.</td></tr>
+<tr><td>invite_link</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Link de convite do chat, para supergrupos e canais. Retornado somente em getChat.</td></tr>
+<tr><td>pinned_message</td><td>Message (Mensagem)</td><td>false (Falso)</td><td>Mensagem fixada, para supergrupos e canais. Retornado somente em getChat.</td></tr>
+<tr><td>sticker_set_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Para supergrupos, nome do pacote de sticker do grupo. Retornado somente em getChat.</td></tr>
+<tr><td>can_set_sticker_set</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Verdadeiro, se o bot pode alterar o pacote de sticker do grupo. Retornado somente em getChat.</td></tr>
+</tbody>
+</table>
+<h2>Message</h2>
+<p>Esse objeto representa uma mensagem.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>message_id</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo de mensagem dentro deste chat</td></tr>
+<tr><td>from</td><td>User</td><td>false (Falso)</td><td>Remetente, vazio para mensagens enviadas para canais</td></tr>
+<tr><td>date</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Data em que a mensagem foi enviada em Unix time</td></tr>
+<tr><td>chat</td><td>Chat</td><td>true (Verdadeiro)</td><td>Conversation the message belongs to</td></tr>
+<tr><td>forward_from</td><td>User</td><td>false (Falso)</td><td>Para mensagens encaminhadas, remetente da mensagem original</td></tr>
+<tr><td>forward_from_chat</td><td>Chat</td><td>false (Falso)</td><td>Para mensagens encaminhadas de canais, informa&#xE7;&#xF5;es sobre o canal original</td></tr>
+<tr><td>forward_from_message_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Para mensagens encaminhadas de canais, identificador da mensagem original no canal</td></tr>
+<tr><td>forward_signature</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Para mensagens encaminhadas de canais, a assinatura do autor da postagem se houver</td></tr>
+<tr><td>forward_date</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Para mensagens encaminhadas, data em que a mensagem original foi enviada em Unix time</td></tr>
+<tr><td>reply_to_message</td><td>Message (Mensagem)</td><td>false (Falso)</td><td>Para respostas, a mensagem original. Note that the Message object in this field will not contain further reply_to_message fields even if it itself is a reply.</td></tr>
+<tr><td>edit_date</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Data em que a mensagem foi editada pela &#xFA;ltima vez em Unix time</td></tr>
+<tr><td>media_group_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>O identificador exclusivo de uma mensagem de m&#xED;dia que pertence ao grupo</td></tr>
+<tr><td>author_signature</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Assinatura do autor da postagem para mensagens em canais</td></tr>
+<tr><td>text</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Para mensagens de texto, o texto atual da mensagem em UTF-8, 0-4096 caracteres.</td></tr>
+<tr><td>entities</td><td>Array de MessageEntity</td><td>false (Falso)</td><td>Para mensagens de texto, entidades especiais como nomes de usu&#xE1;rio, URLs, comandos do bot, etc. que aparecem no texto</td></tr>
+<tr><td>caption_entities</td><td>Array de MessageEntity</td><td>false (Falso)</td><td>Para mensagens com uma legenda, entidades especiais como nomes de usu&#xE1;rio, URLs, comandos do bot, etc. que aparecem na legenda</td></tr>
+<tr><td>audio</td><td>Audio</td><td>false (Falso)</td><td>Mensagem &#xE9; um arquivo de &#xE1;udio, informa&#xE7;&#xF5;es sobre o arquivo</td></tr>
+<tr><td>document</td><td>Document</td><td>false (Falso)</td><td>Mensagem &#xE9; um arquivo, informa&#xE7;&#xF5;es sobre o arquivo</td></tr>
+<tr><td>game</td><td>Game</td><td>false (Falso)</td><td>Mensagem &#xE9; um jogo, informa&#xE7;&#xF5;es sobre o arquivo. Mais sobre jogos &#xBB;</td></tr>
+<tr><td>photo</td><td>Array de PhotoSize</td><td>false (Falso)</td><td>Message is a photo, available sizes of the photo</td></tr>
+<tr><td>sticker</td><td>Sticker</td><td>false (Falso)</td><td>Message is a sticker, information about the sticker</td></tr>
+<tr><td>video</td><td>Video</td><td>false (Falso)</td><td>Message is a video, information about the video</td></tr>
+<tr><td>voice</td><td>Voice</td><td>false (Falso)</td><td>Message is a voice message, information about the file</td></tr>
+<tr><td>video_note</td><td>VideoNote</td><td>false (Falso)</td><td>Message is a video note, information about the video message</td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Caption for the audio, document, photo, video or voice, 0-200 characters</td></tr>
+<tr><td>contact</td><td>Contact</td><td>false (Falso)</td><td>Message is a shared contact, information about the contact</td></tr>
+<tr><td>location</td><td>Location</td><td>false (Falso)</td><td>Message is a shared location, information about the location</td></tr>
+<tr><td>venue</td><td>Venue</td><td>false (Falso)</td><td>Message is a venue, information about the venue</td></tr>
+<tr><td>new_chat_members</td><td>Array de Usu&#xE1;rio</td><td>false (Falso)</td><td>Novos membros que foram adicionados ao grupo ou supergrupo e informa&#xE7;&#xF5;es sobre o mesmo (o bot em si pode ser um desses membros)</td></tr>
+<tr><td>left_chat_member</td><td>User</td><td>false (Falso)</td><td>Um membro foi removido do grupo, informa&#xE7;&#xF5;es sobre o mesmo (esse membro pode ser o pr&#xF3;prio bot)</td></tr>
+<tr><td>new_chat_title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Um t&#xED;tulo do chat foi alterado para este valor</td></tr>
+<tr><td>new_chat_photo</td><td>Array de PhotoSize</td><td>false (Falso)</td><td>A chat photo was change to this value</td></tr>
+<tr><td>delete_chat_photo</td><td>True (Verdadeiro)</td><td>false (Falso)</td><td>Mensagem de servi&#xE7;o: a foto do chat foi apagada</td></tr>
+<tr><td>group_chat_created</td><td>True (Verdadeiro)</td><td>false (Falso)</td><td>Mensagem de servi&#xE7;o: o grupo foi criado</td></tr>
+<tr><td>supergroup_chat_created</td><td>True (Verdadeiro)</td><td>false (Falso)</td><td>Service message: the supergroup has been created. This field can&#x2018;t be received in a message coming through updates, because bot can&#x2019;t be a member of a supergroup when it is created. It can only be found in reply_to_message if someone replies to a very first message in a directly created supergroup.</td></tr>
+<tr><td>channel_chat_created</td><td>True (Verdadeiro)</td><td>false (Falso)</td><td>Mensagem de servi&#xE7;o: o canal foi criado. This field can&#x2018;t be received in a message coming through updates, because bot can&#x2019;t be a member of a channel when it is created. It can only be found in reply_to_message if someone replies to a very first message in a channel.</td></tr>
+<tr><td>migrate_to_chat_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>The group has been migrated to a supergroup with the specified identifier. Esse n&#xFA;mero pode ser maior que 32 bits e algumas linguagens de programa&#xE7;&#xE3;o podem ter defeitos de dificuldade/silencia&#xE7;&#xE3;o na interpreta&#xE7;&#xE3;o. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier.</td></tr>
+<tr><td>migrate_from_chat_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>The supergroup has been migrated from a group with the specified identifier. Esse n&#xFA;mero pode ser maior que 32 bits e algumas linguagens de programa&#xE7;&#xE3;o podem ter defeitos de dificuldade/silencia&#xE7;&#xE3;o na interpreta&#xE7;&#xE3;o. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier.</td></tr>
+<tr><td>pinned_message</td><td>Message (Mensagem)</td><td>false (Falso)</td><td>Specified message was pinned. Note that the Message object in this field will not contain further reply_to_message fields even if it is itself a reply.</td></tr>
+<tr><td>invoice</td><td>Invoice</td><td>false (Falso)</td><td>Message is an invoice for a payment, information about the invoice. More about payments &#xBB;</td></tr>
+<tr><td>successful_payment</td><td>SuccessfulPayment</td><td>false (Falso)</td><td>Message is a service message about a successful payment, information about the payment. More about payments &#xBB;</td></tr>
+<tr><td>connected_website</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>The domain name of the website on which the user has logged in. More about Telegram Login &#xBB;</td></tr>
+</tbody>
+</table>
+<h2>MessageEntity</h2>
+<p>Esse objeto representa uma entidade especial em uma mensagem de texto. Por exemplo, hashtags, nomes de usu&#xE1;rio, URLs, etc.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo da entidade. Can be mention (@username), hashtag, bot_command, url, email, bold (bold text), italic (italic text), code (monowidth string), pre (monowidth block), text_link (for clickable text URLs), text_mention (for users without usernames)</td></tr>
+<tr><td>offset</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Offset in UTF-16 code units to the start of the entity</td></tr>
+<tr><td>lenght</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Length of the entity in UTF-16 code units</td></tr>
+<tr><td>url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>For &#x201C;text_link&#x201D; only, url that will be opened after user taps on the text</td></tr>
+<tr><td>user</td><td>User</td><td>false (Falso)</td><td>For &#x201C;text_mention&#x201D; only, the mentioned user</td></tr>
+</tbody>
+</table>
+<h2>PhotoSize</h2>
+<p>Este objeto representa um tamanho de uma foto ou a miniatura de um arquivo/sticker.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo desse arquivo</td></tr>
+<tr><td>width</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Largura da foto</td></tr>
+<tr><td>height</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Altura da foto</td></tr>
+<tr><td>file_size</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Tamanho do arquivo</td></tr>
+</tbody>
+</table>
+<h2>Audio</h2>
+<p>This object represents an audio file to be treated as music by the Telegram clients.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo desse arquivo</td></tr>
+<tr><td>duration</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Dura&#xE7;&#xE3;o do &#xE1;udio em segundos conforme definido pelo remetente</td></tr>
+<tr><td>artista</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Performer of the audio as defined by sender or by audio tags</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>T&#xED;tulo do &#xE1;udio conforme definido pelo remetente ou por tags de &#xE1;udio</td></tr>
+<tr><td>mime_type</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Tipo MIME do arquivo conforme definido pelo remetente</td></tr>
+<tr><td>file_size</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Tamanho do arquivo</td></tr>
+</tbody>
+</table>
+<h2>Document</h2>
+<p>This object represents a general file (as opposed to photos, voice messages and audio files).</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo do arquivo</td></tr>
+<tr><td>thumb</td><td>PhotoSize</td><td>false (Falso)</td><td>Document thumbnail as defined by sender</td></tr>
+<tr><td>file_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Original filename as defined by sender</td></tr>
+<tr><td>mime_type</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Tipo MIME do arquivo conforme definido pelo remetente</td></tr>
+<tr><td>file_size</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Tamanho do arquivo</td></tr>
+</tbody>
+</table>
+<h2>Video</h2>
+<p>Esse objeto representa um arquivo de v&#xED;deo.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo desse arquivo</td></tr>
+<tr><td>width</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Video width as defined by sender</td></tr>
+<tr><td>height</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Video height as defined by sender</td></tr>
+<tr><td>duration</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Dura&#xE7;&#xE3;o do v&#xED;deo em segundos conforme definido pelo remetente</td></tr>
+<tr><td>thumb</td><td>PhotoSize</td><td>false (Falso)</td><td>Miniatura do v&#xED;deo</td></tr>
+<tr><td>mime_type</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Mime type of a file as defined by sender</td></tr>
+<tr><td>file_size</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Tamanho do arquivo</td></tr>
+</tbody>
+</table>
+<h2>Voice</h2>
+<p>This object represents a voice note.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo desse arquivo</td></tr>
+<tr><td>duration</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Dura&#xE7;&#xE3;o do &#xE1;udio em segundos conforme definido pelo remetente</td></tr>
+<tr><td>mime_type</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Tipo MIME do arquivo conforme definido pelo remetente</td></tr>
+<tr><td>file_size</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Tamanho do arquivo</td></tr>
+</tbody>
+</table>
+<h2>VideoNote</h2>
+<p>Esse objeto representa uma mensagem de v&#xED;deo (dispon&#xED;vel em apps Telegram como v.4.0).</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo desse arquivo</td></tr>
+<tr><td>lenght</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Video width and height as defined by sender</td></tr>
+<tr><td>duration</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Dura&#xE7;&#xE3;o do v&#xED;deo em segundos conforme definido pelo remetente</td></tr>
+<tr><td>thumb</td><td>PhotoSize</td><td>false (Falso)</td><td>Miniatura do v&#xED;deo</td></tr>
+<tr><td>file_size</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Tamanho do arquivo</td></tr>
+</tbody>
+</table>
+<h2>Contact</h2>
+<p>Esse objeto representa um telefone de contato.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>phone_number</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>N&#xFA;mero de telefone do contato</td></tr>
+<tr><td>first_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Primeiro nome do contato</td></tr>
+<tr><td>last_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&#xDA;ltimo nome do contato</td></tr>
+<tr><td>user_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Contact&apos;s user identifier in Telegram</td></tr>
+</tbody>
+</table>
+<h2>Location</h2>
+<p>Esse objeto representa um ponto no mapa.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>longitude</td><td>Float</td><td>true (Verdadeiro)</td><td>Longitude conforme definido pelo remetente</td></tr>
+<tr><td>latitude</td><td>Float</td><td>true (Verdadeiro)</td><td>Latitude conforme definido pelo remetente</td></tr>
+</tbody>
+</table>
+<h2>Venue</h2>
+<p>This object represents a venue.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>location</td><td>Location</td><td>true (Verdadeiro)</td><td>Venue location</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Name of the venue</td></tr>
+<tr><td>address</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Address of the venue</td></tr>
+<tr><td>foursquare_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Foursquare identifier of the venue</td></tr>
+</tbody>
+</table>
+<h2>UserProfilePhotos</h2>
+<p>Esse objeto representa as fotos de perfil de um usu&#xE1;rio.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>total_count</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Total number of profile pictures the target user has</td></tr>
+<tr><td>photos</td><td>Array de Array de PhotoSize</td><td>true (Verdadeiro)</td><td>Requested profile pictures (in up to 4 sizes each)</td></tr>
+</tbody>
+</table>
+<h2>File</h2>
+<p>This object represents a file ready to be downloaded. The file can be downloaded via the link <a href="https://api.telegram.org/file/bot">https://api.telegram.org/file/bot</a><token>/<file_path>. It is guaranteed that the link will be valid for at least 1 hour. When the link expires, a new one can be requested by calling getFile.</file_path></token></p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo desse arquivo</td></tr>
+<tr><td>file_size</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Tamanho do arquivo, se conhecido</td></tr>
+<tr><td>file_path</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Caminho do arquivo. Usar <a href="https://api.telegram.org/file/bot">https://api.telegram.org/file/bot</a><token>/<file_path> para obter o arquivo.</file_path></token></td></tr>
+</tbody>
+</table>
+<h2>ReplyKeyboardMarkup</h2>
+<p>Esse objeto representa um teclado personalizado com op&#xE7;&#xF5;es de resposta (veja Introdu&#xE7;&#xE3;o aos Bots para detalhes e exemplos).</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>keyboard</td><td>Array de Array de KeyboardButton</td><td>true (Verdadeiro)</td><td>Array of button rows, each represented by an Array of KeyboardButton objects</td></tr>
+<tr><td>resize_keyboard</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Requests clients to resize the keyboard vertically for optimal fit (e.g., make the keyboard smaller if there are just two rows of buttons). Defaults to false, in which case the custom keyboard is always of the same height as the app&apos;s standard keyboard.</td></tr>
+<tr><td>one_time_keyboard</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Requests clients to hide the keyboard as soon as it&apos;s been used. The keyboard will still be available, but clients will automatically display the usual letter-keyboard in the chat &#x2013; the user can press a special button in the input field to see the custom keyboard again. Defaults to false.</td></tr>
+<tr><td>selective</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot&apos;s message is a reply (has reply_to_message_id), sender of the original message.Example: A user requests to change the bot&#x2018;s language, bot replies to the request with a keyboard to select the new language. Other users in the group don&#x2019;t see the keyboard.</td></tr>
+</tbody>
+</table>
+<h2>KeyboardButton</h2>
+<p>This object represents one button of the reply keyboard. For simple text buttons String can be used instead of this object to specify text of the button. Optional fields are mutually exclusive.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>text</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Text of the button. If none of the optional fields are used, it will be sent as a message when the button is pressed</td></tr>
+<tr><td>request_contact</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>If True, the user&apos;s phone number will be sent as a contact when the button is pressed. Available in private chats only</td></tr>
+<tr><td>request_location</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>If True, the user&apos;s current location will be sent when the button is pressed. Available in private chats only</td></tr>
+</tbody>
+</table>
+<h2>ReplyKeyboardRemove</h2>
+<p>Upon receiving a message with this object, Telegram clients will remove the current custom keyboard and display the default letter-keyboard. By default, custom keyboards are displayed until a new keyboard is sent by a bot. An exception is made for one-time keyboards that are hidden immediately after the user presses a button (see ReplyKeyboardMarkup).</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>remove_keyboard</td><td>True (Verdadeiro)</td><td>true (Verdadeiro)</td><td>Requests clients to remove the custom keyboard (user will not be able to summon this keyboard; if you want to hide the keyboard from sight but keep it accessible, use one_time_keyboard in ReplyKeyboardMarkup)</td></tr>
+<tr><td>selective</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Use this parameter if you want to remove the keyboard for specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot&apos;s message is a reply (has reply_to_message_id), sender of the original message.Example: A user votes in a poll, bot returns confirmation message in reply to the vote and removes the keyboard for that user, while still showing the keyboard with poll options to users who haven&apos;t voted yet.</td></tr>
+</tbody>
+</table>
+<h2>InlineKeyboardMarkup</h2>
+<p>This object represents an inline keyboard that appears right next to the message it belongs to.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>inline_keyboard</td><td>Array de Array de InlineKeyboardButton</td><td>true (Verdadeiro)</td><td>Array of button rows, each represented by an Array of InlineKeyboardButton objects</td></tr>
+</tbody>
+</table>
+<h2>InlineKeyboardButton</h2>
+<p>This object represents one button of an inline keyboard. You must use exactly one of the optional fields.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>text</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Label text on the button</td></tr>
+<tr><td>url</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>HTTP url to be opened when button is pressed</td></tr>
+<tr><td>callback_data</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Data to be sent in a callback query to the bot when button is pressed, 1-64 bytes</td></tr>
+<tr><td>switch_inline_query</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot&#x2018;s username and the specified inline query in the input field. Can be empty, in which case just the bot&#x2019;s username will be inserted.Note: This offers an easy way for users to start using your bot in inline mode when they are currently in a private chat with it. Especially useful when combined with switch_pm&#x2026; actions &#x2013; in this case the user will be automatically returned to the chat they switched from, skipping the chat selection screen.</td></tr>
+<tr><td>switch_inline_query_current_chat</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>If set, pressing the button will insert the bot&#x2018;s username and the specified inline query in the current chat&apos;s input field. Can be empty, in which case only the bot&#x2019;s username will be inserted.This offers a quick way for the user to open your bot in inline mode in the same chat &#x2013; good for selecting something from multiple options.</td></tr>
+<tr><td>callback_game</td><td>CallbackGame</td><td>false (Falso)</td><td>Description of the game that will be launched when the user presses the button.NOTE: This type of button must always be the first button in the first row.</td></tr>
+<tr><td>pay</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Specify True, to send a Pay button.NOTE: This type of button must always be the first button in the first row.</td></tr>
+</tbody>
+</table>
+<h2>CallbackQuery</h2>
+<p>This object represents an incoming callback query from a callback button in an inline keyboard. If the button that originated the query was attached to a message sent by the bot, the field message will be present. If the button was attached to a message sent via the bot (in inline mode), the field inline_message_id will be present. Exactly one of the fields data or game_short_name will be present.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for this query</td></tr>
+<tr><td>from</td><td>User</td><td>true (Verdadeiro)</td><td>Sender</td></tr>
+<tr><td>message</td><td>Message (Mensagem)</td><td>false (Falso)</td><td>Message with the callback button that originated the query. Note that message content and message date will not be available if the message is too old</td></tr>
+<tr><td>inline_message_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Identifier of the message sent via the bot in inline mode, that originated the query.</td></tr>
+<tr><td>chat_instance</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Global identifier, uniquely corresponding to the chat to which the message with the callback button was sent. Useful for high scores in games.</td></tr>
+<tr><td>data</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Data associated with the callback button. Be aware that a bad client can send arbitrary data in this field.</td></tr>
+<tr><td>game_short_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Short name of a Game to be returned, serves as the unique identifier for the game</td></tr>
+</tbody>
+</table>
+<h2>ForceReply</h2>
+<p>Upon receiving a message with this object, Telegram clients will display a reply interface to the user (act as if the user has selected the bot&#x2018;s message and tapped &#x2019;Reply&apos;). This can be extremely useful if you want to create user-friendly step-by-step interfaces without having to sacrifice privacy mode.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>force_reply</td><td>True (Verdadeiro)</td><td>true (Verdadeiro)</td><td>Shows reply interface to the user, as if they manually selected the bot&#x2018;s message and tapped &#x2019;Reply&apos;</td></tr>
+<tr><td>selective</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Use this parameter if you want to force reply from specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot&apos;s message is a reply (has reply_to_message_id), sender of the original message.</td></tr>
+</tbody>
+</table>
+<h2>ChatPhoto</h2>
+<p>This object represents a chat photo.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>small_file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique file identifier of small (160x160) chat photo. This file_id can be used only for photo download.</td></tr>
+<tr><td>big_file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique file identifier of big (640x640) chat photo. This file_id can be used only for photo download.</td></tr>
+</tbody>
+</table>
+<h2>ChatMember</h2>
+<p>This object contains information about one member of a chat.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>user</td><td>User</td><td>true (Verdadeiro)</td><td>Information about the user</td></tr>
+<tr><td>status</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>The member&apos;s status in the chat. Can be &#x201C;creator&#x201D;, &#x201C;administrator&#x201D;, &#x201C;member&#x201D;, &#x201C;restricted&#x201D;, &#x201C;left&#x201D; or &#x201C;kicked&#x201D;</td></tr>
+<tr><td>until_date</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Restricted and kicked only. Date when restrictions will be lifted for this user, unix time</td></tr>
+<tr><td>can_be_edited</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Administrators only. True, if the bot is allowed to edit administrator privileges of that user</td></tr>
+<tr><td>can_change_info</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Administrators only. True, if the administrator can change the chat title, photo and other settings</td></tr>
+<tr><td>can_post_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Administrators only. True, if the administrator can post in the channel, channels only</td></tr>
+<tr><td>can_edit_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Administrators only. True, if the administrator can edit messages of other users and can pin messages, channels only</td></tr>
+<tr><td>can_delete_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Administrators only. True, if the administrator can delete messages of other users</td></tr>
+<tr><td>can_invite_users</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Administrators only. True, if the administrator can invite new users to the chat</td></tr>
+<tr><td>can_restrict_members</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Administrators only. True, if the administrator can restrict, ban or unban chat members</td></tr>
+<tr><td>can_pin_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Administrators only. True, if the administrator can pin messages, supergroups only</td></tr>
+<tr><td>can_promote_members</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Administrators only. True, if the administrator can add new administrators with a subset of his own privileges or demote administrators that he has promoted, directly or indirectly (promoted by administrators that were appointed by the user)</td></tr>
+<tr><td>can_send_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Restricted only. True, if the user can send text messages, contacts, locations and venues</td></tr>
+<tr><td>can_send_media_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Restricted only. True, if the user can send audios, documents, photos, videos, video notes and voice notes, implies can_send_messages</td></tr>
+<tr><td>can_send_other_messages</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Restricted only. True, if the user can send animations, games, stickers and use inline bots, implies can_send_media_messages</td></tr>
+<tr><td>can_add_web_page_previews</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Restricted only. True, if user may add web page previews to his messages, implies can_send_media_messages</td></tr>
+</tbody>
+</table>
+<h2>ResponseParameters</h2>
+<p>Contains information about why a request was unsuccessful.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>migrate_to_chat_id</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>The group has been migrated to a supergroup with the specified identifier. Esse n&#xFA;mero pode ser maior que 32 bits e algumas linguagens de programa&#xE7;&#xE3;o podem ter defeitos de dificuldade/silencia&#xE7;&#xE3;o na interpreta&#xE7;&#xE3;o. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier.</td></tr>
+<tr><td>retry_after</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>In case of exceeding flood control, the number of seconds left to wait before the request can be repeated</td></tr>
+</tbody>
+</table>
+<h2>InputMediaPhoto</h2>
+<p>Represents a photo to be sent.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;photo&quot;</td></tr>
+<tr><td>media</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>File to send. Pass a file_id to send a file that exists on the Telegram servers (recommended), pass an HTTP URL for Telegram to get a file from the Internet, or pass &quot;attach://<file_attach_name>&quot; to upload a new one using multipart/form-data under <file_attach_name> name. More info on Sending Files &#xBB;</file_attach_name></file_attach_name></td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda da foto a ser enviada, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+</tbody>
+</table>
+<h2>InputMediaVideo</h2>
+<p>Represents a video to be sent.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>tipo</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Tipo do result, deve ser &quot;video&quot;</td></tr>
+<tr><td>media</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>File to send. Pass a file_id to send a file that exists on the Telegram servers (recommended), pass an HTTP URL for Telegram to get a file from the Internet, or pass &quot;attach://<file_attach_name>&quot; to upload a new one using multipart/form-data under <file_attach_name> name. More info on Sending Files &#xBB;</file_attach_name></file_attach_name></td></tr>
+<tr><td>caption</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Legenda da v&#xED;deo a ser enviada, 0-200 caracteres</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&quot;Markdown&quot; ou &quot;HTML&quot;, se voc&#xEA; quiser que os aplicativos mostrem formata&#xE7;&#xE3;o na legenda da foto.</td></tr>
+<tr><td>width</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Largura do v&#xED;deo</td></tr>
+<tr><td>height</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Altura do v&#xED;deo</td></tr>
+<tr><td>duration</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Dura&#xE7;&#xE3;o do v&#xED;deo</td></tr>
+<tr><td>supports_streaming</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Pass True, if the uploaded video is suitable for streaming</td></tr>
+</tbody>
+</table>
+<h2>Sticker</h2>
+<p>This object represents a sticker.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo desse arquivo</td></tr>
+<tr><td>width</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Sticker width</td></tr>
+<tr><td>height</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Sticker height</td></tr>
+<tr><td>thumb</td><td>PhotoSize</td><td>false (Falso)</td><td>Sticker thumbnail in the .webp or .jpg format</td></tr>
+<tr><td>emoji</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Emoji associated with the sticker</td></tr>
+<tr><td>set_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Name of the sticker set to which the sticker belongs</td></tr>
+<tr><td>mask_position</td><td>MaskPosition</td><td>false (Falso)</td><td>For mask stickers, the position where the mask should be placed</td></tr>
+<tr><td>file_size</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Tamanho do arquivo</td></tr>
+</tbody>
+</table>
+<h2>StickerSet</h2>
+<p>This object represents a sticker set.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Sticker set name</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Sticker set title</td></tr>
+<tr><td>contains_masks</td><td>Boolen (Boleano)</td><td>true (Verdadeiro)</td><td>True, if the sticker set contains masks</td></tr>
+<tr><td>stickers</td><td>Array of Sticker</td><td>true (Verdadeiro)</td><td>List of all set stickers</td></tr>
+</tbody>
+</table>
+<h2>MaskPosition</h2>
+<p>This object describes the position on faces where a mask should be placed by default.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>point</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>The part of the face relative to which the mask should be placed. One of &#x201C;forehead&#x201D;, &#x201C;eyes&#x201D;, &#x201C;mouth&#x201D;, or &#x201C;chin&#x201D;.</td></tr>
+<tr><td>x_shift</td><td>Float n&#xFA;mero</td><td>true (Verdadeiro)</td><td>Shift by X-axis measured in widths of the mask scaled to the face size, from left to right. For example, choosing -1.0 will place mask just to the left of the default mask position.</td></tr>
+<tr><td>y_shift</td><td>Float n&#xFA;mero</td><td>true (Verdadeiro)</td><td>Shift by Y-axis measured in heights of the mask scaled to the face size, from top to bottom. For example, 1.0 will place the mask just below the default mask position.</td></tr>
+<tr><td>scale</td><td>Float n&#xFA;mero</td><td>true (Verdadeiro)</td><td>Mask scaling coefficient. For example, 2.0 means double size.</td></tr>
+</tbody>
+</table>
+<h2>InlineQuery (Consulta Inline)</h2>
+<p>This object represents an incoming inline query. When the user sends an empty query, your bot could return some default or trending results.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique identifier for this query</td></tr>
+<tr><td>from</td><td>User</td><td>true (Verdadeiro)</td><td>Sender</td></tr>
+<tr><td>location</td><td>Location</td><td>false (Falso)</td><td>Sender location, only for bots that request user location</td></tr>
+<tr><td>query</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Text of the query (up to 512 characters)</td></tr>
+<tr><td>offset</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Offset of the results to be returned, can be controlled by the bot</td></tr>
+</tbody>
+</table>
+<h2>InputTextMessageContent</h2>
+<p>Represents the content of a text message to be sent as the result of an inline query.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>message_text</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Text of the message to be sent, 1-4096 characters</td></tr>
+<tr><td>parse_mode</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width text or inline URLs in your bot&apos;s message.</td></tr>
+<tr><td>disable_web_page_preview</td><td>Boolen (Boleano)</td><td>false (Falso)</td><td>Disables link previews for links in the sent message</td></tr>
+</tbody>
+</table>
+<h2>InputLocationMessageContent</h2>
+<p>Represents the content of a location message to be sent as the result of an inline query.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>latitude</td><td>Float</td><td>true (Verdadeiro)</td><td>Latitude of the location in degrees</td></tr>
+<tr><td>longitude</td><td>Float</td><td>true (Verdadeiro)</td><td>Longitude of the location in degrees</td></tr>
+<tr><td>live_period</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Per&#xED;odo em segundos para que a localiza&#xE7;&#xE3;o possa ser atualizada, deve estar entre 60 e 86400.</td></tr>
+</tbody>
+</table>
+<h2>InputVenueMessageContent</h2>
+<p>Represents the content of a venue message to be sent as the result of an inline query.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>latitude</td><td>Float</td><td>true (Verdadeiro)</td><td>Latitude of the venue in degrees</td></tr>
+<tr><td>longitude</td><td>Float</td><td>true (Verdadeiro)</td><td>Longitude of the venue in degrees</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Name of the venue</td></tr>
+<tr><td>address</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Address of the venue</td></tr>
+<tr><td>foursquare_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Foursquare identifier of the venue, if known</td></tr>
+</tbody>
+</table>
+<h2>InputContactMessageContent</h2>
+<p>Represents the content of a contact message to be sent as the result of an inline query.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>phone_number</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>N&#xFA;mero de telefone do contato</td></tr>
+<tr><td>first_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Primeiro nome do contato</td></tr>
+<tr><td>last_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>&#xDA;ltimo nome do contato</td></tr>
+</tbody>
+</table>
+<h2>ChosenInlineResult</h2>
+<p>Represents a result of an inline query that was chosen by the user and sent to their chat partner.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>result_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>The unique identifier for the result that was chosen</td></tr>
+<tr><td>from</td><td>User</td><td>true (Verdadeiro)</td><td>The user that chose the result</td></tr>
+<tr><td>location</td><td>Location</td><td>false (Falso)</td><td>Sender location, only for bots that require user location</td></tr>
+<tr><td>inline_message_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Identifier of the sent inline message. Available only if there is an inline keyboard attached to the message. Will be also received in callback queries and can be used to edit the message.</td></tr>
+<tr><td>query</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>The query that was used to obtain the result</td></tr>
+</tbody>
+</table>
+<h2>LabeledPrice</h2>
+<p>This object represents a portion of the price for goods or services.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>label</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Portion label</td></tr>
+<tr><td>amount</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Price of the product in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).</td></tr>
+</tbody>
+</table>
+<h2>Invoice</h2>
+<p>This object contains basic information about an invoice.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Product name</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Product description</td></tr>
+<tr><td>start_parameter</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique bot deep-linking parameter that can be used to generate this invoice</td></tr>
+<tr><td>currency</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Three-letter ISO 4217 currency code</td></tr>
+<tr><td>total_amount</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).</td></tr>
+</tbody>
+</table>
+<h2>ShippingAddress</h2>
+<p>This object represents a shipping address.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>country_code</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>ISO 3166-1 alpha-2 country code</td></tr>
+<tr><td>state</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>State, if applicable</td></tr>
+<tr><td>city</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>City</td></tr>
+<tr><td>street_line1</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>First line for the address</td></tr>
+<tr><td>street_line2</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Second line for the address</td></tr>
+<tr><td>post_code</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Address post code</td></tr>
+</tbody>
+</table>
+<h2>OrderInfo</h2>
+<p>This object represents information about an order.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>User name</td></tr>
+<tr><td>phone_number</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>User&apos;s phone number</td></tr>
+<tr><td>email</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>User email</td></tr>
+<tr><td>shipping_address</td><td>ShippingAddress</td><td>false (Falso)</td><td>User shipping address</td></tr>
+</tbody>
+</table>
+<h2>ShippingOption</h2>
+<p>This object represents one shipping option.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Shipping option identifier</td></tr>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Option title</td></tr>
+<tr><td>prices</td><td>Array of LabeledPrice</td><td>true (Verdadeiro)</td><td>List of price portions</td></tr>
+</tbody>
+</table>
+<h2>SuccessfulPayment</h2>
+<p>This object contains basic information about a successful payment.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>currency</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Three-letter ISO 4217 currency code</td></tr>
+<tr><td>total_amount</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).</td></tr>
+<tr><td>invoice_payload</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Bot specified invoice payload</td></tr>
+<tr><td>shipping_option_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Identifier of the shipping option chosen by the user</td></tr>
+<tr><td>order_info</td><td>OrderInfo</td><td>false (Falso)</td><td>Order info provided by the user</td></tr>
+<tr><td>telegram_payment_charge_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Telegram payment identifier</td></tr>
+<tr><td>provider_payment_charge_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Provider payment identifier</td></tr>
+</tbody>
+</table>
+<h2>ShippingQuery</h2>
+<p>This object contains information about an incoming shipping query.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique query identifier</td></tr>
+<tr><td>from</td><td>User</td><td>true (Verdadeiro)</td><td>User who sent the query</td></tr>
+<tr><td>invoice_payload</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Bot specified invoice payload</td></tr>
+<tr><td>shipping_address</td><td>ShippingAddress</td><td>true (Verdadeiro)</td><td>User specified shipping address</td></tr>
+</tbody>
+</table>
+<h2>PreCheckoutQuery</h2>
+<p>This object contains information about an incoming pre-checkout query.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Unique query identifier</td></tr>
+<tr><td>from</td><td>User</td><td>true (Verdadeiro)</td><td>User who sent the query</td></tr>
+<tr><td>currency</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Three-letter ISO 4217 currency code</td></tr>
+<tr><td>total_amount</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in currencies.json, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).</td></tr>
+<tr><td>invoice_payload</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Bot specified invoice payload</td></tr>
+<tr><td>shipping_option_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Identifier of the shipping option chosen by the user</td></tr>
+<tr><td>order_info</td><td>OrderInfo</td><td>false (Falso)</td><td>Order info provided by the user</td></tr>
+</tbody>
+</table>
+<h2>Game</h2>
+<p>This object represents a game. Use BotFather to create and edit games, their short names will act as unique identifiers.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>title</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Title of the game</td></tr>
+<tr><td>description</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Description of the game</td></tr>
+<tr><td>photo</td><td>Array de PhotoSize</td><td>true (Verdadeiro)</td><td>Photo that will be displayed in the game message in chats.</td></tr>
+<tr><td>text</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Brief description of the game or high scores included in the game message. Can be automatically edited to include current high scores for the game when the bot calls setGameScore, or manually edited using editMessageText. 0-4096 characters.</td></tr>
+<tr><td>text_entities</td><td>Array de MessageEntity</td><td>false (Falso)</td><td>Special entities that appear in text, such as usernames, URLs, bot commands, etc.</td></tr>
+<tr><td>animation</td><td>Animation</td><td>false (Falso)</td><td>Animation that will be displayed in the game message in chats. Upload via BotFather</td></tr>
+</tbody>
+</table>
+<h2>Animation</h2>
+<p>You can provide an animation for your game so that it looks stylish in chats (check out Lumberjack for an example). This object represents an animation file to be displayed in the message containing a game.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>file_id</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>true (Verdadeiro)</td><td>Identificador exclusivo do arquivo</td></tr>
+<tr><td>thumb</td><td>PhotoSize</td><td>false (Falso)</td><td>Animation thumbnail as defined by sender</td></tr>
+<tr><td>file_name</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Original animation filename as defined by sender</td></tr>
+<tr><td>mime_type</td><td>String (Sequ&#xEA;ncia de caracteres)</td><td>false (Falso)</td><td>Tipo MIME do arquivo conforme definido pelo remetente</td></tr>
+<tr><td>file_size</td><td>Integer (N&#xFA;mero)</td><td>false (Falso)</td><td>Tamanho do arquivo</td></tr>
+</tbody>
+</table>
+<h2>GameHighScore</h2>
+<p>Esse objeto representa uma linha da tabela de pontua&#xE7;&#xF5;es mais altas de um jogo.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Tipo</th><th>Requerido</th><th>Descri&#xE7;&#xE3;o</th></tr>
+</thead>
+<tbody>
+<tr><td>position</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Posi&#xE7;&#xE3;o na tabela de pontua&#xE7;&#xE3;o do jogo</td></tr>
+<tr><td>user</td><td>User</td><td>true (Verdadeiro)</td><td>User</td></tr>
+<tr><td>score</td><td>Integer (N&#xFA;mero)</td><td>true (Verdadeiro)</td><td>Pontua&#xE7;&#xE3;o</td></tr>
+</tbody>
+</table>
+
+
+			</article>
+		</div>
+	<footer>
+		<div class="uk-card uk-card-secondary uk-card-body">
+			<label class="uk-align-center uk-text-center">
+				<small>
+					<span uk-icon="github"></span> Projetos totalmente Open Source, veja nosso <a href="https://github.com/DesenvolvimentoDeBots" target="_blank">GitHub</a>.
+					<br><span uk-icon="code"></span> com <span uk-icon="heart"></span> pelos <a href="https://telegram.me/DesenvolvimentoDeBots" target="_blank">membros do grupo</a>.
+					<br>Construido usado <a href="https://jus.js.org" target="_blank">Jus</a> e <a href="https://getuikit.com" target="_blank">UiKit</a>
+					<br>Hospedado em <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+				</small>
+			</label>
+		</div>
+	</footer>
+
+	<div class="uk-offcanvas-content">
+		<div id="offcanvas-nav-primary" uk-offcanvas="overlay: false">
+			<div class="uk-offcanvas-bar uk-flex uk-flex-column">
+				<ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+					<a href="/">
+						<img src="/images/logo.png" class="logo-mobile uk-margin-small-right">
+						<label>Desenvolvimento De Bots</label>
+					</a>
+					<hr class="uk-divider-icon">
+					<li><a href="/projetos">Projetos da Comunidade</a></li>
+					<li><a href="/materiais">Materiais de Apoio</a></li>
+					<li><a href="/documentacao">Documenta&#xE7;&#xE3;o</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="/js/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>

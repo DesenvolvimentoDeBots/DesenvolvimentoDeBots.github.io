@@ -1,0 +1,455 @@
+<html>
+
+<head>
+	<title>Projetos!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Projetos &amp; Bots desenvolvidos pelos membros do grupo.">
+	<meta name="keywords" content="Projetos!">
+
+	<meta property="og:title" content="Projetos!">
+	<meta property="og:url" content="http://DesenvolvimentoDeBots.github.io/projetos">
+	<meta property="og:site_name" content="Projetos!">
+	<meta property="og:description" content="Projetos &amp; Bots desenvolvidos pelos membros do grupo.">
+	<meta name="twitter:title" content="Projetos!">
+	<meta name="twitter:url" content="http://DesenvolvimentoDeBots.github.io/projetos">
+
+	<!--<link rel="shortcut icon" href="/images/favicon.ico">-->
+	<link rel="stylesheet" href="/uikit-3.0.0-beta.40/css/uikit.min.css">
+	<link rel="stylesheet" href="/css/theme.css">
+	<link rel="stylesheet" href="/css/reset.css">
+	<script src="/uikit-3.0.0-beta.40/js/uikit.min.js"></script>
+	<script src="/uikit-3.0.0-beta.40/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+	<nav class="uk-navbar-container menu" uk-navbar="">
+		<div class="uk-navbar-left">
+			<ul class="uk-navbar-nav">
+				<li class="uk-active">
+					<a href="/">
+						<img src="/images/logo.png" class="logo uk-margin-small-right">
+						<label class="uk-visible@s">Desenvolvimento De Bots</label>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="uk-navbar-right">
+			<ul class="uk-navbar-nav uk-visible@s">
+				<li><a href="/projetos">Projetos da Comunidade</a></li>
+				<li><a href="/materiais">Materiais de Apoio</a></li>
+				<li>
+					<a href="/documentacao">Documenta&#xE7;&#xE3;o</a>
+					<div class="uk-navbar-dropdown uk-margin-remove">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a href="/documentacao/pt/types">Types (PT)</a></li>
+							<li><a href="/documentacao/pt/methods">Methods (PT)</a></li>
+							<li><a href="/documentacao/pt/inline">InlineQuery (PT)</a></li>
+							<li><a href="/documentacao/en/types">Types (EN)</a></li>
+							<li><a href="/documentacao/en/methods">Methods (EN)</a></li>
+							<li><a href="/documentacao/en/inline">InlineQuery (EN)</a></li>
+							<li><a href="https://core.telegram.org/bots/api">Site Official</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<button class="uk-hidden@s uk-button uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary" uk-icon="more-vertical"> Menu</button>
+		</div>
+	</nav>
+		<div class="uk-hidden-small uk-card uk-card-body uk-card-primary uk-panel">
+			<h3 class="uk-card-title"><span uk-icon="info"></span> Projetos!</h3>
+			<p>Projetos &amp; Bots desenvolvidos pelos membros do grupo.</p>
+		</div>
+	<!--FIXME: Bug in jus-->
+		<!--
+title: Projetos!
+description: Projetos & Bots desenvolvidos pelos membros do grupo.
+regexParaUsarEmREADME: \- \[(.*)\]\((.*)\) por \[(.*)\]\((.*)\) \- (.*)$
+trocaPara: {"name": "$1", "username": "$2", "urls": [{"title": "GitHub", "url": "$2"}], "authors": [{"name":"$3", "url": "$4"}], "description": "$5"},
+-->
+
+<ul uk-accordion="" class="uk-margin-remove">
+	<li class="uk-open">
+		<a class="uk-accordion-title uk-card uk-card-default uk-card-body uk-card-primary card-green" id="telegram">
+			<span uk-icon="triangle-up"></span>
+			Telegram
+		</a>
+		<div class="uk-accordion-content">
+			<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid="">
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Bot Packagist
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/vitormattos">VitorMattos</a>
+							</h4>
+									<a href="https://github.com/vitormattos/bot-packagist">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Um Telegram Bot para pesquisar em packagist.org</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Currencies Robot
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/joaokhaled">Khaled</a>
+							</h4>
+									<a href="https://github.com/joaokhaled/Currencies-Robot">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Um Telegram Bot desenvolvido para visualizar a cota&#xE7;&#xE3;o de moedas e altcoins de forma r&#xE1;pida e f&#xE1;cil.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Easy Currency
+									(<a href="https://telegram.me/easy_currency_bot">@easy_currency_bot</a>)
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/thomasgroch">Thomas Groch</a>
+							</h4>
+							<hr class="uk-margin-remove">
+							<p>&#xC9; uma ferramenta r&#xE1;pida para obter a taxa de c&#xE2;mbio e convers&#xE3;o de moedas em tempo real, com suporte para Reais, D&#xF3;lares e Bitcoins.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								F.R.I.D.A.Y.
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/VycktorStark">Vycktor Stark</a>
+							</h4>
+									<a href="https://github.com/VycktorStark/Friday">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Bot escrito em Python, com gerenciamento de plugins.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								F.R.I.D.A.Y.
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/VycktorStark">Vycktor Stark</a>
+							</h4>
+									<a href="https://github.com/DialogWizards/Friday">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Bot escrito em Python, com gerenciamento de plugins.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								ImageVisionBot
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/0x7067">Pedro Guimar&#xE3;es</a>
+							</h4>
+									<a href="https://github.com/0x7067/imagevision-bot">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Um Telegram bot que usa vis&#xE3;o computacional para descrever imagens.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								imguradbot
+									(<a href="https://telegram.me/imguradbot">@imguradbot</a>)
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://t.me/julianodorneles">Juliano Dorneles</a>
+							</h4>
+							<hr class="uk-margin-remove">
+							<p>Um bot para baixar imagens de &#xE1;lbuns do Imgur.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Myinstantsbot
+									(<a href="https://telegram.me/Myinstantsbot">@Myinstantsbot</a>)
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/heylouiz">Heylouiz</a>
+							</h4>
+									<a href="https://github.com/heylouiz/myinstantsbot">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Um Telegram Bot que busca sons no Myintants e os manda como mensagens de voz.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Nathy BOT
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/VycktorStark">Vycktor Stark</a>
+							</h4>
+									<a href="https://github.com/VycktorStark/Nathy">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Bot com AIML + Telepot.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Nathy Bot
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/VycktorStark">Vycktor Stark</a>
+							</h4>
+									<a href="https://github.com/VycktorStark/Nathy">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Bot com AIML + Telepot.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Rob&#xF4; Db vs 1.0
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membros:
+									- <a href="https://github.com/VycktorStark">Vycktor Stark</a>
+									- <a href="https://github.com/Player4NoobWinner">Adilson Cavalcante</a>
+							</h4>
+									<a href="https://github.com/VycktorStark/DbBot.git">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Um Telegram Bot simples que executa at&#xE9; no Qpython.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Rob&#xF4; Db vs 2.0
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membros:
+									- <a href="https://github.com/VycktorStark">Vycktor Stark</a>
+									- <a href="https://github.com/Player4NoobWinner">Adilson Cavalcante</a>
+									- <a href="https://github.com/Synk0">Wesley Henrique</a>
+							</h4>
+									<a href="https://github.com/VycktorStark/DbRobot-Lua.git">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Um Telegram Bot baseado no projeto da equipe Synko Developers, e no projeto do SiD feito pelo TiagoDanin.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Rob&#xF4; Db vs 3.0
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/VycktorStark">Vycktor Stark</a>
+							</h4>
+									<a href="https://github.com/VycktorStark/DbRobot-Python.git">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Bot baseado nas antigas vers&#xF5;es do Rob&#xF4; Db.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Rob&#xF4;ED
+									(<a href="https://telegram.me/EdRobot">@EdRobot</a>)
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://synko.com.br">[Equipe] Synko Developers</a>
+							</h4>
+									<a href="https://synko.com.br">Site</a>
+							<hr class="uk-margin-remove">
+							<p>Fui criado pra tornar seu grupo mais divertido e organizado.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								SendCH-Telegram
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/TiagoDanin">TiagoDanin</a>
+							</h4>
+									<a href="https://github.com/TiagoDanin/SendCH-Telegram">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Um webapp para enviar mensagem com suporte a Markdown no Telegram.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								SiD
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/TiagoDanin">TiagoDanin</a>
+							</h4>
+									<a href="https://github.com/TiagoDanin/SiD">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Um bot baseado no Otouto com suporte a Inline.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								SiDBot
+									(<a href="https://telegram.me/sidbot">@sidbot</a>)
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/TiagoDanin">TiagoDanin</a>
+							</h4>
+									<a href="https://github.com/TiagoDanin/SiDBot">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Um bot baseado nas antigas vers&#xF5;es do SiD, agora feito do zero e escrito em Python.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								SpotifyTelegram
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/TiagoDanin">TiagoDanin</a>
+							</h4>
+									<a href="https://github.com/TiagoDanin/SpotifyTelegram">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Uma cole&#xE7;&#xE3;o de plugins para busca no Spotify.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Timmoty
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://github.com/Francis-Taylor">Francis Taylor</a>
+							</h4>
+									<a href="https://github.com/Francis-Taylor/Timotty-Master">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Bot para Telegram feito com Threads nativa da linguagem Python.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								ts2chbot
+									(<a href="https://telegram.me/ts2chbot">@ts2chbot</a>)
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro:
+									- <a href="https://t.me/julianodorneles">Juliano Dorneles</a>
+							</h4>
+							<hr class="uk-margin-remove">
+							<p>Um bot para convers&#xE3;o de v&#xED;deos comuns para Telescopes (&#xE9; poss&#xED;vel enviar v&#xED;deos diretamente ou postar links do Instagram e Youtube - sempre observando o limite m&#xE1;ximo de upload para Telescopes, que gira em torno dos 9Mb, independente da dura&#xE7;&#xE3;o).</p>
+						</div>
+					</div>
+			</div>
+		</div>
+	</li>
+	<li class="uk-margin-remove">
+		<a class="uk-accordion-title uk-card uk-card-default uk-card-body uk-card-primary card-red" id="outros">
+			<span uk-icon="more"></span>
+			Outros
+		</a>
+		<div class="uk-accordion-content">
+			<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid="">
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Api.AI-Simsimi [API.IA]
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro
+									- <a href="https://github.com/VycktorStark">Vycktor Stark</a>
+							</h4>
+									<a href="https://github.com/VycktorStark/Api.AI-Simsimi">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Um bot que utiliza a IA do SimSimi.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Rob&#xF4; Db vs 4.0 [Facebook]
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro
+									- <a href="https://github.com/VycktorStark">Vycktor Stark</a>
+							</h4>
+									<a href="https://github.com/VycktorStark/DbRobot-Facebook-Python">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Um bot simples que usa a API do Facebook de Bots escrita em Python.</p>
+						</div>
+					</div>
+					<div>
+						<div class="project-card-body uk-card uk-card-default uk-card-hover uk-card-body">
+							<h3 class="uk-margin-remove uk-card-title">
+								Taylor Bot Discord [Discord]
+							</h3>
+							<h4 class="uk-text-small uk-margin-remove">
+								Membro
+									- <a href="https://github.com/francis-taylor">Francis Taylor</a>
+							</h4>
+									<a href="https://github.com/francis-taylor/Taylorbot-Discord">GitHub</a>
+							<hr class="uk-margin-remove">
+							<p>Vers&#xE3;o do Taylor Robot feito para o Discord.</p>
+						</div>
+					</div>
+			</div>
+		</div>
+	</li>
+</ul>
+
+	<footer>
+		<div class="uk-card uk-card-secondary uk-card-body">
+			<label class="uk-align-center uk-text-center">
+				<small>
+					<span uk-icon="github"></span> Projetos totalmente Open Source, veja nosso <a href="https://github.com/DesenvolvimentoDeBots" target="_blank">GitHub</a>.
+					<br><span uk-icon="code"></span> com <span uk-icon="heart"></span> pelos <a href="https://telegram.me/DesenvolvimentoDeBots" target="_blank">membros do grupo</a>.
+					<br>Construido usado <a href="https://jus.js.org" target="_blank">Jus</a> e <a href="https://getuikit.com" target="_blank">UiKit</a>
+					<br>Hospedado em <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+				</small>
+			</label>
+		</div>
+	</footer>
+
+	<div class="uk-offcanvas-content">
+		<div id="offcanvas-nav-primary" uk-offcanvas="overlay: false">
+			<div class="uk-offcanvas-bar uk-flex uk-flex-column">
+				<ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+					<a href="/">
+						<img src="/images/logo.png" class="logo-mobile uk-margin-small-right">
+						<label>Desenvolvimento De Bots</label>
+					</a>
+					<hr class="uk-divider-icon">
+					<li><a href="/projetos">Projetos da Comunidade</a></li>
+					<li><a href="/materiais">Materiais de Apoio</a></li>
+					<li><a href="/documentacao">Documenta&#xE7;&#xE3;o</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="/js/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>
