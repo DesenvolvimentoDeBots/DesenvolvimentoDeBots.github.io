@@ -11,13 +11,13 @@ E também, discussão sobre ManyBot, Chatfuel entre outros criadores de bot aut�
 ## Projetos criado pela comunidade
 *Bots desenvolvido pelos membros do grupo*
 {{#telegram}}
-- {{name}}{{#username}} [(@{{username}})](https://telegram.me/{{username}}){{/username}}{{#urls}} ([{{title}}]({{&urls}})){{/urls}} - Membro(s):{{#authors}} [{{name}}]({{&url}}){{/authors}} - {{description}}
+- {{name}}{{#username}} [(@{{username}})](https://telegram.me/{{username}}){{/username}}{{#urls}} ([{{title}}]({{&url}})){{/urls}} - Membro(s):{{#authors}} [{{name}}]({{&url}}){{/authors}} - {{description}}
 
 {{/telegram}}
 
 _Bots para outras plataformas_
 {{#etc}}
-- {{name}}{{#username}} [(@{{username}})](https://telegram.me/{{username}}){{/username}}{{#urls}} ([{{title}}]({{&urls}})){{/urls}} - Membro(s):{{#authors}} [{{name}}]({{&url}}){{/authors}} - {{description}}
+- {{name}}{{#username}} [(@{{username}})](https://telegram.me/{{username}}){{/username}}{{#urls}} ([{{title}}]({{&url}})){{/urls}} - Membro(s):{{#authors}} [{{name}}]({{&url}}){{/authors}} - {{description}}
 
 {{/etc}}
 
