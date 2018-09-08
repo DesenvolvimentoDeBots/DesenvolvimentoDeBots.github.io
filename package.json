@@ -21,7 +21,7 @@
     "node-sass": "4.5.0",
     "require-dir": "0.3.2",
     "graceful-fs": "4.1.6",
-    "jsonfile": "4.0.0",
+    "jsonfile": "5.0.0",
     "mustache": "2.3.0"
   },
   "devDependencies": {
