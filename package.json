@@ -22,7 +22,7 @@
     "require-dir": "0.3.2",
     "graceful-fs": "4.1.6",
     "jsonfile": "5.0.0",
-    "mustache": "2.3.0"
+    "mustache": "2.3.2"
   },
   "devDependencies": {
     "npx": "10.2.0"
