@@ -6,7 +6,9 @@
   "scripts": {
     "start": "bash scripts/test.sh",
     "build": "bash scripts/build.sh",
-    "fix": "bash scripts/fixJus.sh"
+    "fix": "bash scripts/fixJus.sh",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "website",
@@ -15,16 +17,18 @@
   "author": "TiagoDanin",
   "license": "MIT",
   "dependencies": {
-    "chokidar": "1.4.2",
+    "chokidar": "2.0.0",
     "ignored": "2.0.4",
     "jus": "0.26.0",
     "node-sass": "4.5.0",
     "require-dir": "0.3.2",
     "graceful-fs": "4.1.6",
     "jsonfile": "5.0.0",
-    "mustache": "3.0.0"
+    "mustache": "3.0.0",
+    "snyk": "^1.96.0"
   },
   "devDependencies": {
     "npx": "10.2.0"
-  }
+  },
+  "snyk": true
 }
