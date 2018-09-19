@@ -1,0 +1,24 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - jus > browser-sync > localtunnel > debug:
+        patched: '2018-09-19T12:36:32.535Z'
+  'npm:hoek:20180212':
+    - jus > less > request > hawk > hoek:
+        patched: '2018-09-19T12:36:32.535Z'
+    - jus > less > request > hawk > boom > hoek:
+        patched: '2018-09-19T12:36:32.535Z'
+    - jus > less > request > hawk > sntp > hoek:
+        patched: '2018-09-19T12:36:32.535Z'
+    - jus > less > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-09-19T12:36:32.535Z'
+  'npm:lodash:20180130':
+    - jus > cheerio > lodash:
+        patched: '2018-09-19T12:36:32.535Z'
+    - jus > upath > lodash:
+        patched: '2018-09-19T12:36:32.535Z'
+    - jus > get-image-colors > get-svg-colors > cheerio > lodash:
+        patched: '2018-09-19T12:36:32.535Z'
