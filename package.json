@@ -25,7 +25,7 @@
     "graceful-fs": "4.1.6",
     "jsonfile": "5.0.0",
     "mustache": "3.0.0",
-    "snyk": "1.100.0"
+    "snyk": "1.100.1"
   },
   "devDependencies": {
     "npx": "10.2.0"
