@@ -1,224 +1,328 @@
-[{
-	"name": "Bot Packagist",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/vitormattos/bot-packagist"
-	}],
-	"authors": [{
-		"name": "VitorMattos",
-		"url": "https://github.com/vitormattos"
-	}],
-	"description": "Um Telegram Bot para pesquisar em packagist.org"
-}, {
-	"name": "Currencies Robot",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/joaokhaled/Currencies-Robot"
-	}],
-	"authors": [{
-		"name": "Khaled",
-		"url": "https://github.com/joaokhaled"
-	}],
-	"description": "Um Telegram Bot desenvolvido para visualizar a cotação de moedas e altcoins de forma rápida e fácil."
-}, {
-	"name": "Easy Currency",
-	"username": "easy_currency_bot",
-	"authors": [{
-		"name": "Thomas Groch",
-		"url": "https://github.com/thomasgroch"
-	}],
-	"description": "É uma ferramenta rápida para obter a taxa de câmbio e conversão de moedas em tempo real, com suporte para Reais, Dólares e Bitcoins."
-}, {
-	"name": "F.R.I.D.A.Y.",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/VycktorStark/Friday"
-	}],
-	"authors": [{
-		"name": "Vycktor Stark",
-		"url": "https://github.com/VycktorStark"
-	}],
-	"description": "Bot escrito em Python, com gerenciamento de plugins."
-}, {
-	"name": "F.R.I.D.A.Y.",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/DialogWizards/Friday"
-	}],
-	"authors": [{
-		"name": "Vycktor Stark",
-		"url": "https://github.com/VycktorStark"
-	}],
-	"description": "Bot escrito em Python, com gerenciamento de plugins."
-}, {
-	"name": "ImageVisionBot",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/0x7067/imagevision-bot"
-	}],
-	"authors": [{
-		"name": "Pedro Guimarães",
-		"url": "https://github.com/0x7067"
-	}],
-	"description": "Um Telegram bot que usa visão computacional para descrever imagens."
-}, {
-	"name": "imguradbot",
-	"username": "imguradbot",
-	"authors": [{
-		"name": "Juliano Dorneles",
-		"url": "https://t.me/julianodorneles"
-	}],
-	"description": "Um bot para baixar imagens de álbuns do Imgur."
-}, {
-	"name": "Myinstantsbot",
-	"username": "Myinstantsbot",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/heylouiz/myinstantsbot"
-	}],
-	"authors": [{
-		"name": "Heylouiz",
-		"url": "https://github.com/heylouiz"
-	}],
-	"description": "Um Telegram Bot que busca sons no Myintants e os manda como mensagens de voz."
-}, {
-	"name": "Nathy BOT",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/VycktorStark/Nathy"
-	}],
-	"authors": [{
-		"name": "Vycktor Stark",
-		"url": "https://github.com/VycktorStark"
-	}],
-	"description": "Bot com AIML + Telepot."
-}, {
-	"name": "Nathy Bot",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/VycktorStark/Nathy"
-	}],
-	"authors": [{
-		"name": "Vycktor Stark",
-		"url": "https://github.com/VycktorStark"
-	}],
-	"description": "Bot com AIML + Telepot."
-}, {
-	"name": "Robô Db vs 1.0",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/VycktorStark/DbBot.git"
-	}],
-	"authors": [{
-		"name": "Vycktor Stark",
-		"url": "https://github.com/VycktorStark"
-	}, {
-		"name": "Adilson Cavalcante",
-		"url": "https://github.com/Player4NoobWinner"
-	}],
-	"description": "Um Telegram Bot simples que executa até no Qpython."
-}, {
-	"name": "Robô Db vs 2.0",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/VycktorStark/DbRobot-Lua.git"
-	}],
-	"authors": [{
-		"name": "Vycktor Stark",
-		"url": "https://github.com/VycktorStark"
-	}, {
-		"name": "Adilson Cavalcante",
-		"url": "https://github.com/Player4NoobWinner"
-	}, {
-		"name": "Wesley Henrique",
-		"url": "https://github.com/Synk0"
-	}],
-	"description": "Um Telegram Bot baseado no projeto da equipe Synko Developers, e no projeto do SiD feito pelo TiagoDanin."
-}, {
-	"name": "Robô Db vs 3.0",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/VycktorStark/DbRobot-Python.git"
-	}],
-	"authors": [{
-		"name": "Vycktor Stark",
-		"url": "https://github.com/VycktorStark"
-	}],
-	"description": "Bot baseado nas antigas versões do Robô Db."
-}, {
-	"name": "RobôED",
-	"username": "EdRobot",
-	"urls": [{
-		"title": "Site",
-		"url": "https://synko.com.br"
-	}],
-	"authors": [{
-		"name": "[Equipe] Synko Developers",
-		"url": "https://synko.com.br"
-	}],
-	"description": "Fui criado pra tornar seu grupo mais divertido e organizado."
-}, {
-	"name": "SendCH-Telegram",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/TiagoDanin/SendCH-Telegram"
-	}],
-	"authors": [{
-		"name": "TiagoDanin",
-		"url": "https://github.com/TiagoDanin"
-	}],
-	"description": "Um webapp para enviar mensagem com suporte a Markdown no Telegram."
-}, {
-	"name": "SiD",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/TiagoDanin/SiD"
-	}],
-	"authors": [{
-		"name": "TiagoDanin",
-		"url": "https://github.com/TiagoDanin"
-	}],
-	"description": "Um bot baseado no Otouto com suporte a Inline."
-}, {
-	"name": "SiDBot",
-	"username": "sidbot",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/TiagoDanin/SiDBot"
-	}],
-	"authors": [{
-		"name": "TiagoDanin",
-		"url": "https://github.com/TiagoDanin"
-	}],
-	"description": "Um bot baseado nas antigas versões do SiD, agora feito do zero e escrito em Python."
-}, {
-	"name": "SpotifyTelegram",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/TiagoDanin/SpotifyTelegram"
-	}],
-	"authors": [{
-		"name": "TiagoDanin",
-		"url": "https://github.com/TiagoDanin"
-	}],
-	"description": "Uma coleção de plugins para busca no Spotify."
-}, {
-	"name": "Timmoty",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/Francis-Taylor/Timotty-Master"
-	}],
-	"authors": [{
-		"name": "Francis Taylor",
-		"url": "https://github.com/Francis-Taylor"
-	}],
-	"description": "Bot para Telegram feito com Threads nativa da linguagem Python."
-}, {
-	"name": "ts2chbot",
-	"username": "ts2chbot",
-	"authors": [{
-		"name": "Juliano Dorneles",
-		"url": "https://t.me/julianodorneles"
-	}],
-	"description": "Um bot para conversão de vídeos comuns para Telescopes (é possível enviar vídeos diretamente ou postar links do Instagram e Youtube - sempre observando o limite máximo de upload para Telescopes, que gira em torno dos 9Mb, independente da duração)."
-}]
+[
+  {
+    "name": "Bot Packagist",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/vitormattos/bot-packagist"
+      }
+    ],
+    "authors": [
+      {
+        "name": "VitorMattos",
+        "url": "https://github.com/vitormattos"
+      }
+    ],
+    "description": "Um Telegram Bot para pesquisar em packagist.org"
+  },
+  {
+    "name": "Currencies Robot",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/joaokhaled/Currencies-Robot"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Khaled",
+        "url": "https://github.com/joaokhaled"
+      }
+    ],
+    "description": "Um Telegram Bot desenvolvido para visualizar a cotação de moedas e altcoins de forma rápida e fácil."
+  },
+  {
+    "name": "Easy Currency",
+    "username": "easy_currency_bot",
+    "authors": [
+      {
+        "name": "Thomas Groch",
+        "url": "https://github.com/thomasgroch"
+      }
+    ],
+    "description": "É uma ferramenta rápida para obter a taxa de câmbio e conversão de moedas em tempo real, com suporte para Reais, Dólares e Bitcoins."
+  },
+  {
+    "name": "F.R.I.D.A.Y.",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/VycktorStark/Friday"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Vycktor Stark",
+        "url": "https://github.com/VycktorStark"
+      }
+    ],
+    "description": "Bot escrito em Python, com gerenciamento de plugins."
+  },
+  {
+    "name": "F.R.I.D.A.Y.",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/DialogWizards/Friday"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Vycktor Stark",
+        "url": "https://github.com/VycktorStark"
+      }
+    ],
+    "description": "Bot escrito em Python, com gerenciamento de plugins."
+  },
+  {
+    "name": "ImageVisionBot",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/0x7067/imagevision-bot"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Pedro Guimarães",
+        "url": "https://github.com/0x7067"
+      }
+    ],
+    "description": "Um Telegram bot que usa visão computacional para descrever imagens."
+  },
+  {
+    "name": "imguradbot",
+    "username": "imguradbot",
+    "authors": [
+      {
+        "name": "Juliano Dorneles",
+        "url": "https://t.me/julianodorneles"
+      }
+    ],
+    "description": "Um bot para baixar imagens de álbuns do Imgur."
+  },
+  {
+    "name": "Myinstantsbot",
+    "username": "Myinstantsbot",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/heylouiz/myinstantsbot"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Heylouiz",
+        "url": "https://github.com/heylouiz"
+      }
+    ],
+    "description": "Um Telegram Bot que busca sons no Myintants e os manda como mensagens de voz."
+  },
+  {
+    "name": "Nathy Bot",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/VycktorStark/Nathy"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Vycktor Stark",
+        "url": "https://github.com/VycktorStark"
+      }
+    ],
+    "description": "Bot com AIML + Telepot."
+  },
+  {
+    "name": "RastreioBot",
+    "username": "RastreioBot",
+    "authors": [
+      {
+        "name": "GabrielRF",
+        "url": "https://github.com/GabrielRF"
+      }
+    ],
+    "description": "Bot para rastreamento de pacotes cadastrados no sistema dos Correios."
+  },
+  {
+    "name": "Robô Db vs 1.0",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/VycktorStark/DbBot.git"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Vycktor Stark",
+        "url": "https://github.com/VycktorStark"
+      },
+      {
+        "name": "Adilson Cavalcante",
+        "url": "https://github.com/Player4NoobWinner"
+      }
+    ],
+    "description": "Um Telegram Bot simples que executa até no Qpython."
+  },
+  {
+    "name": "Robô Db vs 2.0",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/VycktorStark/DbRobot-Lua.git"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Vycktor Stark",
+        "url": "https://github.com/VycktorStark"
+      },
+      {
+        "name": "Adilson Cavalcante",
+        "url": "https://github.com/Player4NoobWinner"
+      },
+      {
+        "name": "Wesley Henrique",
+        "url": "https://github.com/Synk0"
+      }
+    ],
+    "description": "Um Telegram Bot baseado no projeto da equipe Synko Developers, e no projeto do SiD feito pelo TiagoDanin."
+  },
+  {
+    "name": "Robô Db vs 3.0",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/VycktorStark/DbRobot-Python.git"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Vycktor Stark",
+        "url": "https://github.com/VycktorStark"
+      }
+    ],
+    "description": "Bot baseado nas antigas versões do Robô Db."
+  },
+  {
+    "name": "RobôED",
+    "username": "EdRobot",
+    "urls": [
+      {
+        "title": "Site",
+        "url": "https://synko.com.br"
+      }
+    ],
+    "authors": [
+      {
+        "name": "[Equipe] Synko Developers",
+        "url": "https://synko.com.br"
+      }
+    ],
+    "description": "Fui criado pra tornar seu grupo mais divertido e organizado."
+  },
+  {
+    "name": "Send2KindleBot",
+    "username": "Send2KindleBot",
+    "authors": [
+      {
+        "name": "GabrielRF",
+        "url": "https://github.com/GabrielRF"
+      }
+    ],
+    "description": "Bot para envio de documentos para Kindle."
+  },
+  {
+    "name": "SendCH-Telegram",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/TiagoDanin/SendCH-Telegram"
+      }
+    ],
+    "authors": [
+      {
+        "name": "TiagoDanin",
+        "url": "https://github.com/TiagoDanin"
+      }
+    ],
+    "description": "Um webapp para enviar mensagem com suporte a Markdown no Telegram."
+  },
+  {
+    "name": "SiD",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/TiagoDanin/SiD"
+      }
+    ],
+    "authors": [
+      {
+        "name": "TiagoDanin",
+        "url": "https://github.com/TiagoDanin"
+      }
+    ],
+    "description": "Um bot baseado no Otouto com suporte a Inline."
+  },
+  {
+    "name": "SiDBot",
+    "username": "sidbot",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/TiagoDanin/SiDBot"
+      }
+    ],
+    "authors": [
+      {
+        "name": "TiagoDanin",
+        "url": "https://github.com/TiagoDanin"
+      }
+    ],
+    "description": "Um bot baseado nas antigas versões do SiD, agora feito do zero e escrito em Python."
+  },
+  {
+    "name": "SpotifyTelegram",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/TiagoDanin/SpotifyTelegram"
+      }
+    ],
+    "authors": [
+      {
+        "name": "TiagoDanin",
+        "url": "https://github.com/TiagoDanin"
+      }
+    ],
+    "description": "Uma coleção de plugins para busca no Spotify."
+  },
+  {
+    "name": "Timmoty",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/Francis-Taylor/Timotty-Master"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Francis Taylor",
+        "url": "https://github.com/Francis-Taylor"
+      }
+    ],
+    "description": "Bot para Telegram feito com Threads nativa da linguagem Python."
+  },
+  {
+    "name": "ts2chbot",
+    "username": "ts2chbot",
+    "authors": [
+      {
+        "name": "Juliano Dorneles",
+        "url": "https://t.me/julianodorneles"
+      }
+    ],
+    "description": "Um bot para conversão de vídeos comuns para Telescopes (é possível enviar vídeos diretamente ou postar links do Instagram e Youtube - sempre observando o limite máximo de upload para Telescopes, que gira em torno dos 9Mb, independente da duração)."
+  }
+]
