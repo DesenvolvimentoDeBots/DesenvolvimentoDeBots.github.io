@@ -15,7 +15,7 @@ function ordList(file) {
 		if (indexA > indexB) { return 1  }
 		return 0
 	})
-	jsonfile.writeFileSync(file, data, {replacer: true})
+	jsonfile.writeFileSync(file, data, {spaces: 2})
 }
 
 files.forEach(file => {
