@@ -1,34 +1,50 @@
-[{
-	"name": "Api.AI-Simsimi [API.IA]",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/VycktorStark/Api.AI-Simsimi"
-	}],
-	"authors": [{
-		"name": "Vycktor Stark",
-		"url": "https://github.com/VycktorStark"
-	}],
-	"description": "Um bot que utiliza a IA do SimSimi."
-}, {
-	"name": "Robô Db vs 4.0 [Facebook]",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/VycktorStark/DbRobot-Facebook-Python"
-	}],
-	"authors": [{
-		"name": "Vycktor Stark",
-		"url": "https://github.com/VycktorStark"
-	}],
-	"description": "Um bot simples que usa a API do Facebook de Bots escrita em Python."
-}, {
-	"name": "Taylor Bot Discord [Discord]",
-	"urls": [{
-		"title": "GitHub",
-		"url": "https://github.com/francis-taylor/Taylorbot-Discord"
-	}],
-	"authors": [{
-		"name": "Francis Taylor",
-		"url": "https://github.com/francis-taylor"
-	}],
-	"description": "Versão do Taylor Robot feito para o Discord."
-}]
+[
+  {
+    "name": "Api.AI-Simsimi [API.IA]",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/VycktorStark/Api.AI-Simsimi"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Vycktor Stark",
+        "url": "https://github.com/VycktorStark"
+      }
+    ],
+    "description": "Um bot que utiliza a IA do SimSimi."
+  },
+  {
+    "name": "Robô Db vs 4.0 [Facebook]",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/VycktorStark/DbRobot-Facebook-Python"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Vycktor Stark",
+        "url": "https://github.com/VycktorStark"
+      }
+    ],
+    "description": "Um bot simples que usa a API do Facebook de Bots escrita em Python."
+  },
+  {
+    "name": "Taylor Bot Discord [Discord]",
+    "urls": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/francis-taylor/Taylorbot-Discord"
+      }
+    ],
+    "authors": [
+      {
+        "name": "Francis Taylor",
+        "url": "https://github.com/francis-taylor"
+      }
+    ],
+    "description": "Versão do Taylor Robot feito para o Discord."
+  }
+]
