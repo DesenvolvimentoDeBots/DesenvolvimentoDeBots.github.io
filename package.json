@@ -24,7 +24,7 @@
     "node-sass": "4.13.1",
     "require-dir": "1.2.0",
     "graceful-fs": "4.2.8",
-    "jsonfile": "5.0.0",
+    "jsonfile": "6.1.0",
     "mustache": "4.2.0",
     "snyk": "^1.161.1"
   },
