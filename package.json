@@ -22,7 +22,7 @@
     "ignored": "2.0.4",
     "jus": "0.26.0",
     "node-sass": "4.13.1",
-    "require-dir": "1.1.0",
+    "require-dir": "1.2.0",
     "graceful-fs": "4.2.8",
     "jsonfile": "5.0.0",
     "mustache": "4.2.0",
