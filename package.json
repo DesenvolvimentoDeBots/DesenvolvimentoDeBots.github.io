@@ -21,7 +21,7 @@
     "chokidar": "3.5.2",
     "ignored": "2.0.4",
     "jus": "0.26.0",
-    "node-sass": "6.0.1",
+    "node-sass": "8.0.0",
     "require-dir": "1.2.0",
     "graceful-fs": "4.2.8",
     "jsonfile": "6.1.0",
